@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Banner & Financial Controls Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-card p-space-lg rounded-xl shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-pending-bg text-status-pending-text font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending-text animate-pulse"></span>
+          Audit Clearance Required
+        </span>
+<span class="text-text-muted font-label-sm text-label-sm">• SLA Active (NPT +5:45)</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Payments Verification Queue</h1>
+<p class="font-body-sm text-body-sm text-text-secondary">Audit digital wallet slips, bank clearances, and cash collections before warehouse dispatch.</p>
+</div>
+<!-- Quick Action CTA Group -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-muted text-text-primary hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm" onclick="showToast('Initiating ISO20022 Bank Feed Reconciliation...')">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">sync_saved_locally</span>
+<span>Reconcile Bank Feed</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-muted text-text-primary hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm" onclick="showToast('Exporting Financial Audit Records (CSV)...')">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">download</span>
+<span>Export Financial Audit CSV</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-all shadow-sm" onclick="toggleDrawer(true)">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Quick Verify (Next in Queue)</span>
+</button>
+</div>
+</div>
+<!-- Operational KPI Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Pending eSewa / Wallet Audits -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Pending eSewa Audits</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-text-primary">32</span>
+<span class="font-label-md text-label-md text-text-secondary">manual slips</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-pay-verification-bg text-pay-verification-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-muted/60 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted uppercase">Escrow Value</span>
+<span class="font-currency-display text-currency-display text-text-primary font-semibold">रु. 486,200</span>
+</div>
+<div class="flex items-center gap-1 text-pay-failed-text font-label-sm text-label-sm bg-pay-failed-bg px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>12 expire &lt;1h</span>
+</div>
+</div>
+</div>
+<!-- Card 2: COD In-Flight -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">COD In-Flight</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-text-primary">84</span>
+<span class="font-label-md text-label-md text-text-secondary">consignments</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-status-shipped-bg text-status-shipped-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-muted/60 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted uppercase">Carrier Remittance</span>
+<span class="font-currency-display text-currency-display text-text-primary font-semibold">रु. 1,124,500</span>
+</div>
+<span class="text-text-secondary font-label-sm text-label-sm">Kathmandu + 6 Prov</span>
+</div>
+</div>
+<!-- Card 3: Verified Today -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Verified Today</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-text-primary">118</span>
+<span class="font-label-md text-label-md text-status-delivered-text font-medium">100% matched</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-pay-paid-bg text-pay-paid-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-muted/60 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted uppercase">Dispatched Volume</span>
+<span class="font-currency-display text-currency-display text-status-delivered-text font-semibold">रु. 1,642,800</span>
+</div>
+<span class="text-status-delivered-text font-label-sm text-label-sm bg-status-delivered-bg px-2 py-0.5 rounded">All Clear</span>
+</div>
+</div>
+<!-- Card 4: Discrepancies & Flagged -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Flagged Mismatches</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-pay-failed-text">5</span>
+<span class="font-label-md text-label-md text-pay-failed-text">hash anomalies</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-pay-failed-bg text-pay-failed-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">production_quantity_limits</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-muted/60 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-muted uppercase">At-Risk Value</span>
+<span class="font-currency-display text-currency-display text-pay-failed-text font-semibold">रु. 68,400</span>
+</div>
+<span class="text-pay-failed-text font-label-sm text-label-sm bg-pay-failed-bg px-2 py-0.5 rounded">Review Required</span>
+</div>
+</div>
+</div>
+<!-- Operational Filter & Search Console -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- Verification Status Horizontal Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-nowrap">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span>All Payments</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 font-label-sm text-[10px]">142</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-pay-verification-bg text-pay-verification-text hover:bg-surface-muted font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="w-2 h-2 rounded-full bg-pay-verification-text animate-ping"></span>
+<span class="font-semibold">Pending Verification</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white font-label-sm text-[10px] text-pay-verification-text font-bold">32</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>Paid &amp; Reconciled</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white font-label-sm text-[10px] text-text-muted">96</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-muted text-pay-failed-text hover:bg-pay-failed-bg font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>Flagged / Mismatch</span>
+<span class="px-1.5 py-0.2 rounded-full bg-pay-failed-bg text-pay-failed-text font-label-sm text-[10px] font-bold">5</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>COD Awaiting Delivery</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white font-label-sm text-[10px] text-text-muted">84</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>Refunds &amp; Returns</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white font-label-sm text-[10px] text-text-muted">9</span>
+</button>
+</div>
+<!-- Second Row: Omnibar Search + Granular Filters -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm pt-space-xs">
+<!-- Search Input -->
+<div class="md:col-span-5 relative flex items-center bg-surface-muted rounded-lg px-space-sm">
+<span class="material-symbols-outlined text-[18px] text-text-muted mr-2">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none py-2" placeholder="Search by PAY-..., Order #NPW-..., customer name or phone..." type="text"/>
+<span class="font-label-sm text-[10px] text-text-muted bg-surface-card px-1.5 py-0.5 rounded">⌘K</span>
+</div>
+<!-- Payment Method Dropdown -->
+<div class="md:col-span-3">
+<select class="w-full bg-surface-muted text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm py-2 focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option value="">All Payment Gateways &amp; Slips</option>
+<option value="esewa">eSewa Manual Slip (Merchant QR)</option>
+<option value="nabil">Bank Transfer (Nabil Bank)</option>
+<option value="sanima">Bank Transfer (Sanima Bank)</option>
+<option value="global">Bank Transfer (Global IME)</option>
+<option value="khalti">Khalti Instant Webhook</option>
+<option value="cod">Cash on Delivery (COD)</option>
+</select>
+</div>
+<!-- Date Range Context -->
+<div class="md:col-span-2">
+<button class="w-full flex items-center justify-between bg-surface-muted text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm py-2 hover:bg-surface-container transition-colors">
+<span class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">calendar_today</span>
+<span>Last 7 Days (NPT)</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">expand_more</span>
+</button>
+</div>
+<!-- Clear / Batch Actions -->
+<div class="md:col-span-2 flex items-center gap-2">
+<button class="w-full py-2 bg-surface-muted hover:bg-surface-container text-text-secondary font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+<span>Reset</span>
+</button>
+<button class="p-2 bg-surface-muted hover:bg-surface-container text-text-secondary rounded-lg transition-colors" title="Reload queue data">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main High-Density Financial Verification Queue Table -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted/70 text-text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 w-10 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3 px-4">Payment Ref &amp; Time</th>
+<th class="py-3 px-4">Linked Order &amp; Patron</th>
+<th class="py-3 px-4">Method &amp; Channel</th>
+<th class="py-3 px-4 text-right">Claimed / Expected</th>
+<th class="py-3 px-4">Verification Evidence</th>
+<th class="py-3 px-4">Escrow Reserve</th>
+<th class="py-3 px-4">Assigned Auditor</th>
+<th class="py-3 px-4 text-right">Audit Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-text-primary font-body-sm text-body-sm">
+<!-- ROW 1: eSewa Slip - Exact Match, Urgent Countdown -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-white group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-text-primary tracking-tight">PAY-2024-9982</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 14:28:10 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8945</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-muted text-text-secondary">Capsule FW24</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Prashant Manandhar</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9841890211 • Lazimpat, Ktm</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#60BB46]"></span>
+<span class="font-semibold text-text-primary">eSewa Merchant QR</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">TXN: ES-882910403</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-text-primary">रु. 18,850.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Exp: रु. 18,850.00</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-pay-paid-bg text-pay-paid-text font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[11px]">check_circle</span>
+                  100% Match
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="relative group/thumb cursor-pointer" onclick="toggleDrawer(true)">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-muted" data-alt="Official eSewa digital payment transfer receipt screenshot on mobile phone, showing green branding header, transaction amount Rs. 18,850 and recipient NP Wardrobe Haute Couture Pvt Ltd with timestamp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFMtZCRvpWQKL_k5j_9zkUsg_3UvwbPMnQ-jQOG_5vXL3k8E_mpU0dzPvaNJL64l6XmDZclanboK59__VyzMSqDZlMM7QmjBBK5FOydUuStz6lBOwOPJmacN3sqr4nweZul2YwC4akS3i9L_5Ymnwm24NrI5tzjcNTAKRXRM6FA_jT28ETwAgSODuqif4ywieySLOAq56aG5iCBUt3uE4to67cSyOAPTjlApZAVAo"/>
+<span class="absolute inset-0 bg-black/40 text-white rounded flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-secondary font-mono">hash: 9a7f...e31b</span>
+<span class="text-pay-verification-text font-label-sm text-[10px] font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-pay-verification-text"></span> Slip Unreviewed
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-pay-failed-text font-semibold font-label-sm text-label-sm bg-pay-failed-bg px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+<span>42m left</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Auto-releases at 15:10</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-[10px] font-bold">AS</span>
+<span class="font-label-md text-label-md text-text-primary">Aayush S.</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm transition-colors shadow-sm" onclick="toggleDrawer(true)">
+                  Verify Slip
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-pay-failed-text hover:bg-pay-failed-bg transition-colors" onclick="confirmReject('PAY-2024-9982')" title="Reject Payment">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Bank Transfer - Nabil Bank -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-surface-canvas/40 group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-text-primary tracking-tight">PAY-2024-9981</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 13:50:22 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8944</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-muted text-text-secondary">Custom Tailored</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Dr. Shristi Shakya</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9851029344 • Patan, Lalitpur</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#1A4F9C]"></span>
+<span class="font-semibold text-text-primary">Nabil Bank IBFT</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">REF: NBL-99201948</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-text-primary">रु. 54,200.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Exp: रु. 54,200.00</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-pay-paid-bg text-pay-paid-text font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[11px]">check_circle</span>
+                  100% Match
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="relative group/thumb cursor-pointer" onclick="toggleDrawer(true)">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-muted" data-alt="Nabil Bank internet banking counterfoil transaction voucher receipt document printout showing company account name NP Wardrobe and reference confirmation slip." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqDb_1XIr0VmfpytKifgja2WCNSZoWAFnQTIxVhsag5S-RR4jN5TmlUKHNOV0A2lvxyCKDhEsMWDf2BArckeO22F2s-6owx4QrF0p0KK-CmQNkXy84sOtuFBJdmoEzN5L9GTkhlIucR-KGSTmjTDYgTPciHtt4zX6hugioEAfZ4ggYFb5k5CjBkOz9QF-XFKydijpy5GvOPE0gr0A-7v9PM2XZ8nydVrdi1LUsUE"/>
+<span class="absolute inset-0 bg-black/40 text-white rounded flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-secondary font-mono">auth: c142...09fd</span>
+<span class="text-pay-verification-text font-label-sm text-[10px] font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-pay-verification-text"></span> Voucher Pending
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-text-secondary font-semibold font-label-sm text-label-sm bg-surface-muted px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+<span>02h 18m left</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">3 SKUs Reserved</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-surface-container text-text-muted flex items-center justify-center font-label-sm text-[10px]">--</span>
+<span class="font-label-md text-label-md text-text-muted italic">Unassigned</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm transition-colors shadow-sm" onclick="toggleDrawer(true)">
+                  Review Bank Slip
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-pay-failed-text hover:bg-pay-failed-bg transition-colors" onclick="confirmReject('PAY-2024-9981')" title="Reject Payment">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: eSewa Slip - DISCREPANCY / SHORT AMOUNT -->
+<tr class="hover:bg-pay-failed-bg/30 transition-colors bg-pay-failed-bg/15 group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-pay-failed-text tracking-tight">PAY-2024-9979</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 12:15:04 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8939</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-pay-failed-bg text-pay-failed-text font-bold">Flagged</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Kiran KC</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9813290098 • Pokhara Ward 8</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#60BB46]"></span>
+<span class="font-semibold text-text-primary">eSewa Slip Scan</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">TXN: ES-882771994</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-pay-failed-text">रु. 12,000.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Exp: रु. 12,500.00</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-pay-failed-bg text-pay-failed-text font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[11px]">warning</span>
+                  Short रु. 500
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="relative group/thumb cursor-pointer" onclick="toggleDrawer(true)">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-muted ring-1 ring-pay-failed-text/40" data-alt="Distorted camera phone photograph of an eSewa mobile screen slip showing incomplete transfer amount of 12000 rupees with blurry timestamp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bjAJJNO1323RClPxDyDKDbS7owtg2093DwmpJdyRseXA0Rqaz1-qao_JdRLbh7v5CnO6thjU2Mb814UvOycpyQfTBvP-dI7votmGQeBoH_BRri5vm-DrETqfcUfxqUTY0YGBUX4xTiQCaZb6Wfuqb4FvsTVytp-VxJ5h_oTsdrVuMqEn8n9zhDvFEk_j-HWsbtE1FEmt3MsMXuH95UqTVH8afNCuU5gIrmXQgww"/>
+<span class="absolute inset-0 bg-black/40 text-white rounded flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-pay-failed-text font-mono">hash: MISMATCH</span>
+<span class="text-pay-failed-text font-label-sm text-[10px] font-bold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-pay-failed-text"></span> Partial Paid
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-pay-failed-text font-semibold font-label-sm text-label-sm bg-pay-failed-bg px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">pause_circle</span>
+<span>Hold Escrow</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Dispatch Blocked</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-[10px] font-bold">AS</span>
+<span class="font-label-md text-label-md text-text-primary">Aayush S.</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-pay-failed-text hover:text-white font-label-sm text-label-sm transition-colors shadow-sm" onclick="showDiscrepancyModal('PAY-2024-9979')">
+                  Resolve Delta
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-pay-failed-text hover:bg-pay-failed-bg transition-colors" onclick="confirmReject('PAY-2024-9979')" title="Void Order">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Cash on Delivery (COD) In-Flight -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-white group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-text-primary tracking-tight">COD-2024-1102</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 11:04:18 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8930</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-status-shipped-bg text-status-shipped-text">Dispatched</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Anjali Gurung</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9801928374 • Baneshwor, Ktm</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">local_atm</span>
+<span class="font-semibold text-text-primary">Cash on Delivery</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Rider: Pathao Express #49</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-text-primary">रु. 8,450.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Carrier Remittance Due</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-status-shipped-bg text-status-shipped-text font-label-sm text-[10px] font-bold">
+                  In-Transit
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded bg-surface-muted flex flex-col items-center justify-center text-text-muted">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span class="text-[9px] uppercase font-bold">COD</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-secondary font-mono">waybill: PTH-88401</span>
+<span class="text-status-shipped-text font-label-sm text-[10px] font-semibold">Drop Collection Pending</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-status-delivered-text font-semibold font-label-sm text-label-sm bg-status-delivered-bg px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">check</span>
+<span>Fulfilled</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Stock Deducted</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-text-secondary flex items-center justify-center font-label-sm text-[10px]">RS</span>
+<span class="font-label-md text-label-md text-text-primary">Rita S.</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-muted hover:bg-surface-container text-text-primary font-label-sm text-label-sm transition-colors" onclick="showToast('Tracking Pathao rider location...')">
+                  Track Delivery
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-muted transition-colors" title="Print Run-sheet">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: eSewa Slip - Confirmed & Verified by Rita -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-surface-canvas/40 group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-text-primary tracking-tight">PAY-2024-9972</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 10:14:50 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8924</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-status-confirmed-bg text-status-confirmed-text">Ready to Pack</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Binod Karki</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9849201928 • Jhapa, Prov 1</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#60BB46]"></span>
+<span class="font-semibold text-text-primary">eSewa Merchant QR</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">TXN: ES-882650012</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-status-delivered-text">रु. 29,500.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Settled to Sanima A/C</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-pay-paid-bg text-pay-paid-text font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[11px]">verified</span>
+                  Verified &amp; Paid
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="relative group/thumb cursor-pointer" onclick="toggleDrawer(true)">
+<img class="w-10 h-10 rounded object-cover shadow-sm bg-surface-muted" data-alt="High quality clean mobile payment slip confirmation showing payment approved badge, verified timestamp and customer name Binod Karki with luxury typography layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP00TNolGv-v3Tu27NqS0NN_uLZquo3BRuDDBrbHlhQlKMqHMBt8AAmls4keGHcwA1bhvOGz9Fk-f8XqeRuUEYkWuNjYO7VP_POt4UjiMlMuVOCQpeQfSRczwAwraAn37FK_y4aUUaRhE_GaRd2LScnSnjy60t3Xtfq68RVrglldwT2Ke2KN1ti9FLt9dgCAFykF0F95FZ9L_vVgDlEjyrkGoe29_4E57SMAF-Bd8"/>
+<span class="absolute inset-0 bg-black/40 text-white rounded flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-secondary font-mono">hash: 4bb2...1a88</span>
+<span class="text-status-delivered-text font-label-sm text-[10px] font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Auditor Cleared
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-status-delivered-text font-semibold font-label-sm text-label-sm bg-status-delivered-bg px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">lock_open</span>
+<span>Released</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Committed to Order</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary-fixed text-text-secondary flex items-center justify-center font-label-sm text-[10px]">RS</span>
+<span class="font-label-md text-label-md text-text-primary">Rita S.</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-muted hover:bg-surface-container text-text-secondary font-label-sm text-label-sm transition-colors" onclick="showToast('Opening ledger audit voucher...')">
+                  Voucher
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-muted transition-colors" title="Download signed PDF receipt">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 6: Khalti Instant QR - Auto-cleared Webhook -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-white group">
+<td class="py-3.5 px-4 text-center">
+<input class="rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-numeric-data text-numeric-data font-semibold text-text-primary tracking-tight">PAY-2024-9968</span>
+<span class="font-label-sm text-[11px] text-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  Today, 09:30:12 NPT
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-[13px] font-semibold text-primary-container hover:underline cursor-pointer">#NPW-8919</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-status-confirmed-bg text-status-confirmed-text">In Warehouse</span>
+</div>
+<span class="text-text-primary font-medium mt-0.5">Supriti Thapa</span>
+<span class="text-text-muted font-label-sm text-[11px]">+977 9860182931 • Butwal, Rupandehi</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#5C2D91]"></span>
+<span class="font-semibold text-text-primary">Khalti EPAY Gateway</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">PIDX: KH-99281001429</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-currency-display font-bold text-status-delivered-text">रु. 14,200.00</span>
+<span class="font-label-sm text-[11px] text-text-muted">Gateway Fee: रु. 213.00</span>
+<span class="mt-1 inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-pay-paid-bg text-pay-paid-text font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[11px]">bolt</span>
+                  Instant Auto-Reconciled
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded bg-[#5C2D91]/10 text-[#5C2D91] flex items-center justify-center font-bold text-[11px]">
+                  API
+                </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-text-secondary font-mono">sig: v2_90bf12</span>
+<span class="text-status-delivered-text font-label-sm text-[10px] font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">security</span> Webhook 200 OK
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-status-delivered-text font-semibold font-label-sm text-label-sm bg-status-delivered-bg px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[13px]">lock_open</span>
+<span>Direct Commit</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted mt-0.5">Auto Dispatched</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-full bg-status-confirmed-bg text-status-confirmed-text flex items-center justify-center font-label-sm text-[10px] font-bold">BOT</span>
+<span class="font-label-md text-label-md text-text-primary">NP System Auto</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-muted hover:bg-surface-container text-text-secondary font-label-sm text-label-sm transition-colors" onclick="showToast('Inspecting Webhook Payload...')">
+                  Payload
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-muted transition-colors" title="View Gateway Log">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Bottom Controls: Dense Pagination & Batch Triggers -->
+<div class="p-space-md bg-surface-card flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm text-text-secondary">
+          Showing <span class="font-semibold text-text-primary">1–6</span> of <span class="font-semibold text-text-primary">142</span> records
+        </span>
+<div class="flex items-center gap-1.5 text-text-secondary font-label-sm text-label-sm">
+<span>Rows per page:</span>
+<select class="bg-surface-muted rounded px-2 py-1 text-text-primary focus:outline-none">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<!-- Pagination Navigation -->
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded bg-surface-muted text-text-muted hover:text-text-primary hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded bg-surface-muted text-text-muted hover:text-text-primary hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 text-label-md font-semibold text-on-primary bg-primary-container rounded">1</span>
+<button class="px-3 py-1 text-label-md font-medium text-text-secondary hover:bg-surface-muted rounded">2</button>
+<button class="px-3 py-1 text-label-md font-medium text-text-secondary hover:bg-surface-muted rounded">3</button>
+<span class="px-1 text-text-muted">...</span>
+<button class="px-3 py-1 text-label-md font-medium text-text-secondary hover:bg-surface-muted rounded">15</button>
+<button class="p-1.5 rounded bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dual-Pane Voucher & Slip Audit Inspector Drawer (Off-Canvas overlay) -->
+<div aria-labelledby="drawer-title" aria-modal="true" class="fixed inset-0 z-50 overflow-hidden hidden" id="auditDrawer" role="dialog">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-text-primary/50 backdrop-blur-sm transition-opacity" onclick="toggleDrawer(false)"></div>
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-4xl bg-surface-card shadow-2xl flex flex-col justify-between">
+<!-- Drawer Header -->
+<div class="px-space-lg py-space-md bg-surface-card flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-text-primary" id="drawer-title">Payment Voucher Inspector</h2>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-pay-verification-bg text-pay-verification-text">PAY-2024-9982</span>
+</div>
+<p class="font-label-sm text-label-sm text-text-muted">Dual-pane side-by-side reconciliation against linked order #NPW-8945</p>
+</div>
+</div>
+<button class="p-2 rounded text-text-muted hover:text-text-primary hover:bg-surface-muted transition-colors" onclick="toggleDrawer(false)">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Split View Audit Body -->
+<div class="flex-1 overflow-y-auto grid grid-cols-1 md:grid-cols-2">
+<!-- LEFT PANE: Customer Uploaded Transfer Slip with Zoom Controls -->
+<div class="p-space-lg bg-surface-canvas flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">Customer Uploaded Slip</span>
+<!-- Image Tools -->
+<div class="flex items-center gap-1 bg-surface-card p-1 rounded-lg shadow-sm">
+<button class="p-1 text-text-secondary hover:text-text-primary rounded hover:bg-surface-muted" onclick="zoomSlip(1.1)" title="Zoom In">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="p-1 text-text-secondary hover:text-text-primary rounded hover:bg-surface-muted" onclick="zoomSlip(0.9)" title="Zoom Out">
+<span class="material-symbols-outlined text-[16px]">zoom_out</span>
+</button>
+<button class="p-1 text-text-secondary hover:text-text-primary rounded hover:bg-surface-muted" onclick="rotateSlip()" title="Rotate">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+</button>
+<button class="p-1 text-text-secondary hover:text-text-primary rounded hover:bg-surface-muted" onclick="resetSlip()" title="Reset">
+<span class="material-symbols-outlined text-[16px]">fit_screen</span>
+</button>
+</div>
+</div>
+<!-- Slip Preview Canvas -->
+<div class="relative bg-surface-muted rounded-xl overflow-hidden flex items-center justify-center p-4 min-h-[380px] shadow-inner">
+<img class="max-h-[360px] w-auto object-contain rounded shadow-md transition-transform duration-200" data-alt="High-resolution mobile banking screenshot of eSewa receipt for 18,850 Nepali Rupees, showing beneficiary NP Wardrobe, transaction reference 882910403, and timestamp 14:28 NPT." id="slipImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZFTfT_CTekaQ3SAyzI3p5RsBH2u_DvytAKHbf1quEmyscCI70VG9uTWr2ZvFNctt4Jl0XcSDDKTU5j3ifpd2Q3vc_8-nXw9kCSQ3EXx1F4WqU_lH_Q7gspJ3zygeUDpwzG_LUt6l_M7wz65gkje1A-OvsHSbClPyPNmTSeaLDjyg6M6vrYkFTD4p9lw_V63GlK_ZqOWiYRWHSBUCYdJfS3WzrX8LthE-cjuoIBdo"/>
+</div>
+<!-- Metadata File Details -->
+<div class="mt-space-md bg-surface-card p-space-sm rounded-lg shadow-sm space-y-1 text-[11px] font-mono text-text-secondary">
+<div class="flex justify-between">
+<span class="text-text-muted">Filename:</span>
+<span>esewa_receipt_8945_1428.jpg</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-muted">File Fingerprint:</span>
+<span class="truncate max-w-[200px]" title="9a7f3408c142ee276182">9a7f3408c142ee276182...</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-muted">Uploaded IP:</span>
+<span>27.34.18.90 (Nepal Telecom Broadband)</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<span class="font-label-sm text-[11px] text-text-muted italic flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                Tip: Inspect the transaction time and font clarity for digital tampering signs.
+              </span>
+</div>
+</div>
+<!-- RIGHT PANE: System Expected Data & Operational Verification Fields -->
+<div class="p-space-lg bg-surface-card flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">System Expected Values</span>
+<!-- Amount Match Box -->
+<div class="bg-pay-paid-bg/30 p-space-md rounded-xl space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-pay-paid-text font-semibold">Payment Amount Match</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-pay-paid-bg text-pay-paid-text flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Exact 100% Match
+                  </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div>
+<span class="font-label-sm text-[10px] text-text-muted uppercase">Claimed on Slip</span>
+<p class="font-currency-display text-headline-sm text-pay-paid-text font-bold">रु. 18,850.00</p>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-text-muted uppercase">System Order Total</span>
+<p class="font-currency-display text-headline-sm text-text-primary font-bold">रु. 18,850.00</p>
+</div>
+</div>
+</div>
+<!-- Order Summary Breakdown -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-text-secondary font-semibold">Order Item Details (#NPW-8945)</span>
+<div class="bg-surface-canvas p-space-sm rounded-lg space-y-2 text-body-sm">
+<div class="flex justify-between items-center text-text-primary font-medium">
+<span>Cashmere Wrap Trench (Burgundy / M)</span>
+<span>रु. 14,500.00</span>
+</div>
+<div class="flex justify-between items-center text-text-primary font-medium">
+<span>Raw Silk Scarf (Champa Gold)</span>
+<span>रु. 3,850.00</span>
+</div>
+<div class="flex justify-between items-center text-text-secondary text-label-sm pt-1">
+<span>Standard Express Shipping (Kathmandu)</span>
+<span class="text-status-delivered-text font-semibold">FREE (Over रु. 10k)</span>
+</div>
+</div>
+</div>
+<!-- Transaction ID Verification Field -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-text-primary font-semibold flex items-center justify-between">
+<span>Merchant Transaction Reference (TXN)</span>
+<span class="text-status-delivered-text font-label-sm text-[11px] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified_user</span> Verified in eSewa Portal
+                  </span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-muted text-text-primary font-mono text-body-sm rounded-lg px-space-sm py-2 focus:ring-1 focus:ring-primary-container focus:outline-none" type="text" value="ES-882910403"/>
+</div>
+<span class="font-label-sm text-[11px] text-text-muted">Cross-checked against eSewa Statement Account 9801234567.</span>
+</div>
+<!-- Internal Audit Note -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-text-primary font-semibold">Auditor Clearance Remarks (Recorded to Ledger)</label>
+<textarea class="w-full bg-surface-muted text-text-primary font-body-sm text-body-sm rounded-lg p-space-sm focus:ring-1 focus:ring-primary-container focus:outline-none" placeholder="e.g. Verified transaction reference on eSewa web portal at 14:32. Amount credited to Sanima Main A/C." rows="2">Transaction verified on eSewa Merchant Portal. Amount रु. 18,850 matched with order #NPW-8945. Ready for warehouse dispatch.</textarea>
+</div>
+<!-- Stock Escrow Alert -->
+<div class="p-space-sm rounded-lg bg-surface-muted flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-pay-verification-text mt-0.5">lock_clock</span>
+<div class="flex flex-col text-label-sm">
+<span class="font-semibold text-text-primary">Stock Hold Active: 42 minutes remaining</span>
+<span class="text-text-secondary">Approving this payment will permanently commit reserved inventory and auto-generate invoice &amp; shipping waybill.</span>
+</div>
+</div>
+</div>
+<!-- Drawer Bottom Confirmation Actions -->
+<div class="pt-space-md flex items-center justify-between gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-pay-failed-bg text-pay-failed-text hover:bg-pay-failed-text hover:text-white font-label-md text-label-md transition-colors" onclick="confirmReject('PAY-2024-9982')">
+                Reject Slip
+              </button>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="toggleDrawer(false)">
+                  Hold / Skip
+                </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-all shadow-md flex items-center gap-1.5" onclick="verifyCurrent()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Approve &amp; Dispatch Order</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Template -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="systemToast">
+<div class="bg-text-primary text-white px-4 py-3 rounded-lg shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-pay-paid-text" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toastMessage">Action completed successfully</span>
+</div>
+</div>
+</div>
+<script>
+  let slipZoom = 1;
+  let slipRotation = 0;
+
+  function toggleDrawer(open) {
+    const drawer = document.getElementById('auditDrawer');
+    if (open) {
+      drawer.classList.remove('hidden');
+    } else {
+      drawer.classList.add('hidden');
+    }
+  }
+
+  function zoomSlip(factor) {
+    const img = document.getElementById('slipImage');
+    slipZoom = Math.min(Math.max(slipZoom * factor, 0.5), 3);
+    applySlipTransform();
+  }
+
+  function rotateSlip() {
+    slipRotation = (slipRotation + 90) % 360;
+    applySlipTransform();
+  }
+
+  function resetSlip() {
+    slipZoom = 1;
+    slipRotation = 0;
+    applySlipTransform();
+  }
+
+  function applySlipTransform() {
+    const img = document.getElementById('slipImage');
+    img.style.transform = `scale(${slipZoom}) rotate(${slipRotation}deg)`;
+  }
+
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('systemToast');
+    const msg = document.getElementById('toastMessage');
+    const ico = document.getElementById('toastIcon');
+
+    msg.innerText = message;
+    ico.innerText = icon;
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 3200);
+  }
+
+  function verifyCurrent() {
+    toggleDrawer(false);
+    showToast('Payment PAY-2024-9982 Verified! Order #NPW-8945 sent to Dispatch Queue.');
+  }
+
+  function confirmReject(ref) {
+    toggleDrawer(false);
+    const reason = prompt(`Reject payment reference ${ref}? Enter rejection code / reason:`, 'Blurry receipt / Unmatched Reference');
+    if (reason) {
+      showToast(`Payment ${ref} flagged as Rejected. Customer notified via SMS.`, 'error');
+    }
+  }
+
+  function showDiscrepancyModal(ref) {
+    showToast(`Opening delta adjustment for ${ref} (रु. 500 balance due link sent).`);
+  }
+</script></main></div></body></html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full space-y-space-lg pb-space-xl">
+<!-- Top Action & Context Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-card p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs text-text-muted font-label-md text-label-md">
+<span>Marketing</span>
+<span class="text-border-strong font-bold">/</span>
+<span class="text-text-primary font-semibold">Campaigns &amp; Coupons</span>
+<span class="ml-2 px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary-fixed text-on-primary-fixed">Active Season</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<h1 class="font-headline-md text-headline-md text-text-primary font-bold tracking-tight">Marketing Campaigns &amp; Promotional Vouchers</h1>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary max-w-4xl">
+        Configure seasonal promotional rules, coupon vouchers, VIP tier discounts, and order-level discount stacking constraints across Nepal's luxury retail operations.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center shrink-0">
+<button class="h-9 px-space-md rounded bg-surface-card text-text-primary hover:bg-surface-muted transition-colors font-label-md text-label-md font-semibold flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">file_download</span>
+<span>Export Campaign Ledger</span>
+</button>
+<button class="h-9 px-space-md rounded bg-primary-container hover:bg-primary text-on-primary transition-all duration-150 font-label-md text-label-md font-semibold flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Create New Promotion / Voucher</span>
+</button>
+</div>
+</div>
+<!-- Editorial KPI Metric Row (4 Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="relative bg-surface-card p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-semibold">Active Campaigns</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary font-bold">6</span>
+<span class="font-body-sm text-body-sm text-text-secondary font-medium">Running live</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">campaign</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded font-label-sm text-[11px] font-semibold bg-status-confirmed-bg text-status-confirmed-text">+2 Scheduled</span>
+<span class="font-body-sm text-[12px] text-text-muted truncate">Festive &amp; VIP drops ready</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative bg-surface-card p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-semibold">Total Vouchers Redeemed</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary font-bold">1,428</span>
+<span class="font-body-sm text-body-sm text-status-delivered-text font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>18.2%
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-text-secondary">
+<span class="font-body-sm text-[12px] text-text-muted">Trailing 30 Days</span>
+<span class="font-currency-display text-currency-display text-text-primary">रु. 8,42,500 <span class="font-normal text-text-muted text-[11px]">Gross Disc.</span></span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative bg-surface-card p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-semibold">Average Order Uplift</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary font-bold">+28.4%</span>
+<span class="font-label-sm text-label-sm text-pay-paid-text font-semibold">AOV Boost</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 font-body-sm text-[12px]">
+<span class="text-text-primary font-semibold">रु. 18,250</span>
+<span class="text-text-muted">vs रु. 14,200 non-voucher</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative bg-surface-card p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-semibold">Budget Exhaustion Rate</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary font-bold">64.2%</span>
+<span class="font-label-sm text-label-sm text-pay-verification-text font-semibold">Seasonal Reserve</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pie_chart</span>
+</div>
+</div>
+<div class="mt-space-md space-y-1">
+<div class="w-full bg-surface-muted h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 64.2%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-numeric-data text-text-muted">
+<span>रु. 12,84,000 Expended</span>
+<span class="text-text-primary font-medium">रु. 20,00,000 Cap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Workspace Content (Grid Layout: Table & Inspector) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Data Management Table Section (8 cols on 2xl) -->
+<div class="2xl:col-span-8 flex flex-col space-y-space-md bg-surface-card p-space-lg rounded-xl shadow-sm">
+<!-- Filter Bar & Operational Tabs -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Filter Tabs -->
+<div class="flex items-center gap-1 bg-surface-muted p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded text-label-md font-label-md font-semibold bg-surface-card text-text-primary shadow-sm">
+              All Promotions <span class="ml-1 text-[11px] px-1.5 py-0.2 rounded-full bg-surface-muted text-text-muted">12</span>
+</button>
+<button class="px-3 py-1.5 rounded text-label-md font-label-md font-medium text-text-secondary hover:text-text-primary transition-colors">
+              Active &amp; Live <span class="ml-1 text-[11px] px-1.5 py-0.2 rounded-full bg-status-delivered-bg text-status-delivered-text font-bold">6</span>
+</button>
+<button class="px-3 py-1.5 rounded text-label-md font-label-md font-medium text-text-secondary hover:text-text-primary transition-colors">
+              Scheduled Drops <span class="ml-1 text-[11px] px-1.5 py-0.2 rounded-full bg-status-pending-bg text-status-pending-text font-bold">3</span>
+</button>
+<button class="px-3 py-1.5 rounded text-label-md font-label-md font-medium text-text-secondary hover:text-text-primary transition-colors">
+              Expired / Delisted <span class="ml-1 text-[11px] px-1.5 py-0.2 rounded-full bg-pay-unpaid-bg text-pay-unpaid-text">3</span>
+</button>
+</div>
+<!-- Secondary Quick Status Indicator -->
+<div class="flex items-center gap-2 text-text-muted text-[12px]">
+<span class="w-2 h-2 rounded-full bg-status-delivered-text animate-pulse"></span>
+<span>Promotions Engine: Synchronized</span>
+</div>
+</div>
+<!-- Filter Controls Row -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm">
+<div class="md:col-span-5 relative flex items-center h-9 bg-surface-canvas rounded px-space-sm">
+<span class="material-symbols-outlined text-[18px] text-text-muted mr-2">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search voucher code, rule title, tag..." type="text" value=""/>
+<span class="text-[11px] font-numeric-data text-text-muted bg-surface-muted px-1.5 py-0.5 rounded">FESTIVE</span>
+</div>
+<div class="md:col-span-3">
+<div class="relative h-9 bg-surface-canvas rounded flex items-center px-space-sm text-text-primary font-body-sm text-body-sm cursor-pointer">
+<span class="material-symbols-outlined text-[18px] text-text-muted mr-1.5">category</span>
+<span class="truncate">All Categories</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted ml-auto">expand_more</span>
+</div>
+</div>
+<div class="md:col-span-4 flex items-center gap-space-xs">
+<div class="relative h-9 flex-1 bg-surface-canvas rounded flex items-center px-space-sm text-text-primary font-body-sm text-body-sm cursor-pointer">
+<span class="material-symbols-outlined text-[18px] text-text-muted mr-1.5">tune</span>
+<span class="truncate">Type: All Discount Types</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted ml-auto">expand_more</span>
+</div>
+<button class="h-9 w-9 bg-surface-canvas hover:bg-surface-muted text-text-secondary rounded flex items-center justify-center transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High-Density Operations Table -->
+<div class="w-full overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-canvas text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 font-semibold">Voucher Code &amp; Title</th>
+<th class="py-2.5 px-3 font-semibold">Mechanism</th>
+<th class="py-2.5 px-3 font-semibold">Stacking &amp; Rules</th>
+<th class="py-2.5 px-3 font-semibold text-right">Redemption / Cap</th>
+<th class="py-2.5 px-3 font-semibold">Validity</th>
+<th class="py-2.5 px-3 font-semibold">Status</th>
+<th class="py-2.5 px-3 font-semibold text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<!-- Row 1: FESTIVE2024 (Selected / Active) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-8 bg-primary rounded-full shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-numeric-data text-[13px] font-bold text-primary tracking-wide px-2 py-0.5 rounded bg-primary-fixed">FESTIVE2024</span>
+<span class="text-[10px] text-text-muted font-label-sm uppercase">Winter Drop</span>
+</div>
+<span class="font-title-md text-[13px] text-text-primary font-semibold mt-0.5">Winter Festive Capsule Launch</span>
+<span class="text-[11px] text-text-muted truncate max-w-[200px]">Raw Silk Anarkalis, Velvet</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-currency-display text-text-primary font-semibold">Fixed: -रु. 2,000</span>
+<span class="text-[11px] text-text-secondary">Min spend रु. 15,000</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col items-start gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-pay-failed-bg text-pay-failed-text">
+                    Strict Exclusion
+                  </span>
+<span class="text-[11px] text-text-secondary">No Sale items</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-data font-bold text-text-primary">412 <span class="text-text-muted font-normal">/ 500</span></span>
+<div class="w-20 bg-surface-muted h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82.4%"></div>
+</div>
+<span class="text-[10px] font-numeric-data text-text-muted mt-0.5">82.4% Redeemed</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-numeric-data text-text-primary text-[12px] font-medium">Nov 10 – Jan 10, 2025</span>
+<span class="text-[11px] text-pay-verification-text font-medium">46 days remaining</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-3 align-middle text-center">
+<div class="flex items-center justify-center gap-1 text-text-secondary">
+<button class="p-1 hover:text-primary transition-colors" title="Edit Rule"><span class="material-symbols-outlined text-[18px]">edit_note</span></button>
+<button class="p-1 hover:text-status-cancelled-text transition-colors" title="Pause Voucher"><span class="material-symbols-outlined text-[18px]">pause_circle</span></button>
+<button class="p-1 hover:text-text-primary transition-colors" title="Audit Trail"><span class="material-symbols-outlined text-[18px]">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2: VIP-PATRON-15 -->
+<tr class="hover:bg-surface-canvas transition-colors cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-8 bg-transparent group-hover:bg-border-strong rounded-full shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary tracking-wide px-2 py-0.5 rounded bg-surface-muted">VIP-PATRON-15</span>
+<span class="text-[10px] text-tertiary font-label-sm font-semibold uppercase">Atelier Tier</span>
+</div>
+<span class="font-title-md text-[13px] text-text-primary font-semibold mt-0.5">Tier 1 Atelier Client Privilege</span>
+<span class="text-[11px] text-text-muted truncate max-w-[200px]">HNWI Tier &amp; Patrons</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-currency-display text-text-primary font-semibold">15% Off Total</span>
+<span class="text-[11px] text-text-secondary">Capped at रु. 10,000</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col items-start gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-status-confirmed-bg text-status-confirmed-text">
+                    VIP Points OK
+                  </span>
+<span class="text-[11px] text-text-secondary">Stackable with points</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-data font-bold text-text-primary">88 <span class="text-text-muted font-normal">/ Unlimited</span></span>
+<div class="w-20 bg-surface-muted h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 25%"></div>
+</div>
+<span class="text-[10px] font-numeric-data text-text-muted mt-0.5">Privilege Active</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-numeric-data text-text-primary text-[12px] font-medium">Ongoing</span>
+<span class="text-[11px] text-text-muted">Annual VIP Cycle</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-3 align-middle text-center">
+<div class="flex items-center justify-center gap-1 text-text-secondary">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit_note</span></button>
+<button class="p-1 hover:text-status-cancelled-text transition-colors"><span class="material-symbols-outlined text-[18px]">pause_circle</span></button>
+<button class="p-1 hover:text-text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3: FREESHIP-POKHARA -->
+<tr class="hover:bg-surface-canvas transition-colors cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-8 bg-transparent group-hover:bg-border-strong rounded-full shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary tracking-wide px-2 py-0.5 rounded bg-surface-muted">FREESHIP-POKHARA</span>
+<span class="text-[10px] text-status-shipped-text font-label-sm font-semibold uppercase">Regional</span>
+</div>
+<span class="font-title-md text-[13px] text-text-primary font-semibold mt-0.5">Gandaki Express Courier Waiver</span>
+<span class="text-[11px] text-text-muted truncate max-w-[200px]">Pokhara, Butwal &amp; Lumbini</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-currency-display text-text-primary font-semibold">Free Expedited</span>
+<span class="text-[11px] text-text-secondary">Min cart रु. 8,000</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col items-start gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-surface-muted text-text-secondary">
+                    All Products
+                  </span>
+<span class="text-[11px] text-text-secondary">Corridor dispatch only</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-data font-bold text-text-primary">624 <span class="text-text-muted font-normal">/ 1,000</span></span>
+<div class="w-20 bg-surface-muted h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-status-shipped-text h-full rounded-full" style="width: 62.4%"></div>
+</div>
+<span class="text-[10px] font-numeric-data text-text-muted mt-0.5">62.4% Redeemed</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-numeric-data text-text-primary text-[12px] font-medium">Nov 01 – Nov 30, 2024</span>
+<span class="text-[11px] text-status-cancelled-text font-semibold">Ending in 5 days</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3 px-3 align-middle text-center">
+<div class="flex items-center justify-center gap-1 text-text-secondary">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">edit_note</span></button>
+<button class="p-1 hover:text-status-cancelled-text transition-colors"><span class="material-symbols-outlined text-[18px]">pause_circle</span></button>
+<button class="p-1 hover:text-text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4: NEWPATRON-1000 -->
+<tr class="hover:bg-surface-canvas transition-colors cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-8 bg-transparent group-hover:bg-border-strong rounded-full shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary tracking-wide px-2 py-0.5 rounded bg-surface-muted">NEWPATRON-1000</span>
+<span class="text-[10px] text-text-muted font-label-sm uppercase">Welcome</span>
+</div>
+<span class="font-title-md text-[13px] text-text-primary font-semibold mt-0.5">First Purchase Welcome Voucher</span>
+<span class="text-[11px] text-text-muted truncate max-w-[200px]">New verified identities only</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-currency-display text-text-primary font-semibold">Fixed: -रु. 1,000</span>
+<span class="text-[11px] text-text-secondary">Min spend रु. 15,000</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col items-start gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-pay-unpaid-bg text-pay-unpaid-text">
+                    1 Per Device / Phone
+                  </span>
+<span class="text-[11px] text-text-secondary">Anti-fraud enabled</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-data font-bold text-text-primary">300 <span class="text-text-muted font-normal">/ 300</span></span>
+<div class="w-20 bg-surface-muted h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-status-cancelled-text h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-[10px] font-numeric-data text-status-cancelled-text font-semibold mt-0.5">Depleted 100%</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-numeric-data text-text-primary text-[12px] font-medium">Dec 01 – Dec 31, 2024</span>
+<span class="text-[11px] text-text-muted">Quarterly cycle</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-status-cancelled-bg text-status-cancelled-text inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-cancelled-text"></span>
+                  Depleted
+                </span>
+</td>
+<td class="py-3 px-3 align-middle text-center">
+<div class="flex items-center justify-center gap-1 text-text-secondary">
+<button class="p-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">restart_alt</span></button>
+<button class="p-1 hover:text-text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">history</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 5: ZARIDROP-20 -->
+<tr class="opacity-60 hover:opacity-100 hover:bg-surface-canvas transition-all cursor-pointer group">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-8 bg-transparent rounded-full shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-numeric-data text-[13px] font-bold text-text-muted line-through tracking-wide px-2 py-0.5 rounded bg-surface-muted">ZARIDROP-20</span>
+<span class="text-[10px] text-text-muted font-label-sm uppercase">Delisted</span>
+</div>
+<span class="font-title-md text-[13px] text-text-primary font-medium mt-0.5">Pre-Dashain Zari Embroidery Drop</span>
+<span class="text-[11px] text-text-muted truncate max-w-[200px]">Handloom Kurtas &amp; Sarees</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-currency-display text-text-muted font-medium">20% Flash Clearance</span>
+<span class="text-[11px] text-text-muted">Min spend रु. 25,000</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col items-start gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-label-sm font-semibold bg-surface-muted text-text-muted">
+                    Non-renewable
+                  </span>
+<span class="text-[11px] text-text-muted">Expired seasonal promo</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-data font-medium text-text-muted">250 / 250</span>
+<div class="w-20 bg-surface-muted h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-text-muted h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-[10px] font-numeric-data text-text-muted mt-0.5">Fully Consumed</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<div class="flex flex-col">
+<span class="font-numeric-data text-text-muted text-[12px]">Sep 15 – Oct 20, 2024</span>
+<span class="text-[11px] text-text-muted">Campaign closed</span>
+</div>
+</td>
+<td class="py-3 px-3 align-middle">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-pay-unpaid-bg text-pay-unpaid-text inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-text-muted"></span>
+                  Expired
+                </span>
+</td>
+<td class="py-3 px-3 align-middle text-center">
+<div class="flex items-center justify-center gap-1 text-text-secondary">
+<button class="p-1 hover:text-primary transition-colors" title="Clone as new campaign"><span class="material-symbols-outlined text-[18px]">content_copy</span></button>
+<button class="p-1 hover:text-text-primary transition-colors" title="Performance Report"><span class="material-symbols-outlined text-[18px]">analytics</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Ledger Summary -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-text-secondary">
+<span class="font-label-md text-label-md text-text-muted">Showing 5 of 12 configured campaign mechanisms</span>
+<div class="flex items-center gap-1">
+<button class="h-8 px-2 rounded bg-surface-muted text-text-muted hover:text-text-primary transition-colors flex items-center" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="h-8 px-3 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center font-bold">1</span>
+<button class="h-8 px-3 rounded hover:bg-surface-muted text-text-primary font-label-sm text-label-sm transition-colors flex items-center">2</button>
+<button class="h-8 px-3 rounded hover:bg-surface-muted text-text-primary font-label-sm text-label-sm transition-colors flex items-center">3</button>
+<button class="h-8 px-2 rounded bg-surface-muted text-text-primary hover:bg-surface-canvas transition-colors flex items-center">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Real-time Rule Builder & Selected Voucher Inspector (4 cols on 2xl) -->
+<div class="2xl:col-span-4 flex flex-col space-y-space-md">
+<!-- Selected Rule Inspector Panel -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm flex flex-col space-y-space-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Rule Inspector</span>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text">
+            Live in Cart Engine
+          </span>
+</div>
+<!-- Selected Promotion Card Summary -->
+<div class="bg-surface-canvas p-space-md rounded-lg space-y-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-numeric-data text-[16px] font-bold text-primary tracking-wider">FESTIVE2024</span>
+<p class="font-body-sm text-[12px] text-text-secondary mt-0.5">Winter Festive Capsule Launch Promo</p>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm font-bold bg-primary-container text-on-primary">
+              -रु. 2,000.00
+            </span>
+</div>
+<div class="pt-2 flex items-center gap-4 text-[12px] text-text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">timer</span>
+<span>Expires Jan 10, 2025</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-muted">groups</span>
+<span>412 Patrons</span>
+</div>
+</div>
+</div>
+<!-- Detailed Rule Constraints -->
+<div class="space-y-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">Stacking &amp; Basket Logic</span>
+<div class="space-y-2">
+<!-- Parameter 1 -->
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-canvas">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">shopping_basket</span>
+<span class="font-body-sm text-[13px] text-text-secondary font-medium">Minimum Cart Spend</span>
+</div>
+<span class="font-currency-display text-text-primary font-bold">रु. 15,000.00</span>
+</div>
+<!-- Parameter 2 -->
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-canvas">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-status-cancelled-text">layers_clear</span>
+<span class="font-body-sm text-[13px] text-text-secondary font-medium">Stacking Policy</span>
+</div>
+<span class="font-label-sm text-[11px] font-bold text-status-cancelled-text bg-status-cancelled-bg px-2 py-0.5 rounded">
+                Strict Exclusion
+              </span>
+</div>
+<!-- Parameter 3 -->
+<div class="p-2.5 rounded bg-surface-canvas space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">inventory_2</span>
+<span class="font-body-sm text-[13px] text-text-secondary font-medium">Eligible Collections</span>
+</div>
+<span class="font-numeric-data text-[12px] font-bold text-text-primary">2 Included</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-card text-[11px] font-medium text-text-primary shadow-xs">Festive Atelier 2024</span>
+<span class="px-2 py-0.5 rounded bg-surface-card text-[11px] font-medium text-text-primary shadow-xs">Bridal Velvet Capsule</span>
+</div>
+</div>
+<!-- Parameter 4 -->
+<div class="p-2.5 rounded bg-surface-canvas space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-text-primary">verified_user</span>
+<span class="font-body-sm text-[13px] text-text-secondary font-medium">Patron Eligibility</span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-pay-paid-text bg-pay-paid-bg px-1.5 py-0.5 rounded">Verified Accounts</span>
+</div>
+<p class="text-[11px] text-text-muted leading-tight">Excludes unverified guest checkouts to prevent bot exploitation and multi-claim abuse.</p>
+</div>
+</div>
+</div>
+<!-- Generated Financial Yield -->
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">Campaign Yield Generated</span>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-[22px] font-bold text-text-primary">रु. 82,40,000</span>
+<span class="font-label-sm text-[11px] font-semibold text-status-delivered-text bg-status-delivered-bg px-2 py-0.5 rounded">412 Paid Orders</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-text-secondary pt-1">
+<span>Discount Given: रु. 8,24,000</span>
+<span class="font-bold text-primary">ROAS: 10.0x</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-9 px-3 rounded bg-surface-canvas text-text-primary hover:bg-surface-muted transition-colors font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Modify Bounds</span>
+</button>
+<button class="h-9 px-3 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-red-100 transition-colors font-label-md text-label-md font-semibold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+<span>Pause Voucher</span>
+</button>
+</div>
+</div>
+<!-- Quick Campaign Creation Teaser / Rule Presets -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[16px] text-text-primary font-bold">Voucher Automation Presets</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">bolt</span>
+</div>
+<p class="font-body-sm text-[12px] text-text-secondary">Deploy high-converting promotion presets optimized for Kathmandu &amp; tier-1 provincial corridors.</p>
+<div class="space-y-2">
+<button class="w-full text-left p-2.5 rounded bg-surface-canvas hover:bg-surface-muted transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-status-confirmed-bg text-status-confirmed-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-[13px] text-text-primary group-hover:text-primary transition-colors">VIP Bridal Concierge Rebate</span>
+<span class="text-[11px] text-text-muted">रु. 5,000 off orders &gt; रु. 50,000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-text-muted group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<button class="w-full text-left p-2.5 rounded bg-surface-canvas hover:bg-surface-muted transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-status-processing-bg text-status-processing-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">local_mall</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-[13px] text-text-primary group-hover:text-primary transition-colors">Festive BOGO Saree Add-on</span>
+<span class="text-[11px] text-text-muted">Buy Handloom Silk, get 50% on Blouse</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-text-muted group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Redemption Audit & Real-time Ledger Stream -->
+<div class="bg-surface-card p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">history_edu</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Real-time Voucher Redemption Stream</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Live cart conversions verified via checkout payment gateway (eSewa, Khalti, Nabil Bank Direct &amp; COD).</p>
+</div>
+<div class="flex items-center gap-space-sm text-[12px] text-text-muted">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-pay-paid-text"></span> 412 claims in 24h</span>
+<button class="text-primary font-semibold hover:underline">Download CSV Audit</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Activity Item 1 -->
+<div class="p-space-md rounded-lg bg-surface-canvas flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-status-delivered-bg text-status-delivered-text flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary truncate">Ord #NP-90482</span>
+<span class="font-label-sm text-[11px] text-text-muted">2 mins ago</span>
+</div>
+<span class="text-[12px] text-text-secondary truncate mt-0.5">Applied <strong class="text-primary font-semibold">FESTIVE2024</strong> (-रु. 2,000)</span>
+<div class="flex items-center justify-between mt-2 pt-1 border-t border-border-subtle/50 text-[11px] text-text-muted">
+<span>Patron: Sunita P. (Kathmandu)</span>
+<span class="font-currency-display text-text-primary font-semibold">रु. 24,500 Net</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="p-space-md rounded-lg bg-surface-canvas flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-status-shipped-bg text-status-shipped-text flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary truncate">Ord #NP-90479</span>
+<span class="font-label-sm text-[11px] text-text-muted">14 mins ago</span>
+</div>
+<span class="text-[12px] text-text-secondary truncate mt-0.5">Applied <strong class="text-text-primary font-semibold">FREESHIP-POKHARA</strong> (Waived रु. 450)</span>
+<div class="flex items-center justify-between mt-2 pt-1 border-t border-border-subtle/50 text-[11px] text-text-muted">
+<span>Patron: Bipin S. (Pokhara)</span>
+<span class="font-currency-display text-text-primary font-semibold">रु. 11,200 Net</span>
+</div>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="p-space-md rounded-lg bg-surface-canvas flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-pay-failed-bg text-pay-failed-text flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-[13px] font-bold text-text-primary truncate">Cart Check Blocked</span>
+<span class="font-label-sm text-[11px] text-text-muted">38 mins ago</span>
+</div>
+<span class="text-[12px] text-pay-failed-text truncate mt-0.5">Stacking Rejected: Sale + FESTIVE2024</span>
+<div class="flex items-center justify-between mt-2 pt-1 border-t border-border-subtle/50 text-[11px] text-text-muted">
+<span>Guest Checkout Intercept</span>
+<span class="font-medium text-text-secondary">Enforced Rule #8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

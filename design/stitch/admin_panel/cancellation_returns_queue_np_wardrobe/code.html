@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full space-y-space-lg pb-space-xl">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<span>Claims &amp; Reverse Logistics</span>
+<span class="text-border-strong">•</span>
+<span class="text-primary font-semibold">Triage Gate 01</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Post-Purchase Requests</h1>
+<p class="font-body-sm text-body-sm text-text-secondary max-w-2xl">
+        Triage customer returns, size exchanges, and cancellation claims with strict physical inspection audits. An open claim does not constitute an approved refund or automated inventory restock.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto flex-wrap">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-card text-text-primary font-label-md text-label-md shadow-sm hover:bg-surface-muted transition-all">
+<span class="material-symbols-outlined text-[17px] text-text-secondary">description</span>
+<span>Export Claims Audit Report</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-card text-text-primary font-label-md text-label-md shadow-sm hover:bg-surface-muted transition-all">
+<span class="material-symbols-outlined text-[17px] text-text-secondary">rule_folder</span>
+<span>Policy Configuration Guide</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">add_circle</span>
+<span>Log Offline Return</span>
+</button>
+</div>
+</div>
+<!-- Operational Guardrail Callout -->
+<div class="flex items-center justify-between px-space-md py-2.5 rounded bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Mandatory Protocol:</span> Garments containing hand-embroidered Zardozi, Raw Silk, or 100% Chyangra Pashmina require physical seal validation at Teku Depot before restock ledger entries.
+      </p>
+</div>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-card text-text-secondary shadow-sm">SOP-REV-2024.08</span>
+</div>
+<!-- KPI Overview Triad -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="relative overflow-hidden rounded bg-surface-card p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Pre-Logistics Stage</div>
+<div class="font-headline-md text-headline-md text-text-primary mt-1 font-bold">9 Cases</div>
+</div>
+<div class="w-9 h-9 rounded bg-status-pending-bg text-status-pending-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-pending-text animate-pulse"></span>
+<span class="font-label-md text-label-md text-text-secondary">Awaiting Atelier Review</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-pending-text font-semibold">&lt; 24h SLA Target</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative overflow-hidden rounded bg-surface-card p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Reverse Courier Tracking</div>
+<div class="font-headline-md text-headline-md text-text-primary mt-1 font-bold">6 Items</div>
+</div>
+<div class="w-9 h-9 rounded bg-status-shipped-bg text-status-shipped-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-shipped-text"></span>
+<span class="font-label-md text-label-md text-text-secondary">In-Transit Return Parcels</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Teku Depot Intake</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative overflow-hidden rounded bg-surface-card p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Physical Quality Control</div>
+<div class="font-headline-md text-headline-md text-text-primary mt-1 font-bold">4 Garments</div>
+</div>
+<div class="w-9 h-9 rounded bg-status-processing-bg text-status-processing-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-processing-text"></span>
+<span class="font-label-md text-label-md text-text-secondary">Restocking Decisions Pending</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-processing-text font-semibold">Strict Pass/Scrap</span>
+</div>
+</div>
+</div>
+<!-- Filter & Tab Navigation Workbench -->
+<div class="rounded bg-surface-card shadow-sm p-space-md space-y-space-md">
+<!-- Category Tabs with Segmented Counters -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1" id="categoryTabGroup">
+<button class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all">
+<span>All Requests</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-card/20 text-on-primary">24</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-muted text-text-secondary hover:text-text-primary font-label-md text-label-md font-medium transition-all">
+<span>Size &amp; Fit Exchanges</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-status-processing-bg text-status-processing-text font-semibold">11</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-muted text-text-secondary hover:text-text-primary font-label-md text-label-md font-medium transition-all">
+<span>Return &amp; Refund Claims</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-status-pending-bg text-status-pending-text font-semibold">8</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-muted text-text-secondary hover:text-text-primary font-label-md text-label-md font-medium transition-all">
+<span>Pre-Shipment Cancellations</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-status-cancelled-bg text-status-cancelled-text font-semibold">5</span>
+</button>
+</div>
+<!-- Multifaceted Filter Control Bar -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center pt-2">
+<!-- Search Input -->
+<div class="md:col-span-5 relative flex items-center h-9 bg-surface-muted rounded px-2.5">
+<span class="material-symbols-outlined text-[18px] text-text-muted mr-2">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search by Request (REQ-...), Order (#NPW-...), Customer Phone..." type="text"/>
+</div>
+<!-- Reason Dropdown -->
+<div class="md:col-span-3">
+<select class="w-full h-9 bg-surface-muted rounded px-2.5 font-body-sm text-body-sm text-text-primary focus:outline-none">
+<option value="">Reason: All Categories</option>
+<option value="size">Size / Fit Mismatch</option>
+<option value="fabric">Fabric Handfeel / Color Deviation</option>
+<option value="delay">Transit Delay / Missed Event</option>
+<option value="defect">Artisanal Defect / Alteration Required</option>
+<option value="buyer">Customer Changed Mind (Pre-dispatch)</option>
+</select>
+</div>
+<!-- Workflow Status Dropdown -->
+<div class="md:col-span-3">
+<select class="w-full h-9 bg-surface-muted rounded px-2.5 font-body-sm text-body-sm text-text-primary focus:outline-none">
+<option value="">Status: All Lifecycle Stages</option>
+<option value="review">Under Review</option>
+<option value="waybill">Approved for Return (Waybill Active)</option>
+<option value="inspected">Inspected &amp; Quality Passed</option>
+<option value="restocked">Restocked into Teku Vault</option>
+<option value="refunded">Refund Reconciled (eSewa/Bank)</option>
+<option value="rejected">Claim Rejected / Returned to Client</option>
+</select>
+</div>
+<!-- Quick Reset Button -->
+<div class="md:col-span-1 flex justify-end">
+<button class="w-full h-9 flex items-center justify-center rounded bg-surface-muted text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High-Density Claims Operational Table -->
+<div class="rounded bg-surface-card shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted/60 text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-4 w-10 text-center">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-2.5 px-4">Request &amp; Date</th>
+<th class="py-2.5 px-4">Customer &amp; Order</th>
+<th class="py-2.5 px-4">Type</th>
+<th class="py-2.5 px-4 min-w-[240px]">Garment Details</th>
+<th class="py-2.5 px-4">Reported Cause</th>
+<th class="py-2.5 px-4">Workflow State</th>
+<th class="py-2.5 px-4">Restock Inspection</th>
+<th class="py-2.5 px-4">Specialist</th>
+<th class="py-2.5 px-4 text-right">Triage Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-muted font-body-sm text-body-sm">
+<!-- Row 1: Bridal Velvet Lehenga Size Exchange -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data font-semibold text-text-primary">#REQ-2024-082</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">Today • 11:24 AM NPT</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-text-primary">Prerana Rana</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-[9px] bg-primary text-on-primary font-bold">VIP COUTURE</span>
+</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5 flex items-center gap-1">
+<span>+977 98012-39821</span>
+<span>•</span>
+<span>Jhamsikhel, Lalitpur</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-numeric-data" href="#">#NPW-88194</a>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-processing-bg text-status-processing-text font-semibold">
+                Exchange (Size)
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-13 object-cover rounded shadow-sm flex-shrink-0" data-alt="Close up photograph of a luxurious crimson velvet Nepali bridal lehenga with intricate golden zardozi embroidery, shot on studio neutral ivory pedestal with soft luxury lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDufkOmNdWw0lz3ksrtZOUlfxcrhw57DN_K_zaV764FWsmf42XvfV2B0Ow2ut-HQK3WEB3uYnrbIdWiOii9MSjbGjO2Ujf553V2R8H_ZPZsWqef7heUTjFZJIBELhAHm-CZ3dR3ffcKlhAUqUQoCPk9NadnIjUTjzBdH-rb5KHSeLKleqJlO3PyReR7iwuaJHixPRwg5puSnaN0XZmKga758Nu9sb5akMwPkNakBPI"/>
+<div class="min-w-0">
+<div class="font-medium text-text-primary truncate">Crimson Zardozi Velvet Lehenga</div>
+<div class="font-label-sm text-label-sm text-text-secondary flex items-center gap-1 mt-0.5">
+<span class="px-1 rounded bg-surface-muted text-text-primary">Size M (Waist 28)</span>
+<span class="material-symbols-outlined text-[13px] text-text-muted">arrow_forward</span>
+<span class="px-1 rounded bg-status-processing-bg text-status-processing-text font-bold">Size L (Waist 31)</span>
+</div>
+<div class="font-numeric-data text-numeric-data text-text-muted mt-0.5">NPR 145,000</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="text-text-primary font-medium">Blouse Bust Tight</div>
+<div class="inline-flex items-center gap-1 font-label-sm text-label-sm text-text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-primary">photo_camera</span>
+<span>3 Photos (Bust Seal Intact)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-pending-bg text-status-pending-text font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending-text animate-ping"></span>
+<span>Under Policy Review</span>
+</span>
+<div class="font-label-sm text-[11px] text-text-muted mt-1">SLA remaining: 3h 15m</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-low text-text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span>Seal Verification Gate</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-muted text-text-primary font-label-sm text-[10px] font-bold flex items-center justify-center">RK</div>
+<span class="text-text-primary font-medium text-[12px]">Rabin K.</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-all font-semibold">
+                  Triage Case
+                </button>
+<button class="p-1 rounded text-text-muted hover:text-error hover:bg-surface-muted transition-colors" title="Decline Claim">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Pure Pashmina Shawl Damaged / Return Claim -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data font-semibold text-text-primary">#REQ-2024-079</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">Yesterday • 04:12 PM</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-text-primary">Sushant Manandhar</span>
+</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5 flex items-center gap-1">
+<span>+977 98418-20491</span>
+<span>•</span>
+<span>Pokhara, Kaski</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-numeric-data" href="#">#NPW-88041</a>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-pending-bg text-status-pending-text font-semibold">
+                Return &amp; Refund
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-13 object-cover rounded shadow-sm flex-shrink-0" data-alt="Extreme close up macro shot of fine woven authentic Nepali Chyangra Pashmina shawl in natural soft oatmeal taupe color showcasing delicate hand-twirled fringed hem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABmqdjAWITSoasgpJ7yWEI5PwmWcyBr3O_CVGjScKk9LCcn2LynlqBWRLI2LhZYnyAhWywqAFmL4dXhlEXl52znXYJ51LrDrxDypdvT9RtV9iU1RLTI78_tNEnGifuIyazCWoXFmklLXRk-t8kRteYFxLJcIWURtjRcgGC_Hb5Wes4Joe998Jkzy0zAehF-s9xGGyxOY7pGu4Vx81bczTnMWeKpOUaQD-3mNpL7uo"/>
+<div class="min-w-0">
+<div class="font-medium text-text-primary truncate">Hand-Spun Chyangra Pashmina (Oatmeal)</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5">Classic 200x70cm • GI Certified</div>
+<div class="font-numeric-data text-numeric-data text-text-muted mt-0.5">NPR 42,500</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="text-text-primary font-medium">Claimed Weft Pulled</div>
+<div class="inline-flex items-center gap-1 font-label-sm text-label-sm text-text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-status-pending-text">report</span>
+<span>2 Videos Uploaded</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-shipped-bg text-status-shipped-text font-medium">
+<span class="material-symbols-outlined text-[12px]">local_shipping</span>
+<span>Parcel In-Transit (Teku)</span>
+</span>
+<div class="font-label-sm text-[11px] text-text-muted mt-1 font-numeric-data">Waybill: CT-KTM-9921</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-muted text-text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">smb_share</span>
+<span>Micro-Fibre Audit Req.</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-muted text-text-primary font-label-sm text-[10px] font-bold flex items-center justify-center">SM</div>
+<span class="text-text-primary font-medium text-[12px]">Salina M.</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-surface-muted text-text-primary hover:bg-surface-container-high font-label-md text-label-md transition-all">
+                  Track Courier
+                </button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-all font-semibold">
+                  Triage Case
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Pre-Shipment Cancellation (Order modification requested) -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data font-semibold text-text-primary">#REQ-2024-077</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">Yesterday • 01:10 PM</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-text-primary">Bijay Shakya</span>
+</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5 flex items-center gap-1">
+<span>+977 98510-48201</span>
+<span>•</span>
+<span>Patan, Lalitpur</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-numeric-data" href="#">#NPW-88210</a>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-cancelled-bg text-status-cancelled-text font-semibold">
+                Pre-Shipment Cancel
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-13 object-cover rounded shadow-sm flex-shrink-0" data-alt="Editorial catalog photograph of an artisanal Nepali raw silk Anarkali in royal navy blue with gold foil work border and organza dupatta, pristine luxury hanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCraZ3QvjUYkfMc0M3jL8ZvPIZNz82YOqqnBk-vLDtFkATLqQdrrQA-ZgbXPXp9kMzdjR5ngocuir5DMUxjmk4csfCMBaJhW7HvjDwVnp-VeJcinf905Zee93II03j0MFL623nU2D5UQjxBvIOWgGxcn8pUqDZgHLn8iV4tcXybbuWggdZpsd1G6H2QN5jFzOobcJKvQ3PcWKKY-09kzYvqBIrdiV7phki7wDRQYlU"/>
+<div class="min-w-0">
+<div class="font-medium text-text-primary truncate">Handcrafted Raw Silk Anarkali</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5">Deep Sapphire • Size S</div>
+<div class="font-numeric-data text-numeric-data text-text-muted mt-0.5">NPR 58,000</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="text-text-primary font-medium">Event Postponed</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">Requested prior to dispatch seal</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-confirmed-bg text-status-confirmed-text font-medium">
+<span class="material-symbols-outlined text-[12px]">pause_circle</span>
+<span>Dispatch Hold Active</span>
+</span>
+<div class="font-label-sm text-[11px] text-text-muted mt-1">Package in packing room</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Immediate Unpick Approved</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-muted text-text-primary font-label-sm text-[10px] font-bold flex items-center justify-center">AS</div>
+<span class="text-text-primary font-medium text-[12px]">Aayush S.</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-status-cancelled-bg font-label-sm text-label-sm font-semibold transition-all">
+                  Approve Void
+                </button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-all font-semibold">
+                  Triage Case
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Dhaka Weave Kurta Exchange (Inspection Passed) -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data font-semibold text-text-primary">#REQ-2024-069</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">2 days ago • 10:05 AM</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-text-primary">Dr. Dikshya Thapa</span>
+</div>
+<div class="font-label-sm text-label-sm text-text-secondary mt-0.5 flex items-center gap-1">
+<span>+977 98132-77210</span>
+<span>•</span>
+<span>Baluwatar, Kathmandu</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-numeric-data" href="#">#NPW-87980</a>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-processing-bg text-status-processing-text font-semibold">
+                Exchange (Size)
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-13 object-cover rounded shadow-sm flex-shrink-0" data-alt="Editorial product shot of traditional Nepali Palpali Dhaka pattern tailored coat dress with intricate geometric textile motifs in gold, crimson, and black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtwwprQiget0XR9CUrD3vVj4hDrY-Hb9VuJohnjanIizKBpsAFsEtlkb9UMpAepW937JsVbbsPI-1mdI8KCA7nuddsBZM443nYeUhR9HYCTKduvCdKlQk3NZCt8A6zTOacGaY8sQfABlhvFnyuBV_8BVraZq7Xv4WjMSJGuG98gHvvkpnlYfayiCq-iIDQUKmiPzuxRilrc6WbWVY4nM6eoU3mZybxg_faSu9qVKM"/>
+<div class="min-w-0">
+<div class="font-medium text-text-primary truncate">Palpali Handwoven Dhaka Tunic Set</div>
+<div class="font-label-sm text-label-sm text-text-secondary flex items-center gap-1 mt-0.5">
+<span class="px-1 rounded bg-surface-muted text-text-primary">Size XL</span>
+<span class="material-symbols-outlined text-[13px] text-text-muted">arrow_forward</span>
+<span class="px-1 rounded bg-status-processing-bg text-status-processing-text font-bold">Size L</span>
+</div>
+<div class="font-numeric-data text-numeric-data text-text-muted mt-0.5">NPR 36,000</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="text-text-primary font-medium">Shoulder Seam Loose</div>
+<div class="font-label-sm text-label-sm text-text-muted mt-0.5">Tags &amp; Security Loop Verified</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-label-sm text-label-sm bg-status-delivered-bg text-status-delivered-text font-medium">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span>Inspection Passed (Teku QC)</span>
+</span>
+<div class="font-label-sm text-[11px] text-text-muted mt-1">Replacement reserved in vault</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">move_to_inbox</span>
+<span>Ready for Bin Reassignment</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-muted text-text-primary font-label-sm text-[10px] font-bold flex items-center justify-center">RK</div>
+<span class="text-text-primary font-medium text-[12px]">Rabin K.</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded bg-status-delivered-text text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-all font-semibold">
+                  Dispatch Replacement
+                </button>
+<button class="px-2.5 py-1 rounded bg-surface-muted text-text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-all">
+                  Triage Case
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Density Pagination Controls -->
+<div class="px-space-md py-3 bg-surface-muted/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<div class="flex items-center gap-2">
+<span>Displaying <span class="font-semibold text-text-primary">1 - 4</span> of 24 actionable claims</span>
+<span class="text-border-strong">•</span>
+<span class="text-text-muted">Auto-refreshed 2m ago (NPT)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-1 rounded bg-surface-card text-text-muted cursor-not-allowed shadow-sm" disabled="">Previous</button>
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-semibold shadow-sm">1</button>
+<button class="px-2 py-1 rounded bg-surface-card text-text-primary hover:bg-surface-muted shadow-sm transition-colors">2</button>
+<button class="px-2 py-1 rounded bg-surface-card text-text-primary hover:bg-surface-muted shadow-sm transition-colors">3</button>
+<button class="px-2 py-1 rounded bg-surface-card text-text-primary hover:bg-surface-muted shadow-sm transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Interactive Triage Inspection Workspace Split-Sheet -->
+<div class="rounded bg-surface-card shadow-sm p-space-md space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-bold">CASE INSPECTOR</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Triage Dossier: #REQ-2024-082</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Physical intake comparison and ledger validation before restocking or courier swap authorization.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-pay-verification-bg text-pay-verification-text font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+          Target Replacement Reserved: TEKU-B04
+        </span>
+</div>
+</div>
+<!-- Dual Inspector Pane -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: Visual Evidence & Authenticity Check -->
+<div class="lg:col-span-6 rounded bg-surface-muted/40 p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-text-primary uppercase tracking-wider">Client Evidence Dossier</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Submitted via Client Portal</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative group rounded overflow-hidden shadow-sm aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Customer provided photo showing tamper-evident metallic red security seal loop intact around the neck label of an embroidered bridal lehenga blouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZkhoS3segRFmLBhCyHPuawcRrk62OnobNDqYJfIbqtymClHllsi6h1j3R0C1Apc70FQqEtr8wdWfS79WQf8X6NztCqT_Wv2oWm3ShbyMS8ljDjgkvZoy8JXNJIHYICKS5-9OW-ynDGuz_KhMUidU9sBbq52L7PKNl5KAvuwh7ByXpZ5norW__kyXqnm3dEDqT36jaPah0jOM17Ft107bhKH2Zneo-ccjZoayRRog"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-text-primary/80 to-transparent p-2">
+<span class="font-label-sm text-[11px] text-surface font-medium">Security Loop Intact (Tag #NP-9912)</span>
+</div>
+</div>
+<div class="relative group rounded overflow-hidden shadow-sm aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Customer proof photograph measuring the bust line of a crimson bridal velvet blouse showing tight 34 inch circumference against soft measuring tape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Y4JyWRTx3We6zChg12WMrDcEe7bMpN_WZuayxUMLar988zPbymtYILzih4XWKKIokr1WY8y2GMOQ9BoAfcXYi5DBwYio8R_jUPN7aWIfrDAuOodLExECZiDV9Yj6p0X_mYsW-6cDbiEPWY9_ATEqYGfDt9SAN7KX9QCp7s3C3Z_jD2cDX_JsppErw4gDmQFsftFrELoQTOpXjUQzZ7rAHOpgP3Zexw5_Oh5sNWg"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-text-primary/80 to-transparent p-2">
+<span class="font-label-sm text-[11px] text-surface font-medium">Bustline Measurement Reference</span>
+</div>
+</div>
+</div>
+<div class="rounded bg-surface-card p-3 shadow-sm space-y-2">
+<div class="font-label-md text-label-md font-semibold text-text-primary">Condition Attestation Checklist</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-body-sm text-body-sm text-text-secondary">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded accent-primary" type="checkbox"/>
+<span>Security seal loop unsevered</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded accent-primary" type="checkbox"/>
+<span>Zero perfume or perspiration odor</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Zari threadwork unpicked/clean</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Original velvet garment bag included</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Right: Decision Logic & Restock Allocation -->
+<div class="lg:col-span-6 rounded bg-surface-muted/40 p-space-md flex flex-col justify-between space-y-space-md">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-text-primary uppercase tracking-wider">Triage Ruling &amp; Inventory Path</span>
+<span class="font-label-sm text-label-sm font-numeric-data text-primary font-semibold">Order: #NPW-88194</span>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm font-medium text-text-primary">Discretionary Inspection Resolution</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<label class="flex items-center gap-2 p-2 rounded bg-surface-card shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<input checked="" class="accent-primary" name="ruling" type="radio"/>
+<div class="font-label-sm text-label-sm">
+<div class="font-semibold text-text-primary">Pass: Restock</div>
+<div class="text-text-muted text-[10px]">Pristine garment</div>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-card shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="accent-primary" name="ruling" type="radio"/>
+<div class="font-label-sm text-label-sm">
+<div class="font-semibold text-text-primary">Atelier Mend</div>
+<div class="text-text-muted text-[10px]">Alteration unit</div>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-card shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="accent-primary" name="ruling" type="radio"/>
+<div class="font-label-sm text-label-sm">
+<div class="font-semibold text-error">Reject Return</div>
+<div class="text-text-muted text-[10px]">Ship back to buyer</div>
+</div>
+</label>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-sm text-label-sm font-medium text-text-primary">Teku Depot Quality Control Notes</label>
+<textarea class="w-full bg-surface-card rounded p-2.5 font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none shadow-sm" placeholder="Record exact embroidery condition, sleeve seam findings, or customer correspondence log..." rows="3">Blouse security tag verified via photograph. Physical delivery expected by Kathmandu courier this afternoon. Exchange unit Size L is currently held in Teku Vault Rack B04.</textarea>
+</div>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 text-text-muted font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Recorded under Rabin K. (ID: NP-STF-014)</span>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-3.5 py-1.5 rounded bg-surface-card text-text-primary hover:bg-surface-muted font-label-md text-label-md shadow-sm transition-colors">
+              Save Draft Notes
+            </button>
+<button class="flex-1 sm:flex-none px-4 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 shadow-sm transition-all">
+              Execute Exchange &amp; Print Waybill
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

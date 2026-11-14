@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Header Context & Quick Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md">
+<span>Commerce</span>
+<span class="text-text-muted">/</span>
+<span class="text-primary font-semibold">Products</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight font-bold">Product Catalogue</h1>
+<p class="font-body-sm text-body-sm text-text-secondary max-w-2xl">
+        Manage active luxury garment catalog, multi-sku variants, merchandising lifecycle, and real-time warehouse inventories across Kathmandu &amp; Lalitpur fulfillment hubs.
+      </p>
+</div>
+<!-- Primary Actions Toolbar -->
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-card hover:bg-surface-muted text-text-primary font-body-sm text-body-sm shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">file_download</span>
+<span class="font-medium">Export Catalog</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-card hover:bg-surface-muted text-text-primary font-body-sm text-body-sm shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">layers</span>
+<span class="font-medium">Batch Update</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create Product</span>
+</button>
+</div>
+</div>
+<!-- Operational Telemetry / KPI Cards Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Products -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Total Products</span>
+<span class="material-symbols-outlined text-[20px] text-text-secondary">checkroom</span>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<div class="font-display-lg text-display-lg font-bold text-text-primary tracking-tight">428</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-status-delivered-text bg-status-delivered-bg px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span>
+<span>+12 this month</span>
+</div>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-text-secondary">
+        Across 8 core couture categories
+      </div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-text-primary/10"></div>
+</div>
+<!-- Active SKU Variants -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Active SKU Variants</span>
+<span class="material-symbols-outlined text-[20px] text-text-secondary">style</span>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<div class="font-display-lg text-display-lg font-bold text-text-primary tracking-tight">1,842</div>
+<span class="font-label-sm text-label-sm text-text-secondary bg-surface-muted px-2 py-0.5 rounded-full">Avg 4.3 per SKU</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-text-secondary truncate">
+        Sizes XS-XXL • Custom Bespoke Hues
+      </div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-status-confirmed-text/30"></div>
+</div>
+<!-- Low-Stock Alerts -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-status-pending-text font-bold">Low-Stock Alerts</span>
+<span class="material-symbols-outlined text-[20px] text-status-pending-text">warning</span>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<div class="font-display-lg text-display-lg font-bold text-status-pending-text tracking-tight">14</div>
+<span class="font-label-sm text-label-sm text-status-pending-text bg-status-pending-bg px-2 py-0.5 rounded-full font-semibold">Replenish ASAP</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-text-secondary truncate">
+        Under dynamic reorder threshold (≤ 5 units)
+      </div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-status-pending-text"></div>
+</div>
+<!-- Out of Stock -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-pay-failed-text font-bold">Out of Stock</span>
+<span class="material-symbols-outlined text-[20px] text-pay-failed-text">remove_shopping_cart</span>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<div class="font-display-lg text-display-lg font-bold text-pay-failed-text tracking-tight">3</div>
+<span class="font-label-sm text-label-sm text-pay-failed-text bg-pay-failed-bg px-2 py-0.5 rounded-full font-semibold">Auto-delisted</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-text-secondary truncate">
+        Awaiting Pashmina loom dispatch
+      </div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-pay-failed-text"></div>
+</div>
+</div>
+<!-- Multi-Filter & Search Workspace Control Deck -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-space-sm">
+<!-- Omni Search input -->
+<div class="xl:col-span-4 relative flex items-center h-9 bg-surface-muted rounded-lg px-space-sm">
+<span class="material-symbols-outlined text-[18px] text-text-muted ml-1 mr-2">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search by product name, SKU, or slug..." type="text"/>
+<button class="text-text-muted hover:text-text-primary p-0.5">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Category Filter -->
+<div class="xl:col-span-2 relative">
+<select class="w-full h-9 bg-surface-muted hover:bg-surface-container text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary pr-8">
+<option value="">Category: All Categories</option>
+<option value="anarkali">Anarkali Sets</option>
+<option value="sarees">Heritage Sarees</option>
+<option value="kurtis">Embroidered Kurtis</option>
+<option value="outerwear">Luxury Outerwear</option>
+<option value="shawls">Handspun Shawls</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[18px] text-text-muted">expand_more</span>
+</div>
+<!-- Collection Filter -->
+<div class="xl:col-span-2 relative">
+<select class="w-full h-9 bg-surface-muted hover:bg-surface-container text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary pr-8">
+<option value="">Collection: All</option>
+<option value="festive24">Festive 2024</option>
+<option value="bridal">Bridal Atelier</option>
+<option value="capsule">Luxury Capsule</option>
+<option value="heritage">Himalayan Heritage</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[18px] text-text-muted">expand_more</span>
+</div>
+<!-- Publication Status -->
+<div class="xl:col-span-2 relative">
+<select class="w-full h-9 bg-surface-muted hover:bg-surface-container text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary pr-8">
+<option value="">Status: All Statuses</option>
+<option value="published">Published</option>
+<option value="draft">Draft</option>
+<option value="archived">Archived</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[18px] text-text-muted">expand_more</span>
+</div>
+<!-- Stock Status -->
+<div class="xl:col-span-2 relative">
+<select class="w-full h-9 bg-surface-muted hover:bg-surface-container text-text-primary font-body-sm text-body-sm rounded-lg px-space-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary pr-8">
+<option value="">Stock: All Levels</option>
+<option value="in_stock">In Stock (&gt;10)</option>
+<option value="low_stock">Low Stock (1-5)</option>
+<option value="out_of_stock">Out of Stock (0)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[18px] text-text-muted">expand_more</span>
+</div>
+</div>
+<!-- Active Filter Ribbon -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap font-label-md text-label-md">
+<span class="text-text-muted">Applied filters:</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-muted text-text-primary">
+<span>Kathmandu Main Hub</span>
+<button class="hover:text-primary"><span class="material-symbols-outlined text-[13px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-muted text-text-primary">
+<span>Sort: Last Updated (Desc)</span>
+<button class="hover:text-primary"><span class="material-symbols-outlined text-[13px]">close</span></button>
+</span>
+<button class="text-primary hover:underline text-label-sm font-semibold ml-space-xs">Reset All</button>
+</div>
+<div class="text-text-muted font-label-md text-label-md">
+        Filtered: <strong class="text-text-primary font-semibold">428 items</strong> across catalog
+      </div>
+</div>
+</div>
+<!-- Catalog High-Density Data Table Card -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Scroll Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<!-- Table Header -->
+<thead class="bg-surface-muted text-text-secondary select-none font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-4 w-10 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</th>
+<th class="py-3 px-4 min-w-[280px]">Product &amp; SKU Identifier</th>
+<th class="py-3 px-4 min-w-[170px]">Category &amp; Capsule</th>
+<th class="py-3 px-4 min-w-[130px]">Variant Matrix</th>
+<th class="py-3 px-4 text-right min-w-[130px]">Base Retail (NPR)</th>
+<th class="py-3 px-4 min-w-[120px]">Merch Status</th>
+<th class="py-3 px-4 min-w-[210px]">Warehouse Allocation</th>
+<th class="py-3 px-4 min-w-[170px]">Last Audit Record</th>
+<th class="py-3 px-4 text-right min-w-[100px]">Actions</th>
+</tr>
+</thead>
+<!-- Table Body -->
+<tbody class="divide-y-0 text-text-primary">
+<!-- Row 1: Raw Silk Anarkali Set -->
+<tr class="hover:bg-surface-muted/50 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-14 rounded-lg bg-surface-muted flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial catalog portrait of a Nepalese model in an opulent deep crimson handcrafted raw silk Anarkali dress with intricate gold zardozi needlework, studio lighting, beige minimalist luxury backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRX21VATuqsIOWUtuLI5mECBv6j_dls7tWjP7OoFr1WGojPqMoszeSUSfAXehwrnBYhELPl-3QqDkePAKSnVpmEyUWwP33O4Ja--nf-7cGxvH9r9m9E7mgCcDIqXC8760eiVcP2tBZgQ9JaXxOMB48rMUY3SN13WqanlCpgrxQrJkqln_4Av9nLp2OxQAar5O9a8TE057aIehVkWcGao4eFYr3nQdXMErxehiedvQ"/>
+<span class="absolute top-1 left-1 bg-surface-card/90 text-text-primary px-1 py-0.2 rounded font-label-sm text-[9px] font-bold">NEW</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary group-hover:text-primary transition-colors truncate">
+                    Handcrafted Raw Silk Anarkali Set
+                  </span>
+<span class="font-label-sm text-label-sm text-text-muted truncate">
+                    /products/raw-silk-anarkali-crimson
+                  </span>
+<span class="font-numeric-data text-numeric-data text-text-secondary text-[11px] mt-0.5">
+                    SKU: NP-ARK-24-CRM
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Anarkali Sets</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Festive 2024</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-muted font-label-sm text-label-sm text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+<span>4 Sizes, 2 Colors</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="font-currency-display text-currency-display font-semibold text-text-primary">
+                रु. 28,500.00
+              </div>
+<span class="font-label-sm text-label-sm text-text-muted">MSRP रु. 32,000</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                Published
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-secondary">Avail: <strong class="text-text-primary font-bold">34</strong></span>
+<span class="text-text-muted font-numeric-data text-[11px]">42 On-Hand (8 Res.)</span>
+</div>
+<!-- Dynamic Mini Stock Gauge -->
+<div class="w-full bg-surface-muted rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-status-delivered-text h-full" style="width: 78%"></div>
+<div class="bg-status-pending-text h-full" style="width: 22%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-status-delivered-text font-medium">Optimal Velocity</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col text-text-secondary">
+<span class="font-numeric-data text-numeric-data">24 Nov 2024, 11:20</span>
+<span class="font-label-sm text-label-sm text-text-muted">by Rita Shrestha</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Catalog Entry">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Quick Stock Adjustment">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="More Context Actions">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Embroidered Dhaka Cape -->
+<tr class="hover:bg-surface-muted/50 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-14 rounded-lg bg-surface-muted flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial garment close-up of a contemporary artisanal hand-loomed Palpali Dhaka cape jacket in geometric rich vermillion, ochre and ivory weave, styled over a modern silk black turtleneck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoEXKcUj7UkZgbeDBSot26kD8s0ZvuYAhWCREc51gI2xGNML2nyvO6E1d6_xxLch8psPTOGvOOk_T6Knq-xgwh34KQKwCT1FzAZEn0aoQEwc7F74bSVVV-XLl9wa45mbZTX02Ao1-LjXjQX3xW8U55SzvH1jxycuMNQWOvEm0omgryW5-zO7zC-uck83bDhJCQfKG79Xdf0o0Y-sjaiEP0wmxAWuhxqj0VcT_GvgE"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary group-hover:text-primary transition-colors truncate">
+                    Hand-loomed Palpali Dhaka Cape
+                  </span>
+<span class="font-label-sm text-label-sm text-text-muted truncate">
+                    /products/dhaka-geometric-cape
+                  </span>
+<span class="font-numeric-data text-numeric-data text-text-secondary text-[11px] mt-0.5">
+                    SKU: NP-DHK-24-PAL
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Luxury Outerwear</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Himalayan Heritage</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-muted font-label-sm text-label-sm text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-confirmed-text inline-block"></span>
+<span>3 Sizes (S/M/L)</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="font-currency-display text-currency-display font-semibold text-text-primary">
+                रु. 22,000.00
+              </div>
+<span class="font-label-sm text-label-sm text-text-muted">Fixed Atelier</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                Published
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-status-pending-text font-bold">Avail: 3</span>
+<span class="text-text-muted font-numeric-data text-[11px]">5 On-Hand (2 Res.)</span>
+</div>
+<div class="w-full bg-surface-muted rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-status-pending-text h-full" style="width: 35%"></div>
+<div class="bg-primary h-full" style="width: 25%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-status-pending-text font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Loom Batch Reserved
+                </span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col text-text-secondary">
+<span class="font-numeric-data text-numeric-data">23 Nov 2024, 18:45</span>
+<span class="font-label-sm text-label-sm text-text-muted">by Bikash Pradhan</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Catalog Entry">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Quick Stock Adjustment">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="More Context Actions">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Pure Cashmere Embroidered Cardigan -->
+<tr class="hover:bg-surface-muted/50 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-14 rounded-lg bg-surface-muted flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Studio fashion shot of an ultra-soft beige pure Himalayan cashmere cardigan sweater with delicate floral tonal embroidery down the placket, horn buttons, premium neutral editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBla6PLd7VyzOyp5FoOJs3LqGKypO_pGZ-PV6wGKJBpQ35fk_ISDWJvyN3Ljddmfk9DLXoVBefUJG4sCMt52uKs5ReE4-17abfwshs6lMaosnHX7LpFteajuaySSr7E3JRHM1KiQXWIgrNzjDrCuqZT67XBSUjS0KHxD6ecloY7VuRzDOEfelQLgqkUKp0Ko11guSJfl8hxGChjAMUSXjSUqBQXvhXGb7D4O4ej4GM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary group-hover:text-primary transition-colors truncate">
+                    Pure Cashmere Embroidered Cardigan
+                  </span>
+<span class="font-label-sm text-label-sm text-text-muted truncate">
+                    /products/cashmere-cardigan-oatmeal
+                  </span>
+<span class="font-numeric-data text-numeric-data text-text-secondary text-[11px] mt-0.5">
+                    SKU: NP-CSH-24-OAT
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Shawls &amp; Knitwear</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Luxury Capsule</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-muted font-label-sm text-label-sm text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-processing-text inline-block"></span>
+<span>5 Sizes (XS - XL)</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="font-currency-display text-currency-display font-semibold text-text-primary">
+                रु. 34,900.00
+              </div>
+<span class="font-label-sm text-label-sm text-text-muted">Export Grade</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-status-delivered-bg text-status-delivered-text">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                Published
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-secondary">Avail: <strong class="text-text-primary font-bold">18</strong></span>
+<span class="text-text-muted font-numeric-data text-[11px]">22 On-Hand (4 Res.)</span>
+</div>
+<div class="w-full bg-surface-muted rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-status-delivered-text h-full" style="width: 60%"></div>
+<div class="bg-status-pending-text h-full" style="width: 15%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">Balanced Stock</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col text-text-secondary">
+<span class="font-numeric-data text-numeric-data">22 Nov 2024, 09:12</span>
+<span class="font-label-sm text-label-sm text-text-muted">by Rita Shrestha</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Catalog Entry">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Quick Stock Adjustment">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="More Context Actions">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Velvet Marigold Kurti Set -->
+<tr class="hover:bg-surface-muted/50 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-14 rounded-lg bg-surface-muted flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial lookbook image of a plush mustard yellow velvet kurti with intricate marigold tilla threadwork around the notched neckline and sleeve cuffs, elegant Nepalese festive wear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs2riMZNlmGxzmCKj03ffMb0YHlkndbtPNpyhO5d2j_itmSql-mYBXZOReHoKYB7mIK8ImZd9Jf76g-TVUVzO6REgXAZ7hd-NGs-gBI_y2cYSFVWeofkPtkjXKM6092N8znyKubUjzdrwuwwpxbG0mrNXqRAgZXrcQtfU_o5n6nuv6djw0AmJ3wzXyPwbuZg7SLWMTJj0N7DL_BUcxPChXTAqi7ja-5gSkRlVBy0M"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary group-hover:text-primary transition-colors truncate">
+                    Velvet Marigold Embellished Kurti
+                  </span>
+<span class="font-label-sm text-label-sm text-text-muted truncate">
+                    /products/velvet-kurti-mustard
+                  </span>
+<span class="font-numeric-data text-numeric-data text-text-secondary text-[11px] mt-0.5">
+                    SKU: NP-VKT-24-MST
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Kurtis</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Festive 2024</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-muted font-label-sm text-label-sm text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending-text inline-block"></span>
+<span>4 Sizes, 1 Color</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="font-currency-display text-currency-display font-semibold text-text-primary">
+                रु. 16,500.00
+              </div>
+<span class="font-label-sm text-label-sm text-text-muted">Seasonal Drop</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-status-pending-bg text-status-pending-text">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending-text"></span>
+                Draft
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-secondary">Avail: <strong class="text-text-primary font-bold">50</strong></span>
+<span class="text-text-muted font-numeric-data text-[11px]">50 On-Hand (0 Res.)</span>
+</div>
+<div class="w-full bg-surface-muted rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-status-shipped-text h-full" style="width: 100%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">Unpublished Inventory</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col text-text-secondary">
+<span class="font-numeric-data text-numeric-data">21 Nov 2024, 16:30</span>
+<span class="font-label-sm text-label-sm text-text-muted">by Amit Tuladhar</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Catalog Entry">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Quick Stock Adjustment">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="More Context Actions">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Bridal Crimson Banarasi Saree (Out of Stock alert) -->
+<tr class="hover:bg-surface-muted/50 transition-colors group bg-pay-failed-bg/20">
+<td class="py-3 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-14 rounded-lg bg-surface-muted flex-shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover filter grayscale-[20%]" data-alt="High luxury Nepalese bridal portrait featuring heavy red pure silk Banarasi saree with real zari golden brocade pallu, vintage temple jewelry, dramatic moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSZXx8tf5uINOgIZ0JYtWTkt6PU7SpyfjEtCGeNoShERXnQeDu5SEhgUOPxTAMYYNW9MP_KTRXOBf-P916GwaBLIlljF4UbsmG0QWyhCBWqVRpmNUoBfclc8gdIypUYdIT6Otl0JRz9I5uCk37CUHSUWKn5aDloiFYYxLhTv0l1wevCSqRz9Est2KSiEcYrmM_-plZRMQ2UQ4UDFcu568d-rt6IsHr1XbkryYRAeo"/>
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[14px]">block</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-text-primary group-hover:text-primary transition-colors truncate">
+                    Heritage Crimson Banarasi Bridal Saree
+                  </span>
+<span class="font-label-sm text-label-sm text-text-muted truncate">
+                    /products/bridal-banarasi-crimson
+                  </span>
+<span class="font-numeric-data text-numeric-data text-text-secondary text-[11px] mt-0.5">
+                    SKU: NP-SAR-24-BRD
+                  </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-medium text-text-primary">Heritage Sarees</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Bridal Atelier</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-muted font-label-sm text-label-sm text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-text-muted inline-block"></span>
+<span>Free Size (Unstitched)</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="font-currency-display text-currency-display font-semibold text-text-primary">
+                रु. 85,000.00
+              </div>
+<span class="font-label-sm text-label-sm text-text-muted">Masterwork</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-pay-failed-bg text-pay-failed-text">
+<span class="w-1.5 h-1.5 rounded-full bg-pay-failed-text"></span>
+                Archived / OOS
+              </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-pay-failed-text font-bold">Avail: 0</span>
+<span class="text-text-muted font-numeric-data text-[11px]">0 On-Hand (2 Waitlist)</span>
+</div>
+<div class="w-full bg-pay-failed-bg rounded-full h-1.5 overflow-hidden">
+<div class="bg-pay-failed-text h-full" style="width: 0%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-pay-failed-text font-semibold">Weaver Lead Time: 21 Days</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col text-text-secondary">
+<span class="font-numeric-data text-numeric-data">19 Nov 2024, 14:02</span>
+<span class="font-label-sm text-label-sm text-text-muted">by Aayush Shrestha</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Catalog Entry">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Quick Stock Adjustment">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="More Context Actions">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Data Table Density Pagination & Meta Footer -->
+<div class="bg-surface-card px-space-md py-3 flex flex-col sm:flex-row items-center justify-between gap-space-md select-none">
+<!-- Selection & Showing Range -->
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-text-secondary">
+<span class="text-text-muted">
+          Showing <span class="font-semibold text-text-primary">1</span> to <span class="font-semibold text-text-primary">5</span> of <span class="font-semibold text-text-primary">428</span> products
+        </span>
+<div class="h-3 w-px bg-surface-muted hidden sm:block"></div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="text-text-muted">Rows per page:</span>
+<select class="bg-surface-muted text-text-primary rounded px-2 py-0.5 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer font-medium">
+<option value="10">10</option>
+<option selected="" value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</div>
+</div>
+<!-- Pagination Controls (shadcn style) -->
+<div class="flex items-center gap-1 font-body-sm text-body-sm">
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-text-muted hover:text-text-primary disabled:opacity-40 disabled:pointer-events-none transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-text-muted hover:text-text-primary disabled:opacity-40 disabled:pointer-events-none transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-bold text-center">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-muted text-text-secondary hover:text-text-primary font-medium text-center transition-colors">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-muted text-text-secondary hover:text-text-primary font-medium text-center transition-colors">
+          3
+        </button>
+<span class="px-1 text-text-muted font-bold">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-muted text-text-secondary hover:text-text-primary font-medium text-center transition-colors">
+          43
+        </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Dispatch Drawer / Batch Bar (Appears when selection is active) -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-md transition-all" id="selection-banner">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-surface-lowest">
+<span id="selected-count">0</span> garments selected
+        </div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim">
+          Ready for bulk price revision, seasonal capsule tagging, or warehouse transfer.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-muted text-on-surface font-label-md text-label-md font-semibold hover:bg-surface transition-colors">
+        Assign Capsule Drop
+      </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-muted text-on-surface font-label-md text-label-md font-semibold hover:bg-surface transition-colors">
+        Bulk Stock Adjustment
+      </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors">
+        Publish Selected
+      </button>
+<button class="p-1.5 rounded-lg text-secondary-fixed-dim hover:text-inverse-on-surface transition-colors" title="Clear selection">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic bulk selection watcher for interactive demo feel
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    const headerCheckbox = document.querySelector('thead input[type="checkbox"]');
+    const banner = document.getElementById('selection-banner');
+    const countDisplay = document.getElementById('selected-count');
+
+    function updateBanner() {
+      const checkedCount = document.querySelectorAll('tbody input[type="checkbox"]:checked').length;
+      if (countDisplay) countDisplay.textContent = checkedCount;
+      if (banner) {
+        if (checkedCount > 0) {
+          banner.classList.remove('opacity-60', 'grayscale');
+        } else {
+          banner.classList.add('opacity-60', 'grayscale');
+        }
+      }
+    }
+
+    if (headerCheckbox) {
+      headerCheckbox.addEventListener('change', (e) => {
+        checkboxes.forEach(cb => { cb.checked = e.target.checked; });
+        updateBanner();
+      });
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateBanner);
+    });
+
+    updateBanner();
+  });
+</script></main></div></body></html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Bar / Action Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md">
+<span class="hover:text-text-primary cursor-pointer transition-colors">Commerce</span>
+<span class="text-text-muted">/</span>
+<span class="hover:text-text-primary cursor-pointer transition-colors">Products</span>
+<span class="text-text-muted">/</span>
+<span class="font-semibold text-text-primary">Create New Product</span>
+</nav>
+<div class="flex items-center gap-space-md mt-1">
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight font-bold">Create New Garment Product</h1>
+<span class="bg-status-pending-bg text-status-pending-text font-label-sm text-label-sm px-2 py-0.5 rounded uppercase tracking-wider font-semibold">Draft Mode</span>
+</div>
+</div>
+<!-- Actions Group -->
+<div class="flex items-center gap-space-sm self-end md:self-auto">
+<button class="h-9 px-space-md bg-surface-muted hover:bg-surface-variant text-text-primary font-body-sm text-body-sm font-medium rounded transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">close</span>
+<span>Discard Draft</span>
+</button>
+<div class="relative inline-flex rounded shadow-sm">
+<button class="h-9 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold rounded-l transition-colors flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Save &amp; Publish Product</span>
+</button>
+<button class="h-9 px-2 bg-primary-container hover:bg-primary text-on-primary rounded-r transition-colors flex items-center justify-center" id="save-split-toggle" type="button">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 top-11 w-48 bg-surface-card rounded shadow-xl py-1 z-30" id="save-menu">
+<button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-text-primary hover:bg-surface-muted flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">save</span>
+<span>Save as Draft</span>
+</button>
+<button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-text-primary hover:bg-surface-muted flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">schedule_send</span>
+<span>Schedule Release</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Responsive Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- MAIN COLUMN (8 COLS) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Basic Information -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">styler</span>
+<h2 class="font-title-md text-title-md text-text-primary font-bold">1. Garment Nomenclature &amp; Narrative</h2>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Required Fields</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary flex items-center justify-between">
+<span>Product Title</span>
+<span class="text-text-muted font-normal">Max 120 chars</span>
+</label>
+<input class="h-9 px-3 bg-surface-muted font-body-md text-body-md text-text-primary rounded focus:outline-none focus:ring-2 focus:ring-primary" id="product-title-input" placeholder="e.g. Pure Silk Zari Banarasi Saree" type="text" value="Royal Velvet Embroidered Lehenga Set"/>
+<span class="font-label-sm text-label-sm text-text-muted">Display title prominently highlighted on global storefronts and invoice manifests.</span>
+</div>
+<!-- URL Slug with auto-gen toggle -->
+<div class="p-space-md bg-surface-muted/60 rounded flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-text-secondary">Storefront Canonical Permalink</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-1" id="edit-slug-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">edit</span> Edit manually
+            </button>
+</div>
+<div class="flex items-center bg-surface-card rounded px-3 py-1.5 text-text-secondary font-numeric-data text-numeric-data">
+<span class="text-text-muted select-none">https://npwardrobe.com/products/</span>
+<input class="flex-1 bg-transparent text-text-primary font-semibold focus:outline-none pl-1" id="slug-input" readonly="" type="text" value="royal-velvet-embroidered-lehenga-set"/>
+<span class="material-symbols-outlined text-status-delivered-text text-[18px]" title="Valid Unique Slug">verified</span>
+</div>
+</div>
+<!-- Short Description -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Short Summary / Listing Hook</label>
+<textarea class="p-3 bg-surface-muted font-body-sm text-body-sm text-text-primary rounded focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="Provide a two-line luxury description for search and category mosaic tiles..." rows="2">Handcrafted royal crimson velvet lehenga adorned with antique bullion Zari threadwork, paired with a custom sheer organza dupatta and tailored sweetheart blouse.</textarea>
+<span class="font-label-sm text-label-sm text-text-muted">Used for dynamic preview cards, catalog summaries, and social OpenGraph tags.</span>
+</div>
+<!-- Detailed Description Rich Text Mockup -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Detailed Garment Specification &amp; Craftsmanship</label>
+<div class="rounded overflow-hidden bg-surface-muted/40">
+<!-- Toolbar -->
+<div class="bg-surface-muted px-3 py-2 flex flex-wrap items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_underlined</span></button>
+<div class="h-4 w-px bg-surface-variant mx-1"></div>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">title</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_list_numbered</span></button>
+<div class="h-4 w-px bg-surface-variant mx-1"></div>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">format_quote</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">link</span></button>
+<button class="p-1 rounded hover:bg-surface-variant text-text-secondary hover:text-text-primary" type="button"><span class="material-symbols-outlined text-[18px]">table_chart</span></button>
+</div>
+<!-- Body -->
+<div class="p-4 bg-surface-card min-h-[160px] font-body-sm text-body-sm text-text-secondary space-y-3 focus:outline-none">
+<p class="font-medium text-text-primary">An homage to royal Nepalese bridal heritage:</p>
+<p>Meticulously assembled over 280 artisan hours in our Patan atelier, this bridal masterpiece synthesizes heirloom bullion embroidery, crushed metallic thread work (Zari), and microscopic crystal setting onto structured Italian silk-blend velvet.</p>
+<ul class="list-disc pl-5 space-y-1">
+<li><strong class="text-text-primary">Fabrication:</strong> 100% Pure Silk-Blend Velvet base with unweighted Mulberry Silk internal lining.</li>
+<li><strong class="text-text-primary">Ornamentation:</strong> Hand-loomed antique gold Zardosi with semi-precious bead inserts.</li>
+<li><strong class="text-text-primary">Origin &amp; Care:</strong> Crafted in Lalitpur, Nepal. Specialist bridal dry cleaning only.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Cloudinary Media Gallery -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_upload</span>
+<h2 class="font-title-md text-title-md text-text-primary font-bold">2. Editorial Lookbook Assets &amp; Media</h2>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span>
+            Cloudinary DAM Sync Active
+          </span>
+</div>
+<!-- Drag & Drop Zone -->
+<div class="p-space-lg rounded bg-surface-muted/50 hover:bg-surface-muted transition-colors flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-2">
+<span class="material-symbols-outlined text-[24px]">add_photo_alternate</span>
+</div>
+<p class="font-title-md text-title-md text-text-primary font-semibold">Drop high-resolution studio photographs or <span class="text-primary underline">browse folder</span></p>
+<p class="font-label-sm text-label-sm text-text-muted mt-1">Recommended specs: ProPhoto RGB, lossless WEBP/JPEG, minimum 2400 x 3200 px editorial ratio.</p>
+</div>
+<!-- Asset Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-1">
+<!-- Image 1 (Primary) -->
+<div class="flex flex-col bg-surface-muted/60 rounded p-2 relative group shadow-sm">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High luxury full-length shot of a Nepali model wearing a deep crimson velvet bridal lehenga with heavy gold zari embroidery, editorial studio lighting, soft shadows, pristine luxury fashion catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfNFFkkR985NoJ7WUI0PpbxTYCxZNUUtFeCk0FDRDuukdVzRzGKm6H4bcvPHYk_IOgDHZXx29DUjrYKDv0BSZNnX03rYOyy-RVlu7WJDfbN5pjcnZpd_djyQr2fauLPU1c_WUjTv404jkzq1G_02buqJklIMWephy4wldbfruZASGpBrL5jgCpUnNb1GUAe38s5BFpgQIyNso-PhkJJ9NRmzdvcbpcrEe1HjgQrJM"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow">Cover / Primary</span>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow" title="Crop &amp; Frame" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow cursor-grab" title="Drag to reorder" type="button"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+</div>
+</div>
+<div class="mt-2 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-secondary font-medium truncate">lehenga-crimson-front.webp</span>
+<input class="h-7 px-2 font-label-sm text-label-sm bg-surface-card rounded text-text-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Alt text tag" type="text" value="Royal crimson lehenga front silhouette"/>
+</div>
+</div>
+<!-- Image 2 -->
+<div class="flex flex-col bg-surface-muted/60 rounded p-2 relative group shadow-sm">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Extreme macro close-up of intricate gold bullion Zardosi embroidery, seed pearls, and crimson velvet fabric texture in studio lighting for a high-end luxury bridal couture collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbKfpUKLclCHCmElJq1SpBe_GjRkHoozIvx4UxBmbMQJL-Fn8KLnv--MvYFj4us5SeV4y72LfR67_brzoZARboQhzByGCd0Kt5P9WNy-kyyn_LKrriOZ3p2OPd3tu7N2g2HdE2JQMzatkORgGnzWbI-zpIs3Dyvp4M_FaqdeM2BxDcYomRSTVQSPt_2vopN0l_VWeYwmLfkZwXrmVl1NH5zL1cWkrgidCgZYuW-pI"/>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow" title="Crop &amp; Frame" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow cursor-grab" title="Drag to reorder" type="button"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+<button class="p-1.5 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-pay-failed-text hover:text-on-error shadow" title="Remove" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<div class="mt-2 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-secondary font-medium truncate">zari-detail-macro-02.webp</span>
+<input class="h-7 px-2 font-label-sm text-label-sm bg-surface-card rounded text-text-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Alt text tag" type="text" value="Heirloom Zardosi embroidery micro detail"/>
+</div>
+</div>
+<!-- Image 3 -->
+<div class="flex flex-col bg-surface-muted/60 rounded p-2 relative group shadow-sm">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Rear angle of model posing in an opulent velvet bridal blouse featuring low-cut back with traditional gold dori latkan tassels against warm neutral ivory studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI3supPDeusji2nqeszhTMljm-ReqyhxlJVBcfumZhH2vu4X--3vLjrjM8tQxXV_y_pvUQUx4Zwwbmrv1Er4XqKanLrotSqjyODKqXJc71S4QAFshbc0T6XqqXCXvpA--QMcOa04xVKQs0m7CxhP2XHb4E2plgOz1KgLVLRKpVZZZgW9sx88-KShdGZlkKqWFwMYg1efxAJ1K0Pz77_16NM_wZJe5XW8v_D1xAlvA"/>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow" title="Crop &amp; Frame" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow cursor-grab" title="Drag to reorder" type="button"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+<button class="p-1.5 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-pay-failed-text hover:text-on-error shadow" title="Remove" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<div class="mt-2 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-secondary font-medium truncate">blouse-latkan-back.webp</span>
+<input class="h-7 px-2 font-label-sm text-label-sm bg-surface-card rounded text-text-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Alt text tag" type="text" value="Sweetheart blouse rear profile with latkans"/>
+</div>
+</div>
+<!-- Image 4 -->
+<div class="flex flex-col bg-surface-muted/60 rounded p-2 relative group shadow-sm">
+<div class="relative w-full h-44 rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Model twirling gracefully showcasing the full dramatic flared drape of an emerald green variant embroidered velvet skirt in bright editorial studio fashion lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR-7fqGk8Z0auHzVjXR2b6y70_Ex1u7AeugLgNEE7GPfVX-ABolGpzi2pz87XxlwDgLuk2vNySqRvgYWJfcxL8efoCy6IMER2_nrpyZzDw0-0l2HpOoNITeinfNHlQRfcEHfb45XYTeLOWmRsI7W8szPA0M-OEbpRj0xwkjOlZFDbt4zLPpRVY3Mes4m2i-4luj_5T5TERZChb_5f3ssVg4FSU6LXI2fTYIv1gEdY"/>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow" title="Crop &amp; Frame" type="button"><span class="material-symbols-outlined text-[16px]">crop</span></button>
+<button class="p-1.5 rounded bg-surface-card text-text-primary hover:text-primary shadow cursor-grab" title="Drag to reorder" type="button"><span class="material-symbols-outlined text-[16px]">drag_indicator</span></button>
+<button class="p-1.5 rounded bg-pay-failed-bg text-pay-failed-text hover:bg-pay-failed-text hover:text-on-error shadow" title="Remove" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</div>
+<div class="mt-2 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-secondary font-medium truncate">emerald-flair-motion.webp</span>
+<input class="h-7 px-2 font-label-sm text-label-sm bg-surface-card rounded text-text-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Alt text tag" type="text" value="Full lehenga circular flare rotation"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Variant Matrix Generator -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">grid_view</span>
+<h2 class="font-title-md text-title-md text-text-primary font-bold">3. Sartorial Matrix (Variants &amp; SKUs)</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded bg-surface-muted hover:bg-surface-variant text-text-primary font-label-md text-label-md font-medium transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span> Bulk Edit (8)
+            </button>
+<button class="h-8 px-3 rounded bg-primary/10 text-primary hover:bg-primary/20 font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span> Add Dimension
+            </button>
+</div>
+</div>
+<!-- Dimension Selectors Box -->
+<div class="p-space-md rounded bg-surface-muted/60 flex flex-col gap-space-md">
+<!-- Size Selector -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-text-primary uppercase tracking-wide">Dimension 1: Atelier Size</span>
+<span class="font-label-sm text-label-sm text-text-muted">6 Options active</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1 shadow-sm">XS <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span></span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1 shadow-sm">S <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span></span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1 shadow-sm">M <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span></span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1 shadow-sm">L <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span></span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1 shadow-sm">XL <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span></span>
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-primary font-label-md text-label-md font-semibold flex items-center gap-1 shadow-sm">Custom Bespoke <span class="material-symbols-outlined text-[14px] text-primary hover:text-primary-container cursor-pointer">close</span></span>
+</div>
+</div>
+<!-- Color Selector -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-text-primary uppercase tracking-wide">Dimension 2: Palette Colorway</span>
+<span class="font-label-sm text-label-sm text-text-muted">3 Colorways active</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-sm">
+<span class="w-3 h-3 rounded-full bg-[#8d001a] inline-block"></span> Crimson Red
+                <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span>
+</span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-sm">
+<span class="w-3 h-3 rounded-full bg-[#065F46] inline-block"></span> Emerald Green
+                <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span>
+</span>
+<span class="px-2.5 py-1 rounded bg-surface-card text-text-primary font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-sm">
+<span class="w-3 h-3 rounded-full bg-[#D97706] inline-block"></span> Royal Gold
+                <span class="material-symbols-outlined text-[14px] text-text-muted hover:text-primary cursor-pointer">close</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Generated Matrix Table -->
+<div class="overflow-x-auto rounded bg-surface-card shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-muted text-text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-2.5 px-3">Garment Variant</th>
+<th class="py-2.5 px-3">Unique SKU</th>
+<th class="py-2.5 px-3">Barcode / EAN</th>
+<th class="py-2.5 px-3 text-right">Price Override (NPR)</th>
+<th class="py-2.5 px-3 text-right">Stock</th>
+<th class="py-2.5 px-3 text-center">Swatch</th>
+<th class="py-2.5 px-3 text-center">Active</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-text-primary">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-2.5 px-3 font-semibold flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#8d001a]"></span>
+<span>Crimson / S</span>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-36 focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="NPW-LEH-042-CR-S"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-32 focus:outline-none focus:ring-1 focus:ring-primary text-text-muted" type="text" value="8901429810421"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-28 text-right focus:outline-none focus:ring-1 focus:ring-primary font-semibold text-text-primary" type="text" value="रु. 28,500.00"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-16 text-right focus:outline-none focus:ring-1 focus:ring-primary font-bold text-text-primary" type="number" value="12"/>
+</td>
+<td class="py-2.5 px-3 text-center">
+<button class="w-7 h-7 rounded bg-surface-muted hover:bg-surface-variant flex items-center justify-center mx-auto text-text-secondary" title="Assign variant photo" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</td>
+<td class="py-2.5 px-3 text-center">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-surface-muted/20">
+<td class="py-2.5 px-3 font-semibold flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#8d001a]"></span>
+<span>Crimson / M</span>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-36 focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="NPW-LEH-042-CR-M"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-32 focus:outline-none focus:ring-1 focus:ring-primary text-text-muted" type="text" value="8901429810422"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-28 text-right focus:outline-none focus:ring-1 focus:ring-primary font-semibold text-text-primary" type="text" value="रु. 28,500.00"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-16 text-right focus:outline-none focus:ring-1 focus:ring-primary font-bold text-text-primary" type="number" value="18"/>
+</td>
+<td class="py-2.5 px-3 text-center">
+<div class="w-7 h-7 rounded overflow-hidden mx-auto shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Small thumbnail preview of red crimson velvet swatch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe8y9_xZIE-DKRyaw25ysdyN26QjgmElVHA62rcyJ19ZfFVaBWqHJkDJCU4pkLp7T7kBVn8QdvLfO46AlcShQ15zyfM7gH1_DQcNflLjX7M33uXOlbv5-Ik8u097xuuQ6eMSaUzYpay19cpZB2qJuR7kaZZZBD8rObBkekR-fQE73TZYXzb2541QUU6Rhm0peCW9xjjlKniNycMJb7m7zxoE0XikK3tCw5klUvzas"/>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-2.5 px-3 font-semibold flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#8d001a]"></span>
+<span>Crimson / L</span>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-36 focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="NPW-LEH-042-CR-L"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-32 focus:outline-none focus:ring-1 focus:ring-primary text-text-muted" type="text" value="8901429810423"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-28 text-right focus:outline-none focus:ring-1 focus:ring-primary font-semibold text-text-primary" type="text" value="रु. 28,500.00"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-16 text-right focus:outline-none focus:ring-1 focus:ring-primary font-bold text-text-primary" type="number" value="8"/>
+</td>
+<td class="py-2.5 px-3 text-center">
+<button class="w-7 h-7 rounded bg-surface-muted hover:bg-surface-variant flex items-center justify-center mx-auto text-text-secondary" title="Assign variant photo" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</td>
+<td class="py-2.5 px-3 text-center">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 4 (Emerald Green) -->
+<tr class="hover:bg-surface-muted/40 transition-colors bg-surface-muted/20">
+<td class="py-2.5 px-3 font-semibold flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#065F46]"></span>
+<span>Emerald / M</span>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-36 focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="NPW-LEH-042-EM-M"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-32 focus:outline-none focus:ring-1 focus:ring-primary text-text-muted" type="text" value="8901429810435"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-28 text-right focus:outline-none focus:ring-1 focus:ring-primary font-semibold text-text-primary" type="text" value="रु. 29,800.00"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-16 text-right focus:outline-none focus:ring-1 focus:ring-primary font-bold text-text-primary" type="number" value="6"/>
+</td>
+<td class="py-2.5 px-3 text-center">
+<button class="w-7 h-7 rounded bg-surface-muted hover:bg-surface-variant flex items-center justify-center mx-auto text-text-secondary" title="Assign variant photo" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</td>
+<td class="py-2.5 px-3 text-center">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 5 (Custom Bespoke) -->
+<tr class="hover:bg-surface-muted/40 transition-colors">
+<td class="py-2.5 px-3 font-semibold flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Crimson / Bespoke</span>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-36 focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="NPW-LEH-042-CR-CUS"/>
+</td>
+<td class="py-2.5 px-3">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-32 focus:outline-none focus:ring-1 focus:ring-primary text-text-muted" type="text" value="8901429810499"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-28 text-right focus:outline-none focus:ring-1 focus:ring-primary font-semibold text-text-primary" type="text" value="रु. 34,500.00"/>
+</td>
+<td class="py-2.5 px-3 text-right">
+<input class="h-8 px-2 bg-surface-muted rounded font-numeric-data text-numeric-data w-16 text-right focus:outline-none focus:ring-1 focus:ring-primary font-bold text-text-secondary" type="number" value="0"/>
+</td>
+<td class="py-2.5 px-3 text-center">
+<button class="w-7 h-7 rounded bg-surface-muted hover:bg-surface-variant flex items-center justify-center mx-auto text-text-secondary" title="Assign variant photo" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</td>
+<td class="py-2.5 px-3 text-center">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Total 18 variant permutations generated across 2 dimensions. 5 displayed above for active editing.</span>
+</div>
+</div>
+<!-- SIDEBAR COLUMN (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- SIDEBAR 1: Status & Publishing Control -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-text-primary font-bold">Publishing State</span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-confirmed-text" title="Ready to sync"></span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-secondary">Release Status</label>
+<div class="grid grid-cols-3 gap-1 bg-surface-muted p-1 rounded">
+<button class="py-1.5 rounded font-label-md text-label-md font-semibold text-text-secondary hover:text-text-primary transition-colors" type="button">Draft</button>
+<button class="py-1.5 rounded font-label-md text-label-md font-semibold text-text-secondary hover:text-text-primary transition-colors" type="button">Scheduled</button>
+<button class="py-1.5 rounded bg-surface-card font-label-md text-label-md font-bold text-primary shadow-sm" type="button">Published</button>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md font-semibold text-text-secondary">Sales Channels &amp; Points of Sale</span>
+<label class="flex items-center justify-between p-2 rounded hover:bg-surface-muted cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">storefront</span>
+<span class="font-body-sm text-body-sm text-text-primary">Online Flagship Store</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2 rounded hover:bg-surface-muted cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">point_of_sale</span>
+<span class="font-body-sm text-body-sm text-text-primary">Durbar Marg POS Vault</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-2 rounded hover:bg-surface-muted cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">apartment</span>
+<span class="font-body-sm text-body-sm text-text-primary">Lalitpur Heritage Showroom</span>
+</div>
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- SIDEBAR 2: Organization & Taxonomy -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<span class="font-title-md text-title-md text-text-primary font-bold">Taxonomy &amp; Merchandising</span>
+<!-- Category Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Primary Category</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 bg-surface-muted text-text-primary font-body-sm text-body-sm rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">Bridal &amp; Ceremonial Couture</option>
+<option>Festive Kurtha &amp; Sharara</option>
+<option>Handwoven Pashmina &amp; Shawls</option>
+<option>Luxury Ready-to-Wear</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 pointer-events-none text-text-muted text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Collections Multi-select -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Curated Collections</label>
+<div class="flex flex-wrap gap-1.5 p-2 bg-surface-muted rounded min-h-[42px]">
+<span class="px-2 py-0.5 rounded bg-surface-card text-text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+              Winter Festive 2024
+              <span class="material-symbols-outlined text-[12px] text-text-muted hover:text-primary cursor-pointer">close</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-surface-card text-text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+              Bridal Atelier Capsule
+              <span class="material-symbols-outlined text-[12px] text-text-muted hover:text-primary cursor-pointer">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Tagged to active editorial landing campaigns.</span>
+</div>
+<!-- Product Tags -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Operational Tags</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Handmade</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Zari Work</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Pure Silk</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Made in Nepal</span>
+<button class="px-2 py-0.5 rounded bg-surface-muted hover:bg-surface-variant text-text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[12px]">add</span> Add Tag
+            </button>
+</div>
+</div>
+</div>
+<!-- SIDEBAR 3: Inventory Policy -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-text-primary font-bold">Inventory &amp; Reservation Policy</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock_clock</span>
+</div>
+<!-- Toggle: Track Inventory -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">Track Inventory Strictly</span>
+<span class="font-label-sm text-label-sm text-text-muted">Real-time ledger deduction</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle: Allow Backorders -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-text-primary">Allow Customer Backorders</span>
+<span class="font-label-sm text-label-sm text-text-muted">Reject out-of-stock checkouts</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-muted peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="p-2.5 rounded bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] mt-0.5">info</span>
+<span>Bespoke orders automatically trigger an atelier production requisition order with a 21-day reservation buffer.</span>
+</div>
+</div>
+<!-- SIDEBAR 4: Search Engine Optimization -->
+<div class="bg-surface-card rounded p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-text-primary font-bold">SEO &amp; Social Snippet</span>
+<span class="font-label-sm text-label-sm text-status-delivered-text font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span> Live Preview
+          </span>
+</div>
+<div class="p-3 bg-surface-muted rounded flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-text-muted truncate">npwardrobe.com &gt; bridal &gt; royal-velvet-lehenga</span>
+<span class="font-body-md text-body-md font-bold text-[#1a0dab] line-clamp-1 hover:underline cursor-pointer">Royal Velvet Embroidered Lehenga Set | NP Wardrobe Haute Couture</span>
+<p class="font-label-sm text-label-sm text-text-secondary line-clamp-2">Pure silk-blend velvet bridal lehenga with handcrafted antique gold Zardosi embroidery. Shop Nepal's premier luxury atelier bridal collection.</p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Meta Title</label>
+<input class="h-9 px-3 bg-surface-muted font-body-sm text-body-sm text-text-primary rounded focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="Royal Velvet Embroidered Lehenga Set | NP Wardrobe Haute Couture"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-text-primary">Meta Description</label>
+<textarea class="p-3 bg-surface-muted font-body-sm text-body-sm text-text-primary rounded focus:outline-none focus:ring-2 focus:ring-primary resize-none" rows="2">Pure silk-blend velvet bridal lehenga with handcrafted antique gold Zardosi embroidery. Shop Nepal's premier luxury atelier bridal collection.</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const saveToggle = document.getElementById('save-split-toggle');
+    const saveMenu = document.getElementById('save-menu');
+    if (saveToggle && saveMenu) {
+      saveToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        saveMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        if (!saveMenu.classList.contains('hidden')) {
+          saveMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    const editSlugBtn = document.getElementById('edit-slug-btn');
+    const slugInput = document.getElementById('slug-input');
+    if (editSlugBtn && slugInput) {
+      editSlugBtn.addEventListener('click', () => {
+        if (slugInput.hasAttribute('readonly')) {
+          slugInput.removeAttribute('readonly');
+          slugInput.focus();
+          slugInput.classList.add('ring-1', 'ring-primary');
+          editSlugBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">done</span> Lock';
+        } else {
+          slugInput.setAttribute('readonly', 'true');
+          slugInput.classList.remove('ring-1', 'ring-primary');
+          editSlugBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">edit</span> Edit manually';
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

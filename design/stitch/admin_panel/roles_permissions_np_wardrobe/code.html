@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Context Header & Actions Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md">
+<span class="text-text-muted">Administration</span>
+<span class="text-text-muted">/</span>
+<span class="text-text-primary font-semibold">Roles &amp; Permissions</span>
+<span class="ml-space-xs px-2 py-0.5 rounded bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm">v2.4 Policy Engine</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Enterprise Roles &amp; Access Governance Matrix</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-4xl">
+        Define granular permission scopes, enforce principle of least privilege, and prevent privilege escalation across commerce, finance, and inventory domains.
+      </p>
+</div>
+<!-- Global Action Bar -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="px-space-md py-2 rounded bg-surface-card text-text-secondary hover:bg-surface-muted hover:text-text-primary shadow-sm font-label-md text-label-md transition-all">
+        Discard Changes
+      </button>
+<button class="px-space-md py-2 rounded bg-surface-container-high text-text-primary hover:bg-surface-variant font-label-md text-label-md flex items-center gap-1 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Create Custom Role</span>
+</button>
+<button class="px-space-lg py-2 rounded bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-md transition-all active:scale-95" id="saveSchemaBtn">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Save Permission Schema</span>
+</button>
+</div>
+</div>
+<!-- Segregation of Duties Compliance Banner -->
+<div class="mb-space-lg rounded-xl bg-status-pending-bg/40 p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-status-pending-bg flex items-center justify-center text-status-pending-text shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold text-status-pending-text">Financial Compliance &amp; SoD Enforced</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-card text-status-pending-text font-label-sm text-[10px] font-semibold">Strict Guardrail</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+<strong class="text-text-primary font-medium">Segregation of Duties:</strong> An account with <code class="font-numeric-data text-[12px] bg-surface-card px-1 py-0.5 rounded text-primary">payments.verify_settlement</code> cannot be granted <code class="font-numeric-data text-[12px] bg-surface-card px-1 py-0.5 rounded text-primary">inventory.adjust_stock</code> simultaneously to prevent unauthorized asset dissipation.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm text-text-muted flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-delivered-text"></span>
+        Zero Policy Collisions Detected
+      </span>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded bg-surface-card text-text-secondary hover:bg-surface-muted transition-colors shadow-sm">
+        Audit Policy Rules
+      </button>
+</div>
+</div>
+<!-- Role Archetype Selector Cards -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Configured Role Archetypes</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-muted text-text-secondary font-label-sm text-label-sm">6 Total</span>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted">Click archetype to highlight scopes &amp; member directory</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-sm">
+<!-- Card 1: Super Admin -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer bg-gradient-to-b from-primary/5 to-transparent">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">security</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">Root</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Super Admin</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Store Owner</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Complete system control, cryptographic keys, root financial authority.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span> 1 Member
+          </span>
+<span class="text-status-delivered-text font-semibold">18/18 Scopes</span>
+</div>
+</div>
+<!-- Card 2: Payment Verification Auditor -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-status-confirmed-bg text-status-confirmed-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-pay-verification-bg text-pay-verification-text font-label-sm text-label-sm font-semibold">Finance</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Payment Auditor</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Verification &amp; Ledgers</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Verify eSewa/bank slips, reconcile ledgers. Blocked from inventory edits.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2 Members
+          </span>
+<span class="text-text-secondary font-semibold">6/18 Scopes</span>
+</div>
+</div>
+<!-- Card 3: Vault Inventory & QC Manager -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-surface-variant text-text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">inventory</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-text-secondary font-label-sm text-label-sm font-semibold">Vault Ops</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Vault Inventory &amp; QC</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Stock Authority</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Adjust stock, write-off damages. Blocked from payment verification.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2 Members
+          </span>
+<span class="text-text-secondary font-semibold">5/18 Scopes</span>
+</div>
+</div>
+<!-- Card 4: Logistics & Dispatch Lead -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-status-shipped-bg text-status-shipped-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-status-shipped-bg text-status-shipped-text font-label-sm text-label-sm font-semibold">Fulfillment</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Logistics Lead</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Dispatch &amp; Couriers</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Courier AWB creation, dispatch slips, delivery exception logs.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 3 Members
+          </span>
+<span class="text-text-secondary font-semibold">4/18 Scopes</span>
+</div>
+</div>
+<!-- Card 5: Client Concierge & Order Lead -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-status-processing-bg text-status-processing-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-status-processing-bg text-status-processing-text font-label-sm text-label-sm font-semibold">Commerce</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Client Concierge</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Order Desk</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Customer profiles, phone orders, order status tracking.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 4 Members
+          </span>
+<span class="text-text-secondary font-semibold">5/18 Scopes</span>
+</div>
+</div>
+<!-- Card 6: CMS & Creative Curator -->
+<div class="group relative p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-text-secondary font-label-sm text-label-sm font-semibold">Media</span>
+</div>
+<h2 class="font-title-md text-title-md text-text-primary leading-tight">Creative Curator</h2>
+<span class="font-label-sm text-label-sm text-text-muted block mt-0.5">Editorial &amp; CMS</span>
+<p class="font-body-sm text-[12px] leading-tight text-text-secondary mt-2 line-clamp-2">Lookbooks, banner uploads, SEO meta, size guides.</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2 Members
+          </span>
+<span class="text-text-secondary font-semibold">4/18 Scopes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Matrix Filter & Search Omni-toolbar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm p-space-sm rounded-t-xl bg-surface-card shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative flex items-center w-64 h-8 bg-surface-muted rounded px-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted mr-1.5">filter_list</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" id="scopeSearchInput" placeholder="Filter permission key (e.g. payments)..." type="text"/>
+</div>
+<div class="hidden md:flex items-center gap-1 text-label-sm font-label-sm">
+<span class="px-2 py-1 rounded bg-surface-muted text-text-primary font-semibold">All Domains (5)</span>
+<span class="px-2 py-1 rounded hover:bg-surface-muted text-text-secondary cursor-pointer">Commerce</span>
+<span class="px-2 py-1 rounded hover:bg-surface-muted text-text-secondary cursor-pointer">Finance</span>
+<span class="px-2 py-1 rounded hover:bg-surface-muted text-text-secondary cursor-pointer">Inventory</span>
+<span class="px-2 py-1 rounded hover:bg-surface-muted text-text-secondary cursor-pointer">Governance</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md text-label-sm font-label-sm px-2">
+<div class="flex items-center gap-1 text-status-delivered-text font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Full Access</span>
+</div>
+<div class="flex items-center gap-1 text-status-confirmed-text font-medium">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Read Only</span>
+</div>
+<div class="flex items-center gap-1 text-status-cancelled-text font-medium">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Forbidden / SoD</span>
+</div>
+</div>
+</div>
+<!-- Granular Permissions Matrix Table -->
+<div class="overflow-x-auto bg-surface-card rounded-b-xl shadow-sm mb-space-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<!-- Table Header -->
+<thead class="bg-surface-muted/70 text-text-secondary uppercase font-label-sm text-label-sm sticky top-0 z-10 backdrop-blur-sm">
+<tr>
+<th class="py-3 px-4 w-72">Scope Key &amp; Operational Definition</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Super Admin</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">Root Authority</div>
+</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Payment Auditor</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">eSewa &amp; IBFT</div>
+</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Vault Inventory</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">QC &amp; Restock</div>
+</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Logistics Lead</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">AWB &amp; Dispatch</div>
+</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Client Concierge</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">Orders Desk</div>
+</th>
+<th class="py-3 px-3 text-center">
+<div class="font-title-md text-[13px] text-text-primary">Creative Curator</div>
+<div class="font-label-sm text-[10px] text-text-muted normal-case">Lookbook &amp; CMS</div>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent">
+<!-- DOMAIN 1: ORDERS MANAGEMENT -->
+<tr class="bg-surface-container-low/70">
+<td class="py-2.5 px-4" colspan="7">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">shopping_bag</span>
+<span class="font-title-md text-title-md text-text-primary font-bold">Domain 1: Orders Management &amp; Customer Checkout</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-card text-text-secondary font-label-sm text-label-sm">4 Granular Scopes</span>
+</div>
+</td>
+</tr>
+<!-- orders.read -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">orders.read</code>
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text" title="Active in Production"></span>
+</div>
+<span class="text-text-secondary text-[12px]">View orders, client addresses, phone numbers, and packing slips</span>
+</div>
+</td>
+<!-- Super Admin -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<!-- Payment Auditor -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<!-- Vault Inventory -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<!-- Logistics Lead -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<!-- Client Concierge -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<!-- Creative Curator -->
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- orders.create_manual -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">orders.create_manual</code>
+<span class="text-text-secondary text-[12px]">Draft manual offline orders via WhatsApp or flagship atelier showroom</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- orders.update_status -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">orders.update_status</code>
+<span class="text-text-secondary text-[12px]">Transition order state between Confirmed, Processing, Shipped</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-processing-bg text-status-processing-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Processing Only
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-shipped-bg text-status-shipped-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Shipped Only
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- orders.cancel_order -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">orders.cancel_order</code>
+<span class="text-text-secondary text-[12px]">Administrative order voiding and automatic stock release trigger</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pay-verification-bg text-pay-verification-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">rule</span> Requires Dual-Auth
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- DOMAIN 2: PAYMENTS & FINANCIAL RECONCILIATION -->
+<tr class="bg-surface-container-low/70">
+<td class="py-2.5 px-4" colspan="7">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance_wallet</span>
+<span class="font-title-md text-title-md text-text-primary font-bold">Domain 2: Payments &amp; Financial Reconciliation</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-card text-text-secondary font-label-sm text-label-sm">5 Granular Scopes</span>
+</div>
+</td>
+</tr>
+<!-- payments.read -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">payments.read</code>
+<span class="text-text-secondary text-[12px]">Inspect payment transaction references, merchant gateways, and ledger audit logs</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> SoD Lock
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pay-unpaid-bg text-pay-unpaid-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">pin</span> COD Only
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- payments.view_evidence -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">payments.view_evidence</code>
+<span class="text-text-secondary text-[12px]">Access private Supabase storage receipt slips, eSewa screenshot zoom inspector</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> SoD Lock
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- payments.verify_settlement -->
+<tr class="hover:bg-surface-muted/50 transition-colors bg-pay-verification-bg/20">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<code class="font-numeric-data text-numeric-data text-primary font-bold">payments.verify_settlement</code>
+<span class="px-1.5 py-0.2 rounded bg-pay-failed-bg text-pay-failed-text font-label-sm text-[10px] font-bold">Critical Risk</span>
+</div>
+<span class="text-text-secondary text-[12px]">Approve eSewa QR slips, Bank IBFT transactions &amp; transition to Paid</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pay-failed-bg text-pay-failed-text font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">block</span> SoD Prohibited
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- payments.reject_payment -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">payments.reject_payment</code>
+<span class="text-text-secondary text-[12px]">Flag fraudulent slips or request customer re-upload with memo</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> SoD Lock
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- payments.issue_refund -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">payments.issue_refund</code>
+<span class="text-text-secondary text-[12px]">Authorize cash, store credit or direct digital gateway reversal</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pay-verification-bg text-pay-verification-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">rule</span> Tier 1 (&lt;रू 25k)
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- DOMAIN 3: INVENTORY & WAREHOUSE LOGISTICS -->
+<tr class="bg-surface-container-low/70">
+<td class="py-2.5 px-4" colspan="7">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">warehouse</span>
+<span class="font-title-md text-title-md text-text-primary font-bold">Domain 3: Inventory &amp; Warehouse Logistics</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-card text-text-secondary font-label-sm text-label-sm">4 Granular Scopes</span>
+</div>
+</td>
+</tr>
+<!-- inventory.read -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">inventory.read</code>
+<span class="text-text-secondary text-[12px]">View on-hand, reserved, and available stock pools across all branch hubs</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> SoD Lock
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+</tr>
+<!-- inventory.adjust_stock -->
+<tr class="hover:bg-surface-muted/50 transition-colors bg-pay-verification-bg/20">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<code class="font-numeric-data text-numeric-data text-primary font-bold">inventory.adjust_stock</code>
+<span class="px-1.5 py-0.2 rounded bg-pay-failed-bg text-pay-failed-text font-label-sm text-[10px] font-bold">Critical Risk</span>
+</div>
+<span class="text-text-secondary text-[12px]">Perform stock increase/decrease with auditable write-off damage memo</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pay-failed-bg text-pay-failed-text font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">block</span> SoD Prohibited
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- inventory.override_reservation -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">inventory.override_reservation</code>
+<span class="text-text-secondary text-[12px]">Force-release stuck checkout timer locks to return SKU to available pool</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- inventory.import_catalog -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">inventory.import_catalog</code>
+<span class="text-text-secondary text-[12px]">Bulk CSV inventory adjustment uploads &amp; factory manifest ingestion</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- DOMAIN 4: PRODUCT MERCHANDISING & CMS -->
+<tr class="bg-surface-container-low/70">
+<td class="py-2.5 px-4" colspan="7">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">checkroom</span>
+<span class="font-title-md text-title-md text-text-primary font-bold">Domain 4: Product Merchandising &amp; Storefront CMS</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-card text-text-secondary font-label-sm text-label-sm">3 Granular Scopes</span>
+</div>
+</td>
+</tr>
+<!-- products.create_update -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">products.create_update</code>
+<span class="text-text-secondary text-[12px]">Draft luxury garments, price points, fabric specs &amp; sizing matrices</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Read
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+</tr>
+<!-- products.publish -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">products.publish</code>
+<span class="text-text-secondary text-[12px]">Deploy garment SKU live to storefront capsule catalogs</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+</tr>
+<!-- cms.banners_lookbook -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">cms.banners_lookbook</code>
+<span class="text-text-secondary text-[12px]">Update runway editorial lookbooks, homepage hero banners &amp; campaign tags</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+</tr>
+<!-- DOMAIN 5: ADMINISTRATION & GOVERNANCE -->
+<tr class="bg-surface-container-low/70">
+<td class="py-2.5 px-4" colspan="7">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">admin_panel_settings</span>
+<span class="font-title-md text-title-md text-text-primary font-bold">Domain 5: Security Administration &amp; Governance</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-card text-text-secondary font-label-sm text-label-sm">3 Granular Scopes</span>
+</div>
+</td>
+</tr>
+<!-- staff.manage -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">staff.manage</code>
+<span class="text-text-secondary text-[12px]">Invite staff, provision hardware tokens, enforce TOTP MFA resets</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- roles.configure -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<code class="font-numeric-data text-numeric-data text-primary font-bold">roles.configure</code>
+<span class="px-1.5 py-0.2 rounded bg-pay-failed-bg text-pay-failed-text font-label-sm text-[10px] font-bold">Root Only</span>
+</div>
+<span class="text-text-secondary text-[12px]">Mutate permission grant matrix and define custom operational archetypes</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+<!-- audit.view_logs -->
+<tr class="hover:bg-surface-muted/50 transition-colors">
+<td class="py-2.5 px-4">
+<div class="flex flex-col">
+<code class="font-numeric-data text-numeric-data text-primary font-semibold">audit.view_logs</code>
+<span class="text-text-secondary text-[12px]">Access immutable tamper-evident system event timeline &amp; IP trail</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check</span> Full
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Payments Only
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Stock Only
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-cancelled-bg text-status-cancelled-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Forbidden
+            </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Interactive Audit & Verification Split Card -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg mb-space-lg">
+<!-- Active Governance Engine Status -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-text-primary">Policy Engine Hash</span>
+<span class="px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">Active &amp; Signed</span>
+</div>
+<div class="font-numeric-data text-[12px] bg-surface-muted p-2 rounded text-text-secondary select-all break-all mb-space-md">
+          sha256:7f9b8c199ae8b90c1e8284dbca56312de88a91bc7b844b207dc30e0147cb981f
+        </div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Permission changes are cryptographically hashed and mirrored across audit storage. Role mutations trigger immediate session token revocation on edge microservices.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-label-sm font-label-sm text-text-muted">
+<span>Last updated: 14 mins ago</span>
+<span class="text-text-primary font-medium">By Aayush Shrestha</span>
+</div>
+</div>
+<!-- Live Collision Detector Ring -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-text-primary">Principle of Least Privilege Metric</span>
+<span class="font-label-sm text-label-sm text-status-delivered-text font-bold">98.4% Compliant</span>
+</div>
+<div class="flex items-center gap-space-md my-space-sm">
+<!-- Mini SVG Radial Progress -->
+<div class="relative w-16 h-16 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-muted" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="98, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-label-md text-label-md font-bold text-text-primary">
+              98%
+            </div>
+</div>
+<div class="flex flex-col text-body-sm text-body-sm">
+<span class="text-text-primary font-semibold">14 Staff Members Bound</span>
+<span class="text-text-secondary text-[12px]">Zero elevated wildcard (*) privileges assigned to non-root accounts.</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-text-muted">Unused Grants Flagged: 0</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline">
+          Run Compliance Scan
+        </button>
+</div>
+</div>
+<!-- Quick Brand & Security Seal Card -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-muted flex items-center justify-center p-2 shrink-0">
+<img alt="NP Wardrobe Enterprise Mark" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVxeVYNj_ZDje3-KMOqviar2BW1sDGk8obXR-t1kaAyF2r6efpZQr8DJHAYZ-rrvagPfOVNuZdVQRAzBygbwp5SqQrIy3MmwwcHBrlYofIyHhiGUKZB7h-9N06kGQhgd5noyEdQWjn0FRyHSv1NcSDS8v7MD9QRd_tS_NLV0co8GutmUGGQ-wWtHMSf4oTqjxbSrX7epqAWzkObHcrVxd9zHizbz0_4dzhXYRZ0hWFM1H8wU_e_pf"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary font-bold">NP WARDROBE</span>
+<span class="font-label-sm text-label-sm text-text-muted">Enterprise Access Control Node</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-sm">
+        Role changes require Super Admin passkey sign-off. All modifications generate cryptographic signatures within Kathmandu primary ledger node.
+      </p>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-delivered-text">verified_user</span>
+<span>FIDO2 / WebAuthn Active</span>
+</div>
+<span class="font-numeric-data text-numeric-data text-text-muted">ID: 809-NP-RBAC</span>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation Container -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toastContainer"></div>
+<!-- Client-side Interaction Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Save Schema Feedback
+      const saveBtn = document.getElementById('saveSchemaBtn');
+      const toastContainer = document.getElementById('toastContainer');
+
+      function showToast(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = 'px-4 py-3 rounded-lg shadow-xl font-label-md text-label-md flex items-center gap-2 transition-all transform duration-300 translate-y-2 pointer-events-auto ' +
+          (type === 'success' ? 'bg-status-delivered-text text-on-primary' : 'bg-primary-container text-on-primary');
+        toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span>' + message + '</span>';
+        
+        toastContainer.appendChild(toast);
+        requestAnimationFrame(() => {
+          toast.classList.remove('translate-y-2');
+        });
+
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-2');
+          setTimeout(() => toast.remove(), 300);
+        }, 3200);
+      }
+
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          saveBtn.classList.add('opacity-80');
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span><span>Validating Schema...</span>';
+          
+          setTimeout(() => {
+            saveBtn.classList.remove('opacity-80');
+            saveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">verified</span><span>Save Permission Schema</span>';
+            showToast('Permissions schema successfully compiled and pushed to Kathmandu node.');
+          }, 800);
+        });
+      }
+
+      // Matrix Row Search Filtering
+      const searchInput = document.getElementById('scopeSearchInput');
+      const rows = document.querySelectorAll('tbody tr:not(.bg-surface-container-low\\/70)');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const val = e.target.value.toLowerCase().trim();
+          rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(val) ? '' : 'none';
+          });
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

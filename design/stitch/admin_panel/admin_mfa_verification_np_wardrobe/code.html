@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md flex items-center justify-center min-h-screen"><main class="w-full max-w-md p-space-lg"><div class="flex flex-col w-full">
+<div class="bg-surface-card rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative overflow-hidden">
+<div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="absolute -bottom-20 -left-16 w-44 h-44 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="flex flex-col items-center text-center gap-space-xs relative z-10">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Two-Factor Security Challenge
+      </span>
+<h1 class="font-headline-md text-headline-md text-text-primary mt-space-xs">
+        Identity Verification
+      </h1>
+<p class="font-body-sm text-body-sm text-text-secondary max-w-xs">
+        Enter the 6-digit authentication code generated by your Google Authenticator or 1Password app.
+      </p>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-card flex items-center justify-center text-primary shrink-0 shadow-sm font-label-sm text-label-sm">
+        AS
+      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Authenticating Subject</span>
+<span class="font-numeric-data text-numeric-data text-text-primary truncate">aayush.shrestha@npwardrobe.com</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Role: Store Owner &amp; Super Admin</span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md" id="totp-form" onsubmit="event.preventDefault(); verifyOtp();">
+<div class="flex flex-col items-center gap-space-sm">
+<div class="flex justify-between w-full gap-space-xs max-w-sm" id="otp-slots">
+<input class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-container text-text-primary rounded-lg focus:outline-none focus:bg-surface-card shadow-sm transition-all" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text" value="7"/>
+<input class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-container text-text-primary rounded-lg focus:outline-none focus:bg-surface-card shadow-sm transition-all" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text" value="4"/>
+<input class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-container text-text-primary rounded-lg focus:outline-none focus:bg-surface-card shadow-sm transition-all" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text" value="9"/>
+<input autofocus="" class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-card text-text-primary rounded-lg focus:outline-none shadow-md shadow-primary/10 transition-all caret-primary" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text"/>
+<input class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-container text-text-primary rounded-lg focus:outline-none focus:bg-surface-card shadow-sm transition-all" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text"/>
+<input class="otp-slot w-11 h-12 text-center font-headline-md text-headline-md bg-surface-container text-text-primary rounded-lg focus:outline-none focus:bg-surface-card shadow-sm transition-all" inputmode="numeric" maxlength="1" pattern="[0-9]*" type="text"/>
+</div>
+<div class="flex items-center gap-2 mt-space-xs text-text-secondary">
+<div class="relative w-4 h-4 flex items-center justify-center shrink-0">
+<svg class="w-4 h-4 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-muted" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary transition-all duration-1000 ease-linear" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" id="countdown-ring" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<span class="font-numeric-data text-numeric-data">Code cycle refreshes in <span class="font-title-md text-title-md text-text-primary" id="timer-display">00:24</span></span>
+</div>
+</div>
+<label class="flex items-start gap-space-sm cursor-pointer select-none bg-surface-container/50 hover:bg-surface-container p-space-sm rounded-lg transition-colors">
+<input checked="" class="mt-0.5 h-4 w-4 rounded text-primary accent-primary bg-surface-card cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-primary flex items-center gap-1.5">
+            Trust hardware workstation
+            <span class="material-symbols-outlined text-[15px] text-text-secondary" title="Cryptographically anchored">verified_user</span>
+</span>
+<span class="font-label-sm text-label-sm text-text-secondary">
+            Bypass 2FA on this terminal for 30 days. Requires platform biometric attestation.
+          </span>
+</div>
+</label>
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full h-11 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" type="submit">
+<span>Verify Code &amp; Launch Console</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-space-xs text-center font-label-md text-label-md text-text-secondary hover:text-text-primary transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span>Use Emergency Backup Recovery Key</span>
+</button>
+</div>
+</form>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-sm text-text-secondary">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">contact_support</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-text-primary uppercase tracking-wider">Access Lockout Protocol</span>
+<p class="font-label-sm text-label-sm leading-normal">
+          Lost access to your authenticator? Contact the IT Security Officer or initiate a hardware security clearance session via Kathmandu NOC.
+        </p>
+</div>
+</div>
+<div class="flex items-center justify-between text-text-muted pt-space-xs">
+<span class="font-label-sm text-label-sm tracking-wide">SEC-CHALLENGE: #NPW-902-881</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-pay-paid-text">
+<span class="w-2 h-2 rounded-full bg-pay-paid-text"></span>
+        Encrypted TLS 1.3
+      </span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const slots = Array.from(document.querySelectorAll('.otp-slot'));
+    const timerDisplay = document.getElementById('timer-display');
+    const countdownRing = document.getElementById('countdown-ring');
+    let timeLeft = 24;
+    const maxTime = 30;
+
+    slots.forEach((slot, index) => {
+      slot.addEventListener('input', (e) => {
+        const val = e.target.value.replace(/\D/g, '');
+        slot.value = val ? val[val.length - 1] : '';
+        if (val && index < slots.length - 1) {
+          slots[index + 1].focus();
+        }
+      });
+
+      slot.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !slot.value && index > 0) {
+          slots[index - 1].focus();
+        }
+      });
+
+      slot.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text').trim();
+        const digits = text.replace(/\D/g, '').slice(0, 6).split('');
+        digits.forEach((digit, i) => {
+          if (slots[i]) slots[i].value = digit;
+        });
+        const targetFocus = Math.min(digits.length, slots.length - 1);
+        slots[targetFocus].focus();
+      });
+    });
+
+    setInterval(() => {
+      timeLeft = timeLeft <= 1 ? maxTime : timeLeft - 1;
+      const formatted = timeLeft < 10 ? `00:0${timeLeft}` : `00:${timeLeft}`;
+      if (timerDisplay) timerDisplay.textContent = formatted;
+      if (countdownRing) {
+        const percent = (timeLeft / maxTime) * 100;
+        countdownRing.setAttribute('stroke-dasharray', `${percent}, 100`);
+      }
+    }, 1000);
+  })();
+
+  function verifyOtp() {
+    const slots = Array.from(document.querySelectorAll('.otp-slot'));
+    const code = slots.map(s => s.value).join('');
+    if (code.length === 6) {
+      const btn = document.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Authenticating Session...</span>`;
+      }
+    }
+  }
+</script></main></body></html>

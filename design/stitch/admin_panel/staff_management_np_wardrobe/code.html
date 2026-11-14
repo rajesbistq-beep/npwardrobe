@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-muted":"#F5F5F4","status-delivered-bg":"#ECFDF5","status-processing-text":"#5B21B6","on-background":"#1f1b17","surface-canvas":"#FAFAF9","on-surface":"#1f1b17","pay-refunded-text":"#334155","tertiary-fixed-dim":"#88d1eb","on-error":"#ffffff","primary":"#8d001a","surface-variant":"#eae1da","primary-fixed":"#ffdad8","surface-container-highest":"#eae1da","pay-unpaid-bg":"#F5F5F4","on-tertiary":"#ffffff","border-strong":"#D6D3D1","pay-paid-text":"#166534","pay-unpaid-text":"#44403C","pay-paid-bg":"#DCFCE7","pay-failed-text":"#B91C1C","secondary":"#625e59","tertiary-container":"#00647b","surface-container-low":"#fcf2eb","inverse-surface":"#342f2b","on-secondary-fixed-variant":"#4a4642","status-pending-bg":"#FEF3C7","on-error-container":"#93000a","on-secondary-container":"#68635f","surface":"#fff8f5","primary-fixed-dim":"#ffb3b1","status-delivered-text":"#065F46","surface-container-high":"#f0e6e0","error-container":"#ffdad6","surface-dim":"#e2d8d2","status-shipped-bg":"#ECFEFF","surface-bright":"#fff8f5","secondary-fixed-dim":"#ccc5c0","outline":"#8e706e","primary-container":"#b3192b","on-primary":"#ffffff","pay-verification-text":"#B45309","secondary-container":"#e9e1db","tertiary-fixed":"#b6ebff","status-shipped-text":"#155E75","secondary-fixed":"#e9e1db","status-cancelled-text":"#991B1B","pay-refunded-bg":"#F1F5F9","status-confirmed-text":"#1E40AF","outline-variant":"#e3bebc","surface-tint":"#b81d2e","border-subtle":"#E7E5E4","text-muted":"#A8A29E","pay-verification-bg":"#FFFBEB","pay-failed-bg":"#FEF2F2","inverse-on-surface":"#f9efe8","on-tertiary-container":"#96def9","surface-card":"#FFFFFF","on-primary-fixed":"#410007","background":"#fff8f5","tertiary":"#004b5c","on-surface-variant":"#5a403f","surface-container-lowest":"#ffffff","status-processing-bg":"#F5F3FF","status-cancelled-bg":"#FEE2E2","on-secondary-fixed":"#1e1b18","on-primary-fixed-variant":"#92001c","text-secondary":"#57534E","status-pending-text":"#92400E","on-tertiary-fixed-variant":"#004e60","inverse-primary":"#ffb3b1","on-tertiary-fixed":"#001f28","status-confirmed-bg":"#EFF6FF","on-primary-container":"#ffc5c3","text-primary":"#1C1917","surface-container":"#f6ece6","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-lg":"1.25rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"numeric-data":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"currency-display":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"title-md":["15px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"numeric-data":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"currency-display":["14px",{"lineHeight":"20px","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-card border-r border-border-subtle z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-border-subtle"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA_aRC6WWGEenroJTjSnqLAVstOy3BfD5W7hCVSq5PsNMTkfB7tkAro0Z5XFvdeM0HS53SCdHeeOx1WsuvEpPYPsl4Ael2DxTn5XfSd4T_HkujiN_lNft0vfxyP9RWLYeTrhB1PPwEIgFfADypQSr5O4ROdbaCf15hsPjYaPOmQT8f0Lmf9cnRBmNYn6SKlNPHjH057DQbpbMDkwV-iK3DUcFeHS1sZuAbm25FaIullm4mQgigr0YWwQw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none font-bold">NP WARDROBE</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mt-space-xs">Enterprise Console</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm rounded-lg"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Overview</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm font-medium">Dashboard</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Commerce</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[18px]">shopping_bag</span><span class="font-body-sm text-body-sm font-medium">Orders</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="products" href="#"><span class="material-symbols-outlined text-[18px]">checkroom</span><span class="font-body-sm text-body-sm font-medium">Products</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[18px]">category</span><span class="font-body-sm text-body-sm font-medium">Categories</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome_motion</span><span class="font-body-sm text-body-sm font-medium">Collections</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Inventory</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="inventory-overview" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-sm text-body-sm font-medium">Inventory Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="stock-reservations" href="#"><span class="material-symbols-outlined text-[18px]">lock_clock</span><span class="font-body-sm text-body-sm font-medium">Stock Reservations</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="import-export" href="#"><span class="material-symbols-outlined text-[18px]">swap_vert</span><span class="font-body-sm text-body-sm font-medium">Import / Export</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Operations</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="payments" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span class="font-body-sm text-body-sm font-medium">Payments</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="deliveries" href="#"><span class="material-symbols-outlined text-[18px]">local_shipping</span><span class="font-body-sm text-body-sm font-medium">Deliveries</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="requests-returns" href="#"><span class="material-symbols-outlined text-[18px]">assignment_return</span><span class="font-body-sm text-body-sm font-medium">Requests / Returns</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="customers" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm font-medium">Customers</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-sm text-body-sm font-medium">Reviews</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Marketing</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="campaigns-coupons" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-sm text-body-sm font-medium">Campaigns &amp; Coupons</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Content</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="cms-content" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span class="font-body-sm text-body-sm font-medium">CMS Content</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Analytics</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-sm text-body-sm font-medium">Reports</span></a></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Administration</span><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="staff" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="font-body-sm text-body-sm font-medium">Staff</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="roles-permissions" href="#"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-sm text-body-sm font-medium">Roles &amp; Permissions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="activity-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-sm text-body-sm font-medium">Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm font-medium">Settings</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:bg-surface-muted hover:text-on-surface rounded-lg transition-colors" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">integration_instructions</span><span class="font-body-sm text-body-sm font-medium">Integrations</span></a></div></nav></div><div class="p-space-sm border-t border-border-subtle bg-surface-muted/40"><div class="flex items-center justify-between px-space-sm py-1.5"><div class="flex items-center gap-space-xs text-text-secondary"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">NPT (UTC+5:45)</span></div><span class="w-2 h-2 rounded-full bg-status-delivered-text inline-block"></span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md"><span class="font-medium text-text-muted">NP Wardrobe</span><span class="text-border-strong">/</span><span class="font-semibold text-text-primary">Workspace</span></div><div class="h-4 w-px bg-border-subtle hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-xs px-2 py-0.5 rounded bg-status-delivered-bg border border-border-subtle text-status-delivered-text font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span><span>PRODUCTION • Asia/Kathmandu</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-72 h-9 bg-surface-muted rounded border border-border-subtle px- space-sm"><span class="material-symbols-outlined text-[18px] text-text-muted ml-2 mr-1.5">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" placeholder="Search sku, orders, tracking..." readonly="" type="text"/><div class="flex items-center gap-0.5 mr-2 px-1 py-0.5 rounded bg-surface-card border border-border-subtle text-text-muted font-label-sm text-[10px]"><span>Ctrl</span><span>K</span></div></div><button class="relative p-1.5 rounded text-text-secondary hover:text-text-primary hover:bg-surface-muted transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-card"></span></button><div class="h-6 w-px bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md leading-none text-text-primary">Aayush Shrestha</span><span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text inline-block" title="Online"></span></div><span class="font-label-sm text-label-sm text-text-secondary mt-0.5">Super Admin / Store Owner</span></div><button class="p-1 text-text-muted hover:text-primary transition-colors" title="Sign out"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></header><main class="w-full pt-16 bg-surface-canvas min-h-screen px-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Page Context & Security Governance Top Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs text-text-secondary font-label-md text-label-md mb-1">
+<span class="text-text-muted">Administration</span>
+<span class="text-text-muted font-bold">/</span>
+<span class="font-semibold text-text-primary">Staff Management</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-md text-headline-md text-text-primary tracking-tight">Staff Directory &amp; Access Governance</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-confirmed-bg text-status-confirmed-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+          Zero-Trust Tier 1
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+        Manage authorized personnel, assigned operational roles, two-factor hardware authentication, and session security compliance.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded bg-surface-card hover:bg-surface-muted text-text-primary font-body-sm text-body-sm shadow-sm transition-all" onclick="document.getElementById('policy-drawer').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">verified_user</span>
+<span>Security Dossier</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded bg-surface-card hover:bg-surface-muted text-text-primary font-body-sm text-body-sm shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">history_edu</span>
+<span>Audit Security Log</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-sm transition-colors" onclick="document.getElementById('invite-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Invite New Staff Member</span>
+</button>
+</div>
+</div>
+<!-- Operational Security & Fleet Health KPI Row (4 Bento Metrics) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Active Accounts -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Staff Fleet Size</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary leading-none">14</span>
+<span class="font-label-md text-label-md text-status-delivered-text font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">check</span> Full Quota
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-muted flex items-center justify-center text-text-primary">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-text-secondary font-label-md text-label-md">
+<span class="truncate">Kathmandu HQ, Teku &amp; Pokhara</span>
+<span class="text-text-muted font-numeric-data">3 Vaults</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></div>
+</div>
+<!-- Metric 2: 100% MFA Enforcement -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Hardware MFA Enforcement</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary leading-none">100%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-bold">
+              ISO/IEC 27001
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-status-delivered-bg flex items-center justify-center text-status-delivered-text">
+<span class="material-symbols-outlined text-[20px]">enhanced_encryption</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-text-secondary font-label-md text-label-md">
+<span class="truncate">TOTP &amp; FIDO2 WebAuthn Keys</span>
+<span class="text-status-delivered-text font-semibold">Protected</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-status-delivered-text"></div>
+</div>
+<!-- Metric 3: Active Sessions Now -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Concurrent Sessions</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary leading-none">6</span>
+<span class="font-label-md text-label-md text-text-secondary">Online Now</span>
+</div>
+</div>
+<div class="relative w-10 h-10 rounded-lg bg-surface-muted flex items-center justify-center text-text-primary">
+<span class="material-symbols-outlined text-[20px]">lan</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-delivered-text animate-pulse"></span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-text-secondary font-label-md text-label-md">
+<span class="truncate">NPT (UTC+5:45) Kathmandu</span>
+<span class="font-numeric-data text-text-primary">0 Anomalies</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-status-confirmed-text"></div>
+</div>
+<!-- Metric 4: Pending Invitations -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Pending Authorization</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-text-primary leading-none">1</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-status-pending-bg text-status-pending-text font-bold">
+              Expires 48h
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-status-pending-bg flex items-center justify-center text-status-pending-text">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-text-secondary font-label-md text-label-md">
+<span class="truncate">Atelier Tailoring Lead (Pema)</span>
+<button class="text-primary hover:underline text-label-sm font-semibold">Resend Link</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-status-pending-text"></div>
+</div>
+</div>
+<!-- Operational Filter Bar -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-md mb-space-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="flex flex-1 flex-col sm:flex-row items-center gap-space-sm">
+<!-- Search -->
+<div class="relative w-full sm:w-80 flex items-center bg-surface-muted rounded px-space-sm h-9">
+<span class="material-symbols-outlined text-[18px] text-text-muted ml-1 mr-2">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none" id="staff-search-input" placeholder="Filter by name, email, or employee ID (e.g., NP-STF-014)..." type="text"/>
+</div>
+<!-- Role Dropdown -->
+<div class="relative w-full sm:w-auto">
+<select class="w-full sm:w-48 h-9 px-3 bg-surface-card rounded font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option value="">All Operational Roles</option>
+<option value="owner">Store Owner &amp; Super Admin</option>
+<option value="stylist">Order &amp; Concierge Manager</option>
+<option value="qc">Inventory &amp; QC Lead</option>
+<option value="payment">Payment &amp; Settlement Auditor</option>
+<option value="logistics">Logistics Coordinator</option>
+<option value="content">Content &amp; Lookbook Curator</option>
+</select>
+</div>
+<!-- Hub Filter -->
+<div class="relative w-full sm:w-auto">
+<select class="w-full sm:w-44 h-9 px-3 bg-surface-card rounded font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option value="">All Vaults &amp; Hubs</option>
+<option value="ktm">Kathmandu HQ</option>
+<option value="durbar">Durbar Marg Atelier</option>
+<option value="teku">Teku Central Vault</option>
+<option value="patan">Patan Audit Desk</option>
+<option value="pokhara">Pokhara Hub</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="relative w-full sm:w-auto">
+<select class="w-full sm:w-36 h-9 px-3 bg-surface-card rounded font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option value="">All Statuses</option>
+<option value="active">Active</option>
+<option value="pending">Awaiting Device</option>
+<option value="suspended">Suspended</option>
+</select>
+</div>
+</div>
+<!-- Quick Batch / Export -->
+<div class="flex items-center gap-space-xs justify-end">
+<button class="h-9 px-3 rounded bg-surface-muted hover:bg-surface-variant text-text-secondary hover:text-text-primary flex items-center gap-1.5 font-label-md text-label-md transition-colors" title="Export Security Matrix">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>CSV Export</span>
+</button>
+<button class="h-9 w-9 rounded bg-surface-muted hover:bg-surface-variant text-text-secondary hover:text-text-primary flex items-center justify-center transition-colors" title="Reload Roster">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- High-Density Staff Roster Table -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-muted/60 text-text-muted font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-3 px-4 w-10 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</th>
+<th class="py-3 px-4">Staff Member &amp; Employee ID</th>
+<th class="py-3 px-4">Operational Role &amp; Privileges</th>
+<th class="py-3 px-4">Fulfillment Hub / Vault</th>
+<th class="py-3 px-4">MFA &amp; Hardware Trust</th>
+<th class="py-3 px-4">Last Activity</th>
+<th class="py-3 px-4 text-center">Status</th>
+<th class="py-3 px-4 text-right">Access Controls</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-text-primary" id="staff-table-body">
+<!-- Member 1: Aayush Shrestha -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-title-md text-title-md font-bold shadow-sm">
+                    AS
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-status-delivered-text ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Aayush Shrestha</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary font-label-sm text-[10px] uppercase font-bold tracking-wider">Owner</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">aayush.shrestha@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-001</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Super Admin</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Full Read/Write/Delete/Audit Governance</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">apartment</span>
+<span class="font-medium">Kathmandu HQ &amp; Studio</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">vpn_key</span>
+                  FIDO2 Hardware Key
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted block mt-0.5">YubiKey 5C NFC • Enforced</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5 text-status-delivered-text font-numeric-data text-numeric-data font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text animate-pulse"></span>
+                Just now (Online)
+              </div>
+<span class="font-label-sm text-[10px] text-text-muted">IP 103.10.29.84 (Nepal Telecom)</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+                Active
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="View Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Revoke Privileges">
+<span class="material-symbols-outlined text-[18px]">do_not_disturb_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Member 2: Sneha Sharma -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-text-primary font-title-md text-title-md font-bold">
+                    SS
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-status-delivered-text ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Sneha Sharma</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">sneha.sharma@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-004</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Order &amp; Client Concierge Manager</span>
+<span class="font-label-sm text-label-sm text-text-secondary">VIP Bespoke Orders, Capsule Holds</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">storefront</span>
+<span class="font-medium">Durbar Marg Atelier</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  TOTP Authenticator
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted block mt-0.5">Google Auth • Verified Dec 2024</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5 text-text-primary font-numeric-data text-numeric-data">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+                14m ago (Online)
+              </div>
+<span class="font-label-sm text-[10px] text-text-muted">POS Terminal #2 Durbar Marg</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+                Active
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Force Session Expiry">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Suspend Account">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Member 3: Rabina Thapa -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-text-primary font-title-md text-title-md font-bold">
+                    RT
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-text-muted ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Rabina Thapa</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">rabina.t@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-009</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Inventory QC &amp; Inspection Lead</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Inbound Garment Quality, Stock Audits</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">warehouse</span>
+<span class="font-medium">Teku Central Inspection Vault</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  TOTP Authenticator
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted block mt-0.5">MS Authenticator • Verified</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data text-text-secondary">
+                42m ago
+              </div>
+<span class="font-label-sm text-[10px] text-text-muted">Teku Gate 2 Scanner</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+                Active
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Force Session Expiry">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Suspend Account">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Member 4: Rita Shrestha -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-text-primary font-title-md text-title-md font-bold">
+                    RS
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-status-delivered-text ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Rita Shrestha</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">rita.s@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-006</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Payment &amp; Settlement Auditor</span>
+<span class="font-label-sm text-label-sm text-text-secondary">eSewa / Khalti &amp; Bank Slip Verification</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">account_balance</span>
+<span class="font-medium">Financial Audit Desk (Patan)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">vpn_key</span>
+                  FIDO2 Hardware Key
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted block mt-0.5">Security Token Binding • Strict</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data text-text-secondary">
+                1h ago (Desk)
+              </div>
+<span class="font-label-sm text-[10px] text-text-muted">Audit Console Patan</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+                Active
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Force Session Expiry">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Suspend Account">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Member 5: Bikram KC -->
+<tr class="hover:bg-surface-canvas/80 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-text-primary font-title-md text-title-md font-bold">
+                    BK
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-text-muted ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Bikram KC</span>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">bikram.kc@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-011</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Logistics Coordinator</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Dispatch Manifests &amp; Inter-Province Waybills</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">local_shipping</span>
+<span class="font-medium">Baluwatar Logistics Bench</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  TOTP Authenticator
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted block mt-0.5">Google Auth • Device Validated</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data text-text-secondary">
+                3h ago
+              </div>
+<span class="font-label-sm text-[10px] text-text-muted">Dispatch Dispatcher v2.1</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-delivered-bg text-status-delivered-text font-label-sm text-label-sm font-semibold">
+                Active
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-muted text-text-secondary hover:text-text-primary transition-colors" title="Force Session Expiry">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+</button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Suspend Account">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Member 6: Pema Lama (Invite Pending) -->
+<tr class="bg-status-pending-bg/10 hover:bg-status-pending-bg/20 transition-colors group">
+<td class="py-3 px-4 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-status-pending-bg text-status-pending-text flex items-center justify-center font-title-md text-title-md font-bold">
+                    PL
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-status-pending-text ring-2 ring-surface-card"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md font-semibold text-text-primary truncate">Pema Lama</span>
+<span class="px-1.5 py-0.2 rounded bg-status-pending-bg text-status-pending-text font-label-sm text-[10px] uppercase font-bold tracking-wider">New</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="truncate">pema.lama@npwardrobe.com</span>
+<span class="text-text-muted">•</span>
+<span class="font-numeric-data font-semibold text-text-primary">NP-STF-015</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-text-primary">Content &amp; Lookbook Curator</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Seasonal Editorial CMS, Media Vault</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-text-muted">camera</span>
+<span class="font-medium">Creative Lab (Sanepa)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-status-pending-bg text-status-pending-text font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                  Awaiting Device Registration
+                </span>
+</div>
+<span class="font-label-sm text-[10px] text-status-pending-text block mt-0.5">Enrollment link sent via secure SMS</span>
+</td>
+<td class="py-3 px-4">
+<div class="font-numeric-data text-numeric-data text-text-muted">
+                Yesterday 18:30 NPT
+              </div>
+<span class="font-label-sm text-[10px] text-status-pending-text font-medium">Pending Acceptance</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-status-pending-bg text-status-pending-text font-label-sm text-label-sm font-semibold">
+                Invite Pending
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-surface-card hover:bg-surface-muted text-primary font-label-md text-label-md font-semibold transition-colors shadow-sm">
+                  Resend Link
+                </button>
+<button class="p-1 rounded hover:bg-error-container text-text-muted hover:text-error transition-colors" title="Revoke Invite">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination & Metadata -->
+<div class="py-3 px-4 bg-surface-muted/30 flex flex-col sm:flex-row items-center justify-between gap-3 font-label-md text-label-md text-text-secondary select-none">
+<div class="flex items-center gap-2">
+<span>Showing <strong class="text-text-primary">6</strong> of <strong class="text-text-primary">14</strong> authorized enterprise accounts</span>
+<span class="text-text-muted">•</span>
+<span class="text-status-delivered-text font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-delivered-text"></span>
+          All records verified against Teku Security Ledger
+        </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-card text-text-muted cursor-not-allowed">Previous</button>
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary font-bold">1</button>
+<button class="px-2 py-1 rounded bg-surface-card hover:bg-surface-muted text-text-primary">2</button>
+<button class="px-2 py-1 rounded bg-surface-card hover:bg-surface-muted text-text-primary">3</button>
+<button class="px-2 py-1 rounded bg-surface-card hover:bg-surface-muted text-text-primary">Next</button>
+</div>
+</div>
+</div>
+<!-- Bottom Interactive Section: Security Policy & Architectural Session Rules -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm mb-space-lg" id="policy-drawer">
+<div class="flex flex-col lg:flex-row items-start justify-between gap-space-lg">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary tracking-tight">Staff Security Policy &amp; Session Rules</h2>
+<span class="px-2 py-0.5 rounded bg-surface-muted font-label-sm text-label-sm text-text-secondary uppercase">Strict Enforcement</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed max-w-3xl mb-space-md">
+          To maintain adherence to high-value luxury inventory protocols and financial audit integrity across Nepal, 
+          all staff members operate under cryptographic separation of concerns. Access logs are immutable and streamed to the Teku Vault security appliance.
+        </p>
+<!-- 3 Policy Badges / Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Policy 1 -->
+<div class="p-space-md rounded-lg bg-surface-muted flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1.5 text-text-primary font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">timer</span>
+                Session TTL: 8 Hours
+              </div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Mandatory session revocation occurs after 8 hours of total life or 30 minutes of console idle time. Re-authentication prompts require biometric or TOTP input.
+              </p>
+</div>
+<span class="mt-3 font-label-sm text-label-sm font-semibold text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-status-delivered-text">verified</span>
+              Automated Daemon Active
+            </span>
+</div>
+<!-- Policy 2 -->
+<div class="p-space-md rounded-lg bg-surface-muted flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1.5 text-text-primary font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">pin_drop</span>
+                Zero-Trust Location Binding
+              </div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Console access is restricted to verified Nepal ISP blocks (Subisu, WorldLink, NTC). Out-of-region or foreign IP authentication triggers hardware challenge &amp; SMS alerts.
+              </p>
+</div>
+<span class="mt-3 font-label-sm text-label-sm font-semibold text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-status-delivered-text">verified</span>
+              Geo-Fencing Online
+            </span>
+</div>
+<!-- Policy 3 -->
+<div class="p-space-md rounded-lg bg-surface-muted flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1.5 text-text-primary font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">alt_route</span>
+                Dual-Control Separation
+              </div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Segregation of Duties: Payment Verifiers cannot adjust inventory counts. Inventory QC staff cannot verify customer eSewa/Khalti slips or approve refunds.
+              </p>
+</div>
+<span class="mt-3 font-label-sm text-label-sm font-semibold text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-status-delivered-text">verified</span>
+              RBAC Matrix Locked
+            </span>
+</div>
+</div>
+</div>
+<!-- Quick Action / Brand Stamp -->
+<div class="w-full lg:w-72 p-space-md rounded-xl bg-surface-canvas flex flex-col items-center text-center justify-center">
+<img alt="NP Wardrobe Seal" class="h-10 w-auto object-contain mb-3 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVxeVYNj_ZDje3-KMOqviar2BW1sDGk8obXR-t1kaAyF2r6efpZQr8DJHAYZ-rrvagPfOVNuZdVQRAzBygbwp5SqQrIy3MmwwcHBrlYofIyHhiGUKZB7h-9N06kGQhgd5noyEdQWjn0FRyHSv1NcSDS8v7MD9QRd_tS_NLV0co8GutmUGGQ-wWtHMSf4oTqjxbSrX7epqAWzkObHcrVxd9zHizbz0_4dzhXYRZ0hWFM1H8wU_e_pf"/>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Enterprise Console Security</span>
+<span class="font-title-md text-title-md text-text-primary font-semibold mt-1">Kathmandu Central Node</span>
+<span class="font-numeric-data text-numeric-data text-text-secondary mt-1">Last Cryptographic Audit: Today, 04:00 NPT</span>
+<button class="mt-4 w-full py-1.5 rounded bg-surface-card hover:bg-surface-muted text-text-primary font-label-md text-label-md font-semibold shadow-sm transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">download</span>
+          Download Compliance Cert
+        </button>
+</div>
+</div>
+</div>
+<!-- Invite New Staff Member Modal (Pure CSS/JS dismissable overlay) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-xs p-4" id="invite-modal">
+<div class="bg-surface-card w-full max-w-lg rounded-xl shadow-xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+<div class="px-space-lg py-space-md bg-surface-muted flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">person_add</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Invite New Staff Member</span>
+</div>
+<button class="text-text-muted hover:text-text-primary p-1" onclick="document.getElementById('invite-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div>
+<label class="block font-label-md text-label-md text-text-primary font-semibold mb-1">Full Legal Name</label>
+<input class="w-full h-9 px-3 rounded bg-surface-muted font-body-sm text-body-sm text-text-primary focus:outline-none" placeholder="e.g. Samrat Basnet" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-text-primary font-semibold mb-1">Official Email</label>
+<input class="w-full h-9 px-3 rounded bg-surface-muted font-body-sm text-body-sm text-text-primary focus:outline-none" placeholder="samrat@npwardrobe.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-text-primary font-semibold mb-1">Assigned Staff ID</label>
+<input class="w-full h-9 px-3 rounded bg-surface-muted font-numeric-data text-numeric-data text-text-muted focus:outline-none" readonly="" type="text" value="NP-STF-016"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-text-primary font-semibold mb-1">Operational Role</label>
+<select class="w-full h-9 px-3 rounded bg-surface-muted font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option>Order &amp; Concierge Manager</option>
+<option>Inventory &amp; QC Lead</option>
+<option>Payment &amp; Settlement Auditor</option>
+<option>Logistics Coordinator</option>
+<option>Content Curator</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-text-primary font-semibold mb-1">Fulfillment Hub</label>
+<select class="w-full h-9 px-3 rounded bg-surface-muted font-body-sm text-body-sm text-text-primary focus:outline-none cursor-pointer">
+<option>Kathmandu HQ &amp; Studio</option>
+<option>Durbar Marg Atelier</option>
+<option>Teku Central Vault</option>
+<option>Patan Audit Desk</option>
+<option>Pokhara Hub</option>
+</select>
+</div>
+</div>
+<div class="p-space-md rounded bg-status-confirmed-bg text-status-confirmed-text font-body-sm text-body-sm flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">info</span>
+<span>New invitee will receive a temporary cryptographic token valid for 48 hours to bind their TOTP authenticator app or register a hardware security key.</span>
+</div>
+</div>
+<div class="px-space-lg py-space-md bg-surface-muted/50 flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded bg-surface-card hover:bg-surface-muted text-text-primary font-body-sm text-body-sm" onclick="document.getElementById('invite-modal').classList.add('hidden')">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md shadow-sm" onclick="document.getElementById('invite-modal').classList.add('hidden')">
+          Dispatch Secure Invite
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple client-side real-time filter for high density table
+  const searchInput = document.getElementById('staff-search-input');
+  const tableBody = document.getElementById('staff-table-body');
+
+  if (searchInput && tableBody) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const rows = tableBody.querySelectorAll('tr');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (text.includes(query)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main></div></body></html>

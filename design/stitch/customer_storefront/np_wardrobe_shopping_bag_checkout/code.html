@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>NP Wardrobe</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'secondary-container': '#eddfdd', 'surface-variant': '#ece0df', 'error-container': '#ffdad6', 'secondary-fixed': '#eddfdd', 'surface-container': '#f7ebeb', 'primary-fixed': '#ffd9dd', 'on-tertiary-fixed-variant': '#92001c', 'outline-variant': '#d7c1c3', 'tertiary-fixed': '#ffdad8', 'surface-dim': '#e3d7d7', 'background': '#fff8f7', 'on-surface': '#201a1a', 'primary-container': '#a6606b', 'secondary-fixed-dim': '#d1c4c2', 'tertiary-fixed-dim': '#ffb3b1', 'on-error-container': '#93000a', 'outline': '#857374', 'surface-container-lowest': '#ffffff', 'whatsapp-green': '#25D366', 'secondary': '#665c5b', 'surface-container-high': '#f1e5e5', 'text-muted': '#746A66', 'primary': '#8a4853', 'on-tertiary': '#ffffff', 'on-primary-fixed-variant': '#70343e', 'surface-pure': '#FFFFFF', 'border-subtle': '#E9DED8', 'on-primary-fixed': '#3a0915', 'surface-bright': '#fff8f7', 'primary-fixed-dim': '#ffb2bc', 'on-tertiary-fixed': '#410007', 'tertiary-container': '#d83641', 'on-error': '#ffffff', 'inverse-surface': '#352f2f', 'on-secondary-container': '#6c6261', 'on-tertiary-container': '#fffbff', 'surface-tint': '#8c4b55', 'surface-container-highest': '#ece0df', 'surface': '#fff8f7', 'on-surface-variant': '#524345', 'inverse-on-surface': '#faeeed', 'on-secondary-fixed': '#211a19', 'surface-container-low': '#fdf1f0', 'inverse-primary': '#ffb2bc', 'error': '#ba1a1a', 'on-primary-container': '#fffbff', 'tertiary': '#b5192c', 'on-background': '#201a1a', 'surface-cream': '#FBF7F0', 'on-secondary-fixed-variant': '#4e4544' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-md': '1rem', 'gutter-desktop': '1.5rem', 'space-xs': '0.25rem', 'space-2xl': '4rem', 'margin-desktop': '3.5rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '2rem', 'gutter': '1rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem' }, fontFamily: { 'display-mobile': ['EB Garamond'], 'label-md': ['DM Sans'], 'title-lg': ['DM Sans'], 'display': ['EB Garamond'], 'body-md': ['DM Sans'], 'label-sm': ['DM Sans'], 'body-lg': ['DM Sans'], 'headline-md': ['EB Garamond'], 'headline-sm': ['EB Garamond'], 'headline-lg-mobile': ['EB Garamond'], 'headline-lg': ['EB Garamond'], 'title-md': ['DM Sans'], 'body-sm': ['DM Sans'], 'currency': ['DM Sans'] }, fontSize: { 'display-mobile': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['0.8125rem', { lineHeight: '1rem', letterSpacing: '0.08em', fontWeight: '600' }], 'title-lg': ['1.125rem', { lineHeight: '1.625rem', letterSpacing: '0.01em', fontWeight: '600' }], 'display': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'body-md': ['0.9375rem', { lineHeight: '1.5rem', letterSpacing: '0', fontWeight: '400' }], 'label-sm': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.1em', fontWeight: '600' }], 'body-lg': ['1.0625rem', { lineHeight: '1.75rem', letterSpacing: '0', fontWeight: '400' }], 'headline-md': ['1.75rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '500' }], 'headline-sm': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '0.01em', fontWeight: '500' }], 'headline-lg-mobile': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '400' }], 'headline-lg': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'title-md': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0.01em', fontWeight: '500' }], 'body-sm': ['0.8125rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '400' }], 'currency': ['1rem', { lineHeight: '1.25rem', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; background-color: #FBF7F0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } * { -ms-overflow-style: none; scrollbar-width: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-cream text-on-surface font-body-md text-body-md antialiased min-h-screen relative flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-cream/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDMiPdmVg4-P5x81rAW10FgWCkihEMJ9BCGiXF1XR9p8xFuLDdIKHnutrAN8MQrXuEyacKtEXnmJZ9agLwzcXqRIIhTzmedKppQuj3OLP26Y1jMasC2wagBI1VXlfe7UrZ4PPwKqtU73twQ8TGG-nGnqJ8jZM0JbIZR04ImuYyvmEdjx98Q57HiLDOqZ-Hve1eo4WRlYskCwt5IX_c8XeAZmRR7GUxnndL8ljLIFYUUklvJihXYfzQDfKk"/><h1 class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">Checkout Flow</h1></div></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Shopping Bag" class="relative w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface-cream flex flex-col"><div class="flex flex-col w-full pb-24">
+<!-- Progress Stepper / Trust Header Strip -->
+<div class="w-full bg-surface-container-low px-margin py-space-sm flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center">1</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary font-bold">Review</span>
+</div>
+<div class="h-0.5 w-8 bg-primary/30 rounded-full"></div>
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center">2</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary font-bold">Delivery</span>
+</div>
+<div class="h-0.5 w-8 bg-primary/30 rounded-full"></div>
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center">3</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Payment</span>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-lg mt-space-md">
+<!-- SECTION 1: Shopping Bag Items -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Your Bag (2)</h2>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary-fixed text-on-primary-fixed-variant px-space-xs py-0.5 rounded">Special Reserve</span>
+</div>
+<!-- Item Card 1 -->
+<div class="w-full bg-surface-pure rounded-xl p-space-sm shadow-sm flex gap-space-sm items-start relative">
+<div class="w-20 h-28 rounded-lg overflow-hidden bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High fashion editorial shoot of a graceful woman dressed in an exquisite blush rose pleated georgette maxi gown, standing beside a minimalist architectural archway in soft natural golden light, warm earth tones and refined aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0Y4ExJQfH0B-Mb7yWeQpvfu8xgezExv34eSzsvgqLlOopooiAWnhX5IVTRNcEunwmKdjAUEPrgtUdcN4k69dbfYLM3gwtapNyOGKOzr3DL5x8oGdDDf9QvXUxu8MCTomFPr7LcmKli_zH9u1kLNqfu5ZjXYp8WOLAuwfHLT7M0qoUCLDck3XsGPYANVmQRbpYMQ9mcCK6aq9x-llswL6_6vrA-LxicbrDMFs6BQ"/>
+</div>
+<div class="flex-1 flex flex-col min-w-0 justify-between h-28 py-0.5">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Blush Rose Pleated Gown</h3>
+<button aria-label="Remove item" class="text-text-muted hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5">Size: M <span class="mx-1">•</span> Color: Dusty Rose</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-currency text-currency text-primary">रु. 5,600</span>
+<div class="flex items-center bg-surface-container rounded-full px-2 py-0.5 gap-2">
+<button class="w-5 h-5 flex items-center justify-center text-on-surface font-semibold text-sm active:scale-90">-</button>
+<span class="font-label-md text-label-md text-on-surface min-w-[12px] text-center">1</span>
+<button class="w-5 h-5 flex items-center justify-center text-on-surface font-semibold text-sm active:scale-90">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="w-full bg-surface-pure rounded-xl p-space-sm shadow-sm flex gap-space-sm items-start relative">
+<div class="w-20 h-28 rounded-lg overflow-hidden bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Model wearing an oversized structured linen neutral blazer in oat cream tone over a sleek white top, studio portrait with warm minimalist Himalayan aesthetic and soft cinematic light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3TFwQeDEgOO-2JOQCKv5i-xAOkdoJKA9F2tI9DcMPIC9dGkeHL7UFtFUWypmEdfzyFAY1UkvRpeV3mrM93IjtnZQ16DvRDw8vYDa3wfyvwT69M5eI5F3D0W_KKoRjJipnCRcVR1a7NZed7QXfRPFyKCgIOzvF-lfsWz4nJ2SsgNi-_cq0sgfQyk2esR0tbY8tNLThLoOvt9vEAxwtIrj_EBx6Oqbqn4QJsoFxxeU"/>
+</div>
+<div class="flex-1 flex flex-col min-w-0 justify-between h-28 py-0.5">
+<div>
+<div class="flex items-start justify-between gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Oversized Linen Blazer</h3>
+<button aria-label="Remove item" class="text-text-muted hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-0.5">Size: S <span class="mx-1">•</span> Color: Oat Cream</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-currency text-currency text-primary">रु. 4,100</span>
+<div class="flex items-center bg-surface-container rounded-full px-2 py-0.5 gap-2">
+<button class="w-5 h-5 flex items-center justify-center text-on-surface font-semibold text-sm active:scale-90">-</button>
+<span class="font-label-md text-label-md text-on-surface min-w-[12px] text-center">1</span>
+<button class="w-5 h-5 flex items-center justify-center text-on-surface font-semibold text-sm active:scale-90">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Promo Code Section -->
+<div class="bg-surface-pure rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs mt-1">
+<div class="flex gap-space-xs">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container transition-colors uppercase tracking-wider" placeholder="Enter coupon or gift code" type="text" value="NPWARDBO15"/>
+<span class="material-symbols-outlined text-[16px] text-primary absolute right-3 top-3" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-2 rounded-lg uppercase tracking-wider hover:opacity-95 transition-opacity">Apply</button>
+</div>
+<div class="flex items-center justify-between bg-primary-fixed/60 px-space-sm py-1.5 rounded-lg text-on-primary-fixed-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-primary">local_offer</span>
+<span class="font-label-sm text-label-sm font-semibold truncate">NPWARDBO15 applied (- रु. 500)</span>
+</div>
+<button class="text-text-muted hover:text-on-surface text-xs font-bold px-1">✕</button>
+</div>
+</div>
+<!-- Calculation Breakdown -->
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-text-muted font-body-sm text-body-sm">
+<span>Subtotal</span>
+<span class="text-on-surface font-medium">रु. 9,700</span>
+</div>
+<div class="flex justify-between items-center text-text-muted font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-primary">Coupon Discount</span>
+<span class="text-primary font-semibold">- रु. 500</span>
+</div>
+<div class="flex justify-between items-center text-text-muted font-body-sm text-body-sm">
+<span class="flex items-center gap-1">Nationwide Delivery</span>
+<span class="text-whatsapp-green font-bold uppercase tracking-wider text-xs">FREE (Over रु. 5k)</span>
+</div>
+<div class="w-full h-[1px] bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold">Total Payable</span>
+<div class="text-right">
+<span class="font-currency text-headline-sm text-primary font-bold">रु. 9,200</span>
+<span class="block font-label-sm text-label-sm text-text-muted uppercase">NPR (Tax Included)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Express Delivery Details Form -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Express Delivery</h2>
+<span class="font-label-sm text-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-whatsapp-green">bolt</span>
+          Fast Dispatch
+        </span>
+</div>
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold flex items-center justify-between">
+            Full Name <span class="text-primary text-xs">*</span>
+</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container" id="custName" placeholder="e.g. Sambridhi Shrestha" type="text" value="Sambridhi Shrestha"/>
+</div>
+<!-- Phone / WhatsApp -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold flex items-center justify-between">
+            Mobile / WhatsApp <span class="text-primary text-xs">*</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md pl-10 pr-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container font-mono" id="custPhone" placeholder="+977 98XXXXXXXX" type="tel" value="+977 9841289100"/>
+<span class="material-symbols-outlined text-[18px] text-whatsapp-green absolute left-3 top-3">chat</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Used for real-time delivery SMS &amp; WhatsApp dispatch tracking.</span>
+</div>
+<!-- City / District -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold flex items-center justify-between">
+            Region / Hub <span class="text-primary text-xs">*</span>
+</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg appearance-none focus:outline-none focus:bg-surface-container" id="custCity">
+<option selected="">Kathmandu Valley (Inside Ring Road)</option>
+<option>Kathmandu Valley (Outside Ring Road / Bhaktapur / Lalitpur)</option>
+<option>Pokhara City</option>
+<option>Chitwan / Butwal / Biratnagar</option>
+<option>Other Nationwide Hubs</option>
+</select>
+<span class="material-symbols-outlined text-[20px] text-text-muted absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Complete Address -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold flex items-center justify-between">
+            Complete Delivery Address <span class="text-primary text-xs">*</span>
+</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2.5 rounded-lg focus:outline-none focus:bg-surface-container" id="custAddress" placeholder="House / Street / Landmark details" type="text" value="Jhamsikhel, Ward 3, Near British School"/>
+</div>
+<!-- Instructions -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-text-muted flex items-center justify-between">
+            Delivery Instructions <span class="font-normal text-xs text-text-muted">(Optional)</span>
+</label>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md px-space-sm py-2 rounded-lg focus:outline-none focus:bg-surface-container" id="custNotes" placeholder="e.g. Call before delivery, Gate 2" type="text"/>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Payment Method Selection -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Payment Method</h2>
+<span class="font-label-sm text-label-sm text-whatsapp-green flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+          Safe &amp; Verified
+        </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Option B: eSewa (Selected) -->
+<div class="w-full bg-surface-pure rounded-xl p-space-md shadow-sm transition-all">
+<div class="flex items-start justify-between cursor-pointer" onclick="selectPayment('esewa')">
+<div class="flex items-center gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center p-0.5">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">eSewa Direct Payment</span>
+<span class="bg-[#60bb46] text-white font-label-sm text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">Instant</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">Pay securely via eSewa mobile app or web portal</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance_wallet</span>
+</div>
+<!-- Expandable eSewa Payment Box -->
+<div class="mt-space-md pt-space-md flex flex-col gap-space-sm bg-surface-container-low/70 p-space-sm rounded-lg" id="esewaExpandBox">
+<div class="bg-surface-pure p-space-sm rounded-lg flex items-center justify-between shadow-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted block">Official Merchant ID</span>
+<span class="font-mono font-bold text-on-surface text-body-md select-all">NP-WARDROBE-8821</span>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs font-semibold uppercase tracking-wider active:scale-95" onclick="navigator.clipboard.writeText('NP-WARDROBE-8821'); alert('Merchant ID Copied!');">Copy</button>
+</div>
+<!-- QR Container -->
+<div class="w-full bg-surface-pure p-space-md rounded-lg flex flex-col items-center justify-center text-center shadow-xs">
+<div class="w-36 h-36 bg-surface-container-highest rounded-lg flex flex-col items-center justify-center relative p-2 shadow-inner">
+<!-- Fallback stylized SVG QR pattern -->
+<svg class="w-full h-full text-on-surface fill-current" viewbox="0 0 100 100">
+<path d="M0,0 h30 v30 h-30 z M10,10 h10 v10 h-10 z M70,0 h30 v30 h-30 z M80,10 h10 v10 h-10 z M0,70 h30 v30 h-30 z M10,80 h10 v10 h-10 z M40,10 h10 v10 h-10 z M50,20 h10 v10 h-10 z M40,40 h20 v20 h-20 z M70,40 h10 v10 h-10 z M80,50 h20 v10 h-20 z M10,40 h20 v10 h-20 z M40,70 h10 v20 h-10 z M60,70 h20 v10 h-20 z M70,90 h30 v10 h-30 z M90,70 h10 v10 h-10 z"></path>
+</svg>
+<div class="absolute inset-0 m-auto w-8 h-8 rounded-full bg-[#60bb46] text-white flex items-center justify-center text-[10px] font-bold shadow-md">eS</div>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-2">Scan to pay रु. 9,200</span>
+<span class="font-label-sm text-label-sm text-text-muted">Account: NP Wardrobe Retail Pvt. Ltd.</span>
+</div>
+<!-- Remark Instructions -->
+<div class="flex items-start gap-2 bg-surface-cream p-2.5 rounded-lg text-text-muted">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong>Important:</strong> Please write your <span class="text-primary font-semibold">Name &amp; Phone Number</span> in the eSewa Remarks field before confirming payment.
+              </p>
+</div>
+</div>
+</div>
+<!-- Option A: COD -->
+<div class="w-full bg-surface-pure rounded-xl p-space-md shadow-sm opacity-90 transition-all cursor-pointer" onclick="selectPayment('cod')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center p-0.5" id="codRadio">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Cash on Delivery (COD)</span>
+<p class="font-body-sm text-body-sm text-text-muted">Pay with cash or Fonepay QR upon receipt at your doorstep across Nepal.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[22px]">payments</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Primary Checkout Action & Guarantee -->
+<div class="flex flex-col gap-space-sm mt-space-sm">
+<button class="w-full bg-whatsapp-green hover:bg-[#20b857] text-on-primary py-space-md px-space-md rounded-xl shadow-md flex items-center justify-center gap-space-sm transition-transform active:scale-[0.98]" onclick="handleWhatsAppOrder()">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="font-label-md text-title-md font-bold uppercase tracking-wider">Place Order via WhatsApp (रु. 9,200)</span>
+</button>
+<div class="text-center px-space-sm">
+<p class="font-body-sm text-body-sm text-text-muted">
+          Tapping will validate your details and launch WhatsApp (<span class="font-semibold text-on-surface">+977 9740258617</span>) with your pre-formatted order summary ready to send!
+        </p>
+</div>
+<!-- Secondary Fallback -->
+<button class="w-full bg-surface-pure text-on-surface hover:bg-surface-container py-space-sm px-space-md rounded-xl font-label-md text-label-md tracking-wider uppercase font-semibold transition-colors flex items-center justify-center gap-2" onclick="handleSMSOrder()">
+<span class="material-symbols-outlined text-[18px] text-text-muted">phone_in_talk</span>
+        Place Order via SMS / Call Support
+      </button>
+<!-- Trust Badges Strip -->
+<div class="w-full bg-surface-pure rounded-xl p-space-md shadow-xs grid grid-cols-3 gap-space-xs text-center mt-space-xs">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">100% Authentic</span>
+<span class="font-label-sm text-[10px] text-text-muted">Himalayan Crafted</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Secure Data</span>
+<span class="font-label-sm text-[10px] text-text-muted">Encrypted Direct</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">published_with_changes</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Easy Returns</span>
+<span class="font-label-sm text-[10px] text-text-muted">Within 7 Days</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let selectedMethod = 'esewa';
+
+  function selectPayment(method) {
+    selectedMethod = method;
+    const esewaBox = document.getElementById('esewaExpandBox');
+    const codRadio = document.getElementById('codRadio');
+    if (method === 'cod') {
+      if (esewaBox) esewaBox.style.display = 'none';
+      if (codRadio) codRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-primary"></div>';
+    } else {
+      if (esewaBox) esewaBox.style.display = 'flex';
+      if (codRadio) codRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-transparent"></div>';
+    }
+  }
+
+  function handleWhatsAppOrder() {
+    const name = document.getElementById('custName').value.trim() || 'Valued Customer';
+    const phone = document.getElementById('custPhone').value.trim() || 'N/A';
+    const city = document.getElementById('custCity').value;
+    const address = document.getElementById('custAddress').value.trim() || 'N/A';
+    const notes = document.getElementById('custNotes').value.trim() || 'None';
+    const payment = selectedMethod === 'esewa' ? 'eSewa Direct Transfer' : 'Cash on Delivery (COD)';
+
+    const message = `✨ *NP WARDROBE ORDER INQUIRY* ✨%0A` +
+      `--------------------------------%0A` +
+      `*Customer:* ${encodeURIComponent(name)}%0A` +
+      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+      `*Region:* ${encodeURIComponent(city)}%0A` +
+      `*Address:* ${encodeURIComponent(address)}%0A` +
+      `*Notes:* ${encodeURIComponent(notes)}%0A` +
+      `--------------------------------%0A` +
+      `*ITEMS ORDERED:*%0A` +
+      `1. Blush Rose Pleated Gown (M / Dusty Rose) - रु. 5,600%0A` +
+      `2. Oversized Linen Blazer (S / Oat Cream) - रु. 4,100%0A` +
+      `*Coupon Applied:* NPWARDBO15 (- रु. 500)%0A` +
+      `*Nationwide Delivery:* FREE%0A` +
+      `*TOTAL PAYABLE:* रु. 9,200 NPR%0A` +
+      `*Selected Payment:* ${encodeURIComponent(payment)}%0A` +
+      `--------------------------------%0A` +
+      `Please confirm availability and dispatch schedule. Thank you!`;
+
+    window.open(`https://wa.me/9779740258617?text=${message}`, '_blank');
+  }
+
+  function handleSMSOrder() {
+    const name = document.getElementById('custName').value.trim() || 'Customer';
+    const phone = document.getElementById('custPhone').value.trim() || '';
+    const body = `NP Wardrobe Order: 2 items (Gown+Blazer) for ${name} (${phone}), Total: रु 9,200. Please assist.`;
+    window.location.href = `sms:+9779740258617?body=${encodeURIComponent(body)}`;
+  }
+</script></main><a aria-label="WhatsApp Order Concierge" class="fixed bottom-6 right-4 z-40 bg-whatsapp-green text-on-primary rounded-full px-space-md py-space-sm shadow-[0_4px_20px_-2px_rgba(41,35,35,0.15)] flex items-center gap-space-xs transition-transform transform active:scale-95" href="https://wa.me/9779740258617" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span></span><span class="material-symbols-outlined text-[20px]">chat</span><span class="font-label-sm text-label-sm font-bold tracking-tight whitespace-nowrap">+977 9740258617</span></a></body></html>

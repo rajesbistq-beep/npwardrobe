@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>NP Wardrobe</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'secondary-container': '#eddfdd', 'surface-variant': '#ece0df', 'error-container': '#ffdad6', 'secondary-fixed': '#eddfdd', 'surface-container': '#f7ebeb', 'primary-fixed': '#ffd9dd', 'on-tertiary-fixed-variant': '#92001c', 'outline-variant': '#d7c1c3', 'tertiary-fixed': '#ffdad8', 'surface-dim': '#e3d7d7', 'background': '#fff8f7', 'on-surface': '#201a1a', 'primary-container': '#a6606b', 'secondary-fixed-dim': '#d1c4c2', 'tertiary-fixed-dim': '#ffb3b1', 'on-error-container': '#93000a', 'outline': '#857374', 'surface-container-lowest': '#ffffff', 'whatsapp-green': '#25D366', 'secondary': '#665c5b', 'surface-container-high': '#f1e5e5', 'text-muted': '#746A66', 'primary': '#8a4853', 'on-tertiary': '#ffffff', 'on-primary-fixed-variant': '#70343e', 'surface-pure': '#FFFFFF', 'border-subtle': '#E9DED8', 'on-primary-fixed': '#3a0915', 'surface-bright': '#fff8f7', 'primary-fixed-dim': '#ffb2bc', 'on-tertiary-fixed': '#410007', 'tertiary-container': '#d83641', 'on-error': '#ffffff', 'inverse-surface': '#352f2f', 'on-secondary-container': '#6c6261', 'on-tertiary-container': '#fffbff', 'surface-tint': '#8c4b55', 'surface-container-highest': '#ece0df', 'surface': '#fff8f7', 'on-surface-variant': '#524345', 'inverse-on-surface': '#faeeed', 'on-secondary-fixed': '#211a19', 'surface-container-low': '#fdf1f0', 'inverse-primary': '#ffb2bc', 'error': '#ba1a1a', 'on-primary-container': '#fffbff', 'tertiary': '#b5192c', 'on-background': '#201a1a', 'surface-cream': '#FBF7F0', 'on-secondary-fixed-variant': '#4e4544' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-md': '1rem', 'gutter-desktop': '1.5rem', 'space-xs': '0.25rem', 'space-2xl': '4rem', 'margin-desktop': '3.5rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '2rem', 'gutter': '1rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem' }, fontFamily: { 'display-mobile': ['EB Garamond'], 'label-md': ['DM Sans'], 'title-lg': ['DM Sans'], 'display': ['EB Garamond'], 'body-md': ['DM Sans'], 'label-sm': ['DM Sans'], 'body-lg': ['DM Sans'], 'headline-md': ['EB Garamond'], 'headline-sm': ['EB Garamond'], 'headline-lg-mobile': ['EB Garamond'], 'headline-lg': ['EB Garamond'], 'title-md': ['DM Sans'], 'body-sm': ['DM Sans'], 'currency': ['DM Sans'] }, fontSize: { 'display-mobile': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['0.8125rem', { lineHeight: '1rem', letterSpacing: '0.08em', fontWeight: '600' }], 'title-lg': ['1.125rem', { lineHeight: '1.625rem', letterSpacing: '0.01em', fontWeight: '600' }], 'display': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'body-md': ['0.9375rem', { lineHeight: '1.5rem', letterSpacing: '0', fontWeight: '400' }], 'label-sm': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.1em', fontWeight: '600' }], 'body-lg': ['1.0625rem', { lineHeight: '1.75rem', letterSpacing: '0', fontWeight: '400' }], 'headline-md': ['1.75rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '500' }], 'headline-sm': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '0.01em', fontWeight: '500' }], 'headline-lg-mobile': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '400' }], 'headline-lg': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'title-md': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0.01em', fontWeight: '500' }], 'body-sm': ['0.8125rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '400' }], 'currency': ['1rem', { lineHeight: '1.25rem', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; background-color: #FBF7F0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } * { -ms-overflow-style: none; scrollbar-width: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-cream text-on-surface font-body-md text-body-md antialiased min-h-screen relative flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-cream/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDMiPdmVg4-P5x81rAW10FgWCkihEMJ9BCGiXF1XR9p8xFuLDdIKHnutrAN8MQrXuEyacKtEXnmJZ9agLwzcXqRIIhTzmedKppQuj3OLP26Y1jMasC2wagBI1VXlfe7UrZ4PPwKqtU73twQ8TGG-nGnqJ8jZM0JbIZR04ImuYyvmEdjx98Q57HiLDOqZ-Hve1eo4WRlYskCwt5IX_c8XeAZmRR7GUxnndL8ljLIFYUUklvJihXYfzQDfKk"/><h1 class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">Product Details</h1></div></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Shopping Bag" class="relative w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface-cream flex flex-col"><div class="flex flex-col w-full pb-32">
+<!-- Top Gallery Carousel Area -->
+<section class="relative w-full bg-surface-container-low overflow-hidden">
+<!-- Main Photo Container -->
+<div class="relative w-full aspect-[3/4] max-h-[480px] overflow-hidden bg-surface-container">
+<div class="flex w-full h-full transition-transform duration-500 ease-out" id="gallery-track">
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover object-top" data-alt="Stunning South Asian fashion model wearing an ethereal blush rose pleated georgette maxi gown, standing against a sunlit minimalist cream architectural archway in Patan Nepal. Soft warm editorial natural light, cinematic vogue fashion aesthetic, pastel muted rose tones, delicate pleated skirt floating softly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Sq14KCiobZ99hC-FVcmeenscrlUXZNwZh2-7hPOKyJYpkTjKwUFHwJWf5bCKmcr6jv248kVh7vEoJGPHRWuA-5WvLcO2YdkxS14igCweh6y6ZN4aBoHOknvRTze5JT-PTKv_ng7aWQ0FtkNKvAFWan2Lc6etRZjg6lqO3BuHEc1t4084KsJK8pgGBq1sxcD5cVhNOWJSViyTiFwKwRQqsuYyKBpxYniLJgM0A9k"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover object-center" data-alt="Side profile editorial shot of elegant woman wearing luxury blush rose pleated georgette gown showing the cinched tailored waistline and graceful sweeping hem against a warm neutral terracotta and cream boutique backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEQQYe-bbhhh7ZuIm2myG6mPoRoFsKsdeeyOj7x4h6mXfy1lDTyl7fOFAK7GU5JG3CqiomYTWwaZPq-BhfKrZ0ZuwhBMwgYiRnBlMtjqbJbm7WQeAsoO-1dhUIABs1aAXdwkZS4i_bOTTW5pnhbe4RTeS0H69Eb1PmPt2Rpj5s5km9EoVPsM9HPjHQiamAYy4xIeTwEJNkcLKOcJRmfzsfH6o4UMnuZkk0iBtUUX4"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover object-center" data-alt="Extreme macro textural detail shot of soft blush rose pleated georgette fabric weave with refined shimmering micro-threads, subtle inner crepe lining, handcrafted hem stitch finish, luxurious boutique fashion craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP8uUT8niwlrKfo4XR6rdFUdD-SY3KWwYbK3sTB_clW6DrW1IxCWpDpJk1P1jvzj5zhJSLptjZPZHOf8fKpllqGbpH61G4-MF-qob84oj45dYY2oIvx8ZvQx5yBPw5sJwQmodudec7OBPRWHs1XS4L3RGzjiEkty5S1oAl_GCj3_RjPTySshssik7eSEEeyjhwZSJgqHa4DGkblCnxhX9i7VlfsLj1qSc1CiZLYRM"/>
+</div>
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover object-center" data-alt="Lifestyle editorial shot of model wearing a blush rose pleated gown paired with delicate rose-gold Himalayan filigree jewelry and miniature ivory clutch, candid walking pose in a high-end luxury tea lounge in Kathmandu." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9JY-BklcEet7-_omlWClDpjId34Hnjvp7f-DnPNzIQZzC5EnZRU2UfbzsQx9FNVGNxabiLN7WYy0t-P5azcfuAqhzNWFZKLfCUUg5VV7ARYbtPg13g_oGysA2ngvp7zEDzIDqOUlQYBztK-ABXFTrd07tZV5NWOgmj5ZiqN1HDB7UOsOxaHJcw8SlAGgcW-WgnRF9Kw6YqJ3DMB9a4WDt3vDsrhHCiArmf3nlLcY"/>
+</div>
+</div>
+<!-- Top Overlay Badges & Quick Controls -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none z-10">
+<div class="flex items-center gap-space-xs pointer-events-auto">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-sm shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-cream animate-pulse"></span>
+            14% OFF
+          </span>
+<span class="bg-surface-pure/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-sm shadow-sm">
+            Festive '25
+          </span>
+</div>
+<div class="flex items-center gap-2 pointer-events-auto">
+<button aria-label="Share dress" class="w-9 h-9 rounded-full bg-surface-pure/90 backdrop-blur-md text-on-surface shadow-sm flex items-center justify-center transition-transform active:scale-90" id="share-btn">
+<span class="material-symbols-outlined text-[19px]">share</span>
+</button>
+<button aria-label="Save to Wishlist" class="w-9 h-9 rounded-full bg-surface-pure/90 backdrop-blur-md text-on-surface shadow-sm flex items-center justify-center transition-colors active:scale-90" id="wishlist-btn" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[20px]" id="wish-icon">favorite_border</span>
+</button>
+</div>
+</div>
+<!-- Gallery Counter Pill -->
+<div class="absolute bottom-3 right-3 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">photo_camera</span>
+<span id="gallery-counter">1 / 4</span>
+</div>
+<!-- Inventory Low Stock Urgency Callout -->
+<div class="absolute bottom-3 left-3 bg-surface-pure/95 backdrop-blur-md text-on-surface px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">Only 4 left in Kathmandu</span>
+</div>
+</div>
+<!-- Thumbnail Bar Carousel -->
+<div class="flex items-center gap-2 px-margin py-3 overflow-x-auto bg-surface-cream">
+<button class="thumb-btn flex-shrink-0 w-14 h-16 rounded-md overflow-hidden ring-2 ring-primary transition-all opacity-100" data-index="0" onclick="changeSlide(0)">
+<img class="w-full h-full object-cover object-top" data-alt="Thumbnail frontal view of blush rose gown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2FDgBJE3cB1rsGegA8VgIY3wVCB6Zyv2z7yPrdRbuNn3q1l1Gs4cxybHeiLHyWLdzQUtzNK9Gotq38rJxNk4RjekHQZi43-3gF5WucEaCsIeyLTTpVdeog_MDyKAl7g8cFDR4DU4H7QMb2sCPuzyO1K3uVMSPLOi_OJiHgAwF2vBvqhF1EG08I9P4XIFJcNXeTII-RlaV3vrJW6ir-2yUT1hHHjbb_-E5NWKMUDQ"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-14 h-16 rounded-md overflow-hidden ring-1 ring-surface-variant transition-all opacity-60 hover:opacity-100" data-index="1" onclick="changeSlide(1)">
+<img class="w-full h-full object-cover object-center" data-alt="Thumbnail side silhouette view of dress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-jV4sCftnWmsvavdVGlL32OrZkNIH4gZdjV4C6iLFRSLQtR0o6H_o_nNR2nNa2DfjHcGD6mAIcpyann7a2iGqB5EjJfQyxx66PUlvt9hM32QRsi_kfYsoS3FUfbVvjfK8RcMGaD369W5tGVhTEr9udA2Fy7zU0I3lBO2C_xbbNlnpr0uwgFgRX8A6y-TGdJd81lXWPDsSagS_pcwhVBrw7_KGgAF0VHNr-4DhhIc"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-14 h-16 rounded-md overflow-hidden ring-1 ring-surface-variant transition-all opacity-60 hover:opacity-100" data-index="2" onclick="changeSlide(2)">
+<img class="w-full h-full object-cover object-center" data-alt="Thumbnail fabric close-up of pleated georgette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrzgwYR7itfeW6IgMsWV--vWrtAPYZEh7xkKH6-JMjMDQOwQCvBsmPSLhSfC-rEeWCJbbWZmjEo4OMq6B0UzrLCH3is5Tk5vn1VUvmI5ccUrQYtfi5ChAOtTunFVVchCeByskkgfQDNbVtzZufT_i17mgMpU_eGCZ0CnQ-Mz0uQinMmLabLmapcWN-JtaaWk6BENcUTGNENdlZK3hwhRZalhTIOqteG3HH6I_FTOI"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-14 h-16 rounded-md overflow-hidden ring-1 ring-surface-variant transition-all opacity-60 hover:opacity-100" data-index="3" onclick="changeSlide(3)">
+<img class="w-full h-full object-cover object-center" data-alt="Thumbnail lifestyle styling of model with accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-aFOSD3f_QU7BLBEx63whq0flC9Z_XwAbtqQstjpU2G-KLQYavfKAOIbRlZ5JWKj5W72clBj1LdNUraabTM7nNJvKnVuJ3WZHjBbxuwlO_bvvQKNRJdeJO2N1TvCZGRGYdAJ5gB5amRUdu4eivEGzfXECZFXfQfIZgpRoubB_5t3TJjutssBWUt4MjnFoXQNtIEh92P0B7kyMilmpYWeODG0l3PmjQaN0XuYduyE"/>
+</button>
+<div class="flex-1 flex flex-col justify-center pl-2">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Fabric Weight</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Flowy 120 GSM Georgette</span>
+</div>
+</div>
+</section>
+<!-- Product Core Details Section -->
+<section class="px-margin pt-4 pb-6 flex flex-col gap-4 bg-surface-cream">
+<!-- Brand / Collection Eyebrow -->
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">NP WARDROBE LUXE</span>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-label-sm text-label-sm text-text-muted">(38 reviews)</span>
+</div>
+</div>
+<!-- Product Title & Subtitle -->
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-normal tracking-tight">Blush Rose Pleated Georgette Gown</h1>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">Sculpted bodice with gentle micro-pleats and breathable inner drape</p>
+</div>
+<!-- Price Block & Value Pill -->
+<div class="flex items-baseline justify-between py-2 border-b border-surface-container-high">
+<div class="flex items-baseline gap-2.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">रु. 5,600</span>
+<span class="font-body-md text-body-md line-through text-text-muted">रु. 6,500</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded font-bold uppercase tracking-tight">Save रु. 900</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Taxes included</span>
+</div>
+<!-- Free Delivery Incentive Micro-Banner -->
+<div class="flex items-center gap-2.5 bg-surface-container p-2.5 rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Free Valley Express Delivery</span>
+<span class="font-body-sm text-body-sm text-text-muted">Orders over रु. 5,000 ship free in Kathmandu &amp; Lalitpur</span>
+</div>
+</div>
+<!-- Color Variant Selector -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Selected Shade:</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface" id="selected-shade-label">Dusty Rose Gold</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Color 1: Dusty Rose -->
+<button aria-label="Dusty Rose Gold" class="color-pill ring-2 ring-primary ring-offset-2 ring-offset-surface-cream w-9 h-9 rounded-full bg-[#D68A8E] shadow-sm relative flex items-center justify-center transition-all" onclick="selectColor(this, 'Dusty Rose Gold')">
+<span class="material-symbols-outlined text-[16px] text-white">check</span>
+</button>
+<!-- Color 2: Champagne Cream -->
+<button aria-label="Champagne Cream" class="color-pill ring-1 ring-surface-variant ring-offset-1 ring-offset-surface-cream w-9 h-9 rounded-full bg-[#E8DCB8] shadow-sm relative flex items-center justify-center transition-all" onclick="selectColor(this, 'Champagne Cream')">
+<span class="material-symbols-outlined text-[16px] text-white opacity-0">check</span>
+</button>
+<!-- Color 3: Classic Noir -->
+<button aria-label="Classic Noir" class="color-pill ring-1 ring-surface-variant ring-offset-1 ring-offset-surface-cream w-9 h-9 rounded-full bg-[#292323] shadow-sm relative flex items-center justify-center transition-all" onclick="selectColor(this, 'Classic Noir')">
+<span class="material-symbols-outlined text-[16px] text-white opacity-0">check</span>
+</button>
+</div>
+</div>
+<!-- Size Variant Selector & Size Assist -->
+<div class="flex flex-col gap-2.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Choose Size:</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface" id="selected-size-text">M (Bust 36")</span>
+</div>
+<!-- Modal Trigger for Size Guide -->
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold" onclick="openSizeModal()">
+<span class="material-symbols-outlined text-[15px]">straighten</span>
+<span>Size Guide</span>
+</button>
+</div>
+<!-- Size Chips Grid -->
+<div class="grid grid-cols-5 gap-2" id="size-chips-container">
+<button class="size-chip py-2.5 rounded-md font-label-md text-label-md bg-surface-pure text-on-surface shadow-sm hover:bg-surface-container transition-all" onclick="selectSize(this, 'XS', '32')">
+          XS
+        </button>
+<button class="size-chip py-2.5 rounded-md font-label-md text-label-md bg-surface-pure text-on-surface shadow-sm hover:bg-surface-container transition-all" onclick="selectSize(this, 'S', '34')">
+          S
+        </button>
+<button class="size-chip py-2.5 rounded-md font-label-md text-label-md bg-primary text-on-primary font-bold shadow-md ring-1 ring-primary transition-all" onclick="selectSize(this, 'M', '36')">
+          M
+        </button>
+<button class="size-chip py-2.5 rounded-md font-label-md text-label-md bg-surface-pure text-on-surface shadow-sm hover:bg-surface-container transition-all" onclick="selectSize(this, 'L', '38')">
+          L
+        </button>
+<button class="size-chip py-2.5 rounded-md font-label-md text-label-md bg-surface-pure text-on-surface shadow-sm hover:bg-surface-container transition-all" onclick="selectSize(this, 'XL', '40')">
+          XL
+        </button>
+</div>
+<div class="flex items-center gap-1.5 text-text-muted">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span class="font-body-sm text-body-sm text-text-muted">True to Nepali standard fit. Model is 5'6" wearing size S.</span>
+</div>
+</div>
+<!-- Quantity & Live Calculation Strip -->
+<div class="flex items-center justify-between bg-surface-pure p-3 rounded-lg shadow-sm mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Quantity</span>
+<span class="font-currency text-currency text-on-surface">Subtotal: <span class="text-primary font-bold" id="subtotal-display">रु. 5,600</span></span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-8 h-8 rounded-full bg-surface-pure text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="adjustQty(-1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-title-md text-title-md font-bold text-on-surface w-4 text-center" id="qty-count">1</span>
+<button class="w-8 h-8 rounded-full bg-surface-pure text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="adjustQty(1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<!-- Dual Conversion CTAs -->
+<div class="flex flex-col gap-2.5 pt-2">
+<!-- Direct Shopping Bag CTA -->
+<button class="w-full h-12 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-md shadow-md flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" onclick="addToBagAction()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Add to Shopping Bag</span>
+</button>
+<!-- WhatsApp Express Concierge Order CTA -->
+<a class="w-full h-12 bg-whatsapp-green text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-md shadow-sm flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" href="https://wa.me/9779740258617?text=Hello%20NP%20Wardrobe%2C%20I%20would%20like%20to%20order%20the%20Blush%20Rose%20Pleated%20Georgette%20Gown%20(SKU%3A%20NPW-GOWN-ROSE)%20in%20Size%20M.%20Total%20Price%3A%20NPR%205%2C600." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Order Now via WhatsApp</span>
+</a>
+<p class="font-body-sm text-body-sm text-center text-text-muted">Instant customer concierge support +977 9740258617</p>
+</div>
+<!-- Trust Badges Strip -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-surface-container-high text-center">
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">verified</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">100% Authentic</span>
+<span class="font-label-sm text-[10px] text-text-muted leading-tight">Tailored Fabric</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">published_with_changes</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Easy Exchange</span>
+<span class="font-label-sm text-[10px] text-text-muted leading-tight">7-Day Fit Guarantee</span>
+</div>
+<div class="flex flex-col items-center p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">payments</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Cash on Delivery</span>
+<span class="font-label-sm text-[10px] text-text-muted leading-tight">Kathmandu &amp; Outstation</span>
+</div>
+</div>
+</section>
+<!-- Product Specifications & Details Accordions -->
+<section class="px-margin py-4 bg-surface-cream flex flex-col gap-2.5">
+<div class="font-headline-sm text-headline-sm text-on-surface">Garment Insights &amp; Service</div>
+<!-- Accordion 1: Description & Styling -->
+<details class="group bg-surface-pure rounded-lg shadow-sm overflow-hidden transition-all" open="">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none select-none">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">style</span>
+          Description &amp; Styling Notes
+        </span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 font-body-md text-body-md text-on-surface-variant flex flex-col gap-2">
+<p>
+          Crafted for high-elegance festive soirees, cocktail evenings, and destination weddings across Nepal. The gown features masterfully engineered micro-pleating along the flowing A-line silhouette, paired with a sculpted feminine neckline.
+        </p>
+<ul class="flex flex-col gap-1.5 pt-1 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+<span>Ultra-soft breathable georgette with opaque inner silk-crepe lining.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+<span>Invisible YKK Japanese concealed side zipper for effortless wear.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+<span>Floor-grazing hemline tailored to highlight stilettos or ethnic juttis.</span>
+</li>
+</ul>
+</div>
+</details>
+<!-- Accordion 2: Fabric & Care -->
+<details class="group bg-surface-pure rounded-lg shadow-sm overflow-hidden transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none select-none">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">dry_cleaning</span>
+          Fabric Composition &amp; Care
+        </span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 font-body-md text-body-md text-on-surface-variant flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2 py-1">
+<div class="bg-surface-container p-2.5 rounded-md">
+<span class="font-label-sm text-label-sm text-text-muted block">Outer Sheer</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">100% Poly-Georgette</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-md">
+<span class="font-label-sm text-label-sm text-text-muted block">Inner Lining</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Butter Silk Crepe</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+          Recommended: Dry clean only for the initial wear to protect delicate knife pleats. Gentle steam iron inside out on low heat setting. Do not bleach or wring.
+        </p>
+</div>
+</details>
+<!-- Accordion 3: Nepal Nationwide Delivery -->
+<details class="group bg-surface-pure rounded-lg shadow-sm overflow-hidden transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none select-none">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+          Nepal Delivery &amp; Shipping Rates
+        </span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 font-body-md text-body-md text-on-surface-variant flex flex-col gap-3">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Kathmandu Valley (KTM, Lalitpur, Bhaktapur)</span>
+<span class="font-label-sm text-label-sm text-text-muted">24 - 48 Hours delivery slot</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">Free on this order</span>
+</div>
+<div class="flex items-center justify-between border-b border-surface-container-high pb-2">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Pokhara, Butwal, Biratnagar, Chitwan</span>
+<span class="font-label-sm text-label-sm text-text-muted">2 - 3 Business Days via Express Courier</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">रु. 150</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Rest of Nepal (77 Districts)</span>
+<span class="font-label-sm text-label-sm text-text-muted">3 - 5 Business Days via Nepal Post / City Courier</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">रु. 200</span>
+</div>
+</div>
+</details>
+<!-- Accordion 4: Local Nepali Payment Methods -->
+<details class="group bg-surface-pure rounded-lg shadow-sm overflow-hidden transition-all">
+<summary class="flex items-center justify-between p-4 cursor-pointer list-none select-none">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+          Payment Options (eSewa &amp; COD)
+        </span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 flex flex-col gap-2.5">
+<p class="font-body-sm text-body-sm text-on-surface-variant">We offer verified secure checkout channels for smooth shopping:</p>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex items-center gap-2 p-2.5 rounded bg-surface-container">
+<span class="w-3 h-3 rounded-full bg-[#60BB46]"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">eSewa Mobile Wallet</span>
+<span class="font-label-sm text-[10px] text-text-muted">Direct digital scan</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded bg-surface-container">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Cash On Delivery</span>
+<span class="font-label-sm text-[10px] text-text-muted">Pay at doorstep</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Fonepay QR &amp; Khalti also supported at checkout.</span>
+</div>
+</div>
+</details>
+</section>
+<!-- Customer Reviews with Kathmandu / Nepal Citations -->
+<section class="px-margin py-6 bg-surface-cream">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Verified Customer Love</h2>
+<span class="font-body-sm text-body-sm text-text-muted">Real women, authentic Himalayan celebrations</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Write Review</button>
+</div>
+<!-- Rating Summary Bar -->
+<div class="bg-surface-pure p-4 rounded-xl shadow-sm mb-4 flex items-center justify-between">
+<div class="flex flex-col items-center pr-4 border-r border-surface-container-high">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary leading-none">4.9</span>
+<div class="flex text-[#F59E0B] my-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-[11px] text-text-muted">38 Nepali buyers</span>
+</div>
+<div class="flex-1 pl-4 flex flex-col gap-1">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-text-muted">
+<span>5★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full w-[92%] rounded-full"></div>
+</div>
+<span>92%</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-text-muted">
+<span>4★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full w-[8%] rounded-full"></div>
+</div>
+<span>8%</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-text-muted">
+<span>3★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full w-[0%] rounded-full"></div>
+</div>
+<span>0%</span>
+</div>
+</div>
+</div>
+<!-- Review Cards Slider -->
+<div class="flex flex-col gap-3">
+<!-- Review 1 -->
+<div class="bg-surface-pure p-4 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center justify-center font-bold">
+              AS
+            </div>
+<div>
+<span class="font-title-md text-title-md font-semibold text-on-surface block leading-tight">Anjali Shrestha</span>
+<span class="font-label-sm text-[11px] text-text-muted">Jawalakhel, Lalitpur • Verified Buyer</span>
+</div>
+</div>
+<div class="flex text-[#F59E0B]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          "Wore this to my cousin's engagement dinner at Yak &amp; Yeti. The pleats fall gracefully and don't crease even after sitting for hours. Sizing was exact to the chart. Delivered via NP Wardrobe rider inside 24 hours!"
+        </p>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-label-sm font-label-sm text-text-muted">Purchased Size: M</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-label-sm font-label-sm text-text-muted">Color: Rose Gold</span>
+</div>
+</div>
+<!-- Review 2 with Photo -->
+<div class="bg-surface-pure p-4 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center justify-center font-bold">
+              PG
+            </div>
+<div>
+<span class="font-title-md text-title-md font-semibold text-on-surface block leading-tight">Prashamsha Gurung</span>
+<span class="font-label-sm text-[11px] text-text-muted">Lakeside, Pokhara • Verified Buyer</span>
+</div>
+</div>
+<div class="flex text-[#F59E0B]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          "The fabric lining is so soft against the skin, not clingy at all. The WhatsApp concierge helped me confirm my bust measurement before sending it to Pokhara. Such thoughtful service!"
+        </p>
+<div class="w-20 h-24 rounded-lg overflow-hidden mt-1 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Customer photo review showing user wearing the blush rose georgette gown at an outdoor banquet reception surrounded by floral decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAJS26PHGajUkfqEJkIomyppAHj8lB_2F723mEtwK-aCvUjvvKf1PZABSuudqIFmhEIU4Udt_GPIarn_yadcjVC5vgDTFqYS5DcoEl20H0lb7uKw794kulDwVBEkiTFm2nYoCZx8oVXzvjkcaQK507ZuSss9eQyVoLuwFlNXDwwpNeyeoBEmhA5ApXpE1YDkT0oAMkIu88P8FgSbcsP-EBJTRwcdicSMW7hwmnlxE"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Complete The Look / Cross-Sell 2-Column Grid -->
+<section class="px-margin py-4 bg-surface-cream mb-6">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Complete The Look</h2>
+<span class="font-label-sm text-label-sm text-primary font-bold">View Ensemble</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Related Item 1 -->
+<div class="flex flex-col bg-surface-pure rounded-lg overflow-hidden shadow-sm group">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Luxury handcrafted rose-gold crystal drop statement earrings designed for traditional and western evening gowns on ivory satin pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt8XTzHC9bdPyGN_ifVNDv6AileS8IRdB0zT-uzwf3pbOF4zHJWQ2auly1HwkyG9FFNT4CNgCvlRh4bGB_6iWqyNnIywh3z6eOxdlpNr2_nMClzHEwhucUoES9vwLkx8XW6j7ylF-Kq8NNgMvdImJkPvQopg_CcYgFBvgkAYdkBm7sCG0mb18qWq9pBWWtztWSG0YikqwZx8tcQUbStth-5v7ZxRu9dvomrPZSHdg"/>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-pure/80 backdrop-blur text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-label-sm text-[10px] uppercase text-text-muted">Accessories</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Rose Crystal Solitaire Earrings</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-md text-label-md font-bold text-primary">रु. 1,450</span>
+</div>
+<button class="mt-2 w-full py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm uppercase rounded hover:bg-primary hover:text-on-primary transition-colors">
+            + Quick Add
+          </button>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="flex flex-col bg-surface-pure rounded-lg overflow-hidden shadow-sm group">
+<div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Embroidered champagne metallic evening minaudiere clutch purse with subtle brass mountain silhouette clasp on velvet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmeXoBK5N5J006lLQdP9FSiXNbTvNWwokgwxKNsXYBw8npXam1yZ39c4vSriDZlTlLvSmxjDWt3o0xymilnkxh_qbEyf50SVLB0eiZjVkkckyV76KMsZEQFZBPwncDLigRQDt_fpaeYGS9lFD3YGRPWTHvYUAmXiDqd6WiAFKH2Dcz10z07CgdtuOlGmb5zsDFqMMOTqmmHOxNx8--84eC2v0VzUi1ok74r263SWY"/>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-pure/80 backdrop-blur text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-label-sm text-[10px] uppercase text-text-muted">Handbags</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Champagne Velvet Minaudiere</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-label-md text-label-md font-bold text-primary">रु. 2,800</span>
+</div>
+<button class="mt-2 w-full py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm uppercase rounded hover:bg-primary hover:text-on-primary transition-colors">
+            + Quick Add
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Shopping Bar for High Mobile Conversion -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-pure/95 backdrop-blur-xl border-t border-surface-container-high px-margin py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] pb-safe">
+<div class="flex items-center justify-between gap-3">
+<!-- Mini Preview & Price -->
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-md bg-surface-container flex-shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover object-top" data-alt="Mini thumb thumbnail preview of blush rose gown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTlAturC5Fq2yXZZD2TVM1Tb0HbbnI1iiUbz77CM-ci3I30KLbf7ZGVquU0E4NX0sUru9-Eak3rczeenBUtng9Q_v7vxR0dbjQZ_p7w66CpVlQPYCePqH8lGyzT4MSWW4fe7ESaOVmjV3kgM-wiv_0nvejmmJRormWepvyD2uAEg3VeG4BDP4D_Vy0C4BRzh6kFATQ07CkS8jsAMbnkrg2roqRBERudutyVjWJK8U"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-currency text-currency text-primary font-bold">रु. 5,600</span>
+<span class="font-label-sm text-[10px] px-1.5 py-0.2 bg-surface-container-high rounded text-on-surface font-semibold" id="sticky-size-pill">Size M</span>
+</div>
+<span class="font-label-sm text-[11px] text-text-muted truncate">In stock • Ready to dispatch</span>
+</div>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="h-11 px-5 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-md shadow-md flex items-center gap-1.5 active:scale-95 transition-transform" onclick="addToBagAction()">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Size Guide Modal Drawer -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 hidden opacity-0 transition-opacity duration-300" id="size-modal">
+<div class="w-full max-w-lg bg-surface-pure rounded-t-2xl sm:rounded-xl p-5 shadow-2xl flex flex-col gap-4 transform transition-transform translate-y-full max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Garment Measurement Guide</h3>
+<span class="font-label-sm text-label-sm text-text-muted">Standard Nepali Body Dimensions (Inches)</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeSizeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Size Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface uppercase font-label-sm text-label-sm">
+<th class="p-2.5 rounded-l">Size</th>
+<th class="p-2.5">Bust</th>
+<th class="p-2.5">Waist</th>
+<th class="p-2.5">Hip</th>
+<th class="p-2.5 rounded-r">Length</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<tr class="hover:bg-surface-container-low">
+<td class="p-2.5 font-bold text-primary">XS</td>
+<td class="p-2.5">32"</td>
+<td class="p-2.5">26"</td>
+<td class="p-2.5">36"</td>
+<td class="p-2.5">54"</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2.5 font-bold text-primary">S</td>
+<td class="p-2.5">34"</td>
+<td class="p-2.5">28"</td>
+<td class="p-2.5">38"</td>
+<td class="p-2.5">55"</td>
+</tr>
+<tr class="bg-primary-fixed/20">
+<td class="p-2.5 font-bold text-primary">M (Selected)</td>
+<td class="p-2.5 font-bold">36"</td>
+<td class="p-2.5 font-bold">30"</td>
+<td class="p-2.5 font-bold">40"</td>
+<td class="p-2.5 font-bold">56"</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2.5 font-bold text-primary">L</td>
+<td class="p-2.5">38"</td>
+<td class="p-2.5">32"</td>
+<td class="p-2.5">42"</td>
+<td class="p-2.5">56"</td>
+</tr>
+<tr class="hover:bg-surface-container-low">
+<td class="p-2.5 font-bold text-primary">XL</td>
+<td class="p-2.5">40"</td>
+<td class="p-2.5">34"</td>
+<td class="p-2.5">44"</td>
+<td class="p-2.5">57"</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-3 bg-surface-container rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">tips_and_updates</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong>Nepali Fit Tip:</strong> If you fall between two sizes (e.g., Bust 35"), we recommend ordering size <strong>M</strong> for comfortable breathing ease around the ribcage.
+        </p>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary font-label-md text-label-md uppercase rounded-md shadow-md" onclick="closeSizeModal()">
+        Got it, Continue Shopping
+      </button>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed top-20 left-4 right-4 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center justify-between pointer-events-none transform -translate-y-12 opacity-0 transition-all duration-300" id="cart-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#4ADE80] text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium">Added to Bag • Blush Rose Gown (Size <span id="toast-size">M</span>)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase font-bold">View Bag</span>
+</div>
+</div>
+<script>
+  let currentSlide = 0;
+  let quantity = 1;
+  const basePrice = 5600;
+  let selectedSize = 'M';
+
+  function changeSlide(index) {
+    currentSlide = index;
+    const track = document.getElementById('gallery-track');
+    const counter = document.getElementById('gallery-counter');
+    track.style.transform = `translateX(-${index * 100}%)`;
+    counter.textContent = `${index + 1} / 4`;
+
+    const thumbs = document.querySelectorAll('.thumb-btn');
+    thumbs.forEach((thumb, i) => {
+      if (i === index) {
+        thumb.classList.remove('opacity-60', 'ring-surface-variant');
+        thumb.classList.add('opacity-100', 'ring-2', 'ring-primary');
+      } else {
+        thumb.classList.remove('opacity-100', 'ring-2', 'ring-primary');
+        thumb.classList.add('opacity-60', 'ring-1', 'ring-surface-variant');
+      }
+    });
+  }
+
+  function selectColor(btn, colorName) {
+    document.getElementById('selected-shade-label').innerText = colorName;
+    const allPills = document.querySelectorAll('.color-pill');
+    allPills.forEach(pill => {
+      pill.classList.remove('ring-2', 'ring-primary', 'ring-offset-2');
+      pill.classList.add('ring-1', 'ring-surface-variant', 'ring-offset-1');
+      pill.querySelector('span').classList.add('opacity-0');
+    });
+    btn.classList.add('ring-2', 'ring-primary', 'ring-offset-2');
+    btn.classList.remove('ring-1', 'ring-surface-variant', 'ring-offset-1');
+    btn.querySelector('span').classList.remove('opacity-0');
+  }
+
+  function selectSize(btn, size, bust) {
+    selectedSize = size;
+    document.getElementById('selected-size-text').innerText = `${size} (Bust ${bust}")`;
+    document.getElementById('sticky-size-pill').innerText = `Size ${size}`;
+    document.getElementById('toast-size').innerText = size;
+
+    const allChips = document.querySelectorAll('.size-chip');
+    allChips.forEach(chip => {
+      chip.className = "size-chip py-2.5 rounded-md font-label-md text-label-md bg-surface-pure text-on-surface shadow-sm hover:bg-surface-container transition-all";
+    });
+
+    btn.className = "size-chip py-2.5 rounded-md font-label-md text-label-md bg-primary text-on-primary font-bold shadow-md ring-1 ring-primary transition-all";
+  }
+
+  function adjustQty(delta) {
+    quantity = Math.max(1, Math.min(10, quantity + delta));
+    document.getElementById('qty-count').innerText = quantity;
+    const total = (basePrice * quantity).toLocaleString('en-IN');
+    document.getElementById('subtotal-display').innerText = `रु. ${total}`;
+  }
+
+  function toggleWishlist(btn) {
+    const icon = document.getElementById('wish-icon');
+    if (icon.textContent === 'favorite_border') {
+      icon.textContent = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-primary');
+    } else {
+      icon.textContent = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-primary');
+    }
+  }
+
+  function openSizeModal() {
+    const modal = document.getElementById('size-modal');
+    modal.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      modal.classList.remove('opacity-0');
+      modal.querySelector('div').classList.remove('translate-y-full');
+    });
+  }
+
+  function closeSizeModal() {
+    const modal = document.getElementById('size-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.add('translate-y-full');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300);
+  }
+
+  function addToBagAction() {
+    const toast = document.getElementById('cart-toast');
+    toast.classList.remove('-translate-y-12', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    // Trigger slight haptic micro-feedback if available
+    if (window.navigator && window.navigator.vibrate) {
+      window.navigator.vibrate(30);
+    }
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('-translate-y-12', 'opacity-0');
+    }, 3200);
+  }
+</script></main><a aria-label="WhatsApp Order Concierge" class="fixed bottom-6 right-4 z-40 bg-whatsapp-green text-on-primary rounded-full px-space-md py-space-sm shadow-[0_4px_20px_-2px_rgba(41,35,35,0.15)] flex items-center gap-space-xs transition-transform transform active:scale-95" href="https://wa.me/9779740258617" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span></span><span class="material-symbols-outlined text-[20px]">chat</span><span class="font-label-sm text-label-sm font-bold tracking-tight whitespace-nowrap">+977 9740258617</span></a></body></html>

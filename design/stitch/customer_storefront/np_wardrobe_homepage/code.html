@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>NP Wardrobe</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'secondary-container': '#eddfdd', 'surface-variant': '#ece0df', 'error-container': '#ffdad6', 'secondary-fixed': '#eddfdd', 'surface-container': '#f7ebeb', 'primary-fixed': '#ffd9dd', 'on-tertiary-fixed-variant': '#92001c', 'outline-variant': '#d7c1c3', 'tertiary-fixed': '#ffdad8', 'surface-dim': '#e3d7d7', 'background': '#fff8f7', 'on-surface': '#201a1a', 'primary-container': '#a6606b', 'secondary-fixed-dim': '#d1c4c2', 'tertiary-fixed-dim': '#ffb3b1', 'on-error-container': '#93000a', 'outline': '#857374', 'surface-container-lowest': '#ffffff', 'whatsapp-green': '#25D366', 'secondary': '#665c5b', 'surface-container-high': '#f1e5e5', 'text-muted': '#746A66', 'primary': '#8a4853', 'on-tertiary': '#ffffff', 'on-primary-fixed-variant': '#70343e', 'surface-pure': '#FFFFFF', 'border-subtle': '#E9DED8', 'on-primary-fixed': '#3a0915', 'surface-bright': '#fff8f7', 'primary-fixed-dim': '#ffb2bc', 'on-tertiary-fixed': '#410007', 'tertiary-container': '#d83641', 'on-error': '#ffffff', 'inverse-surface': '#352f2f', 'on-secondary-container': '#6c6261', 'on-tertiary-container': '#fffbff', 'surface-tint': '#8c4b55', 'surface-container-highest': '#ece0df', 'surface': '#fff8f7', 'on-surface-variant': '#524345', 'inverse-on-surface': '#faeeed', 'on-secondary-fixed': '#211a19', 'surface-container-low': '#fdf1f0', 'inverse-primary': '#ffb2bc', 'error': '#ba1a1a', 'on-primary-container': '#fffbff', 'tertiary': '#b5192c', 'on-background': '#201a1a', 'surface-cream': '#FBF7F0', 'on-secondary-fixed-variant': '#4e4544' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-md': '1rem', 'gutter-desktop': '1.5rem', 'space-xs': '0.25rem', 'space-2xl': '4rem', 'margin-desktop': '3.5rem', 'space-lg': '1.5rem', 'margin': '1rem', 'margin-tablet': '2rem', 'gutter': '1rem', 'space-sm': '0.5rem', 'space-xl': '2.5rem' }, fontFamily: { 'display-mobile': ['EB Garamond'], 'label-md': ['DM Sans'], 'title-lg': ['DM Sans'], 'display': ['EB Garamond'], 'body-md': ['DM Sans'], 'label-sm': ['DM Sans'], 'body-lg': ['DM Sans'], 'headline-md': ['EB Garamond'], 'headline-sm': ['EB Garamond'], 'headline-lg-mobile': ['EB Garamond'], 'headline-lg': ['EB Garamond'], 'title-md': ['DM Sans'], 'body-sm': ['DM Sans'], 'currency': ['DM Sans'] }, fontSize: { 'display-mobile': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['0.8125rem', { lineHeight: '1rem', letterSpacing: '0.08em', fontWeight: '600' }], 'title-lg': ['1.125rem', { lineHeight: '1.625rem', letterSpacing: '0.01em', fontWeight: '600' }], 'display': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.02em', fontWeight: '400' }], 'body-md': ['0.9375rem', { lineHeight: '1.5rem', letterSpacing: '0', fontWeight: '400' }], 'label-sm': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.1em', fontWeight: '600' }], 'body-lg': ['1.0625rem', { lineHeight: '1.75rem', letterSpacing: '0', fontWeight: '400' }], 'headline-md': ['1.75rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '500' }], 'headline-sm': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '0.01em', fontWeight: '500' }], 'headline-lg-mobile': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '0', fontWeight: '400' }], 'headline-lg': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.01em', fontWeight: '400' }], 'title-md': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0.01em', fontWeight: '500' }], 'body-sm': ['0.8125rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '400' }], 'currency': ['1rem', { lineHeight: '1.25rem', letterSpacing: '0.02em', fontWeight: '700' }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; background-color: #FBF7F0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } * { -ms-overflow-style: none; scrollbar-width: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface-cream text-on-surface font-body-md text-body-md antialiased min-h-screen relative flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-cream/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-1 px-margin text-center overflow-hidden flex items-center justify-center"><p class="font-label-sm text-label-sm uppercase tracking-widest truncate">FREE DELIVERY ACROSS NEPAL ON ORDERS ABOVE रु. 5,000 | 100% QUALITY GUARANTEED</p></div><div class="h-20 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs"><img alt="logoo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDMiPdmVg4-P5x81rAW10FgWCkihEMJ9BCGiXF1XR9p8xFuLDdIKHnutrAN8MQrXuEyacKtEXnmJZ9agLwzcXqRIIhTzmedKppQuj3OLP26Y1jMasC2wagBI1VXlfe7UrZ4PPwKqtU73twQ8TGG-nGnqJ8jZM0JbIZR04ImuYyvmEdjx98Q57HiLDOqZ-Hve1eo4WRlYskCwt5IX_c8XeAZmRR7GUxnndL8ljLIFYUUklvJihXYfzQDfKk"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NP Wardrobe</span></div></div><div class="flex items-center gap-1"><button aria-label="Search Boutique" class="w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="relative w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none">0</span></button><button aria-label="Shopping Bag" class="relative w-11 h-11 flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-20 pb-28 bg-surface-cream flex flex-col"><div class="flex flex-col w-full">
+<!-- 1. Editorial Hero Banner -->
+<section class="relative w-full overflow-hidden bg-surface-cream px-margin pb-space-lg">
+<div class="relative w-full rounded-xl overflow-hidden shadow-sm bg-surface-pure flex flex-col">
+<div class="relative w-full h-[390px] bg-cover bg-center flex flex-col justify-end p-space-md" data-alt="Editorial fashion photography of a graceful South Asian Nepali woman wearing a flowy silk rose gold gown with delicate gold embroidery, posed against warm neutral cream textured studio architecture with soft cinematic morning sunlight and subtle shadows, minimalist luxury magazine cover vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJnz1uLJwDdry-cSKv7qE8v5Qflwr5IYUSNVgbRYuhnS1u3NoLUksusehGUMNkav8mI-m-gA4uwbyzB8nJKXKUWkWnfykxI8WonUJxWF5UnLHWZIAkr2X4DzEBjCQRMjVbd08MQ1oJi4gOtLVI8NDpPXcv20iEFWoU0QLqontHIR2yi-2OfXI9vaftOKobRulTSxxWXx3JpztKa72RRsl4yHfZejHwIWnduDnBP_w')">
+<!-- Subtle Gradient Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent"></div>
+<!-- Floating Festive Pill Tag -->
+<div class="relative z-10 mb-space-sm flex items-center gap-space-xs self-start bg-surface-cream/90 backdrop-blur-md px-space-sm py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Spring &amp; Festive '25</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-pure leading-tight">
+            Elegance Redefined: <br/><span class="italic font-display-mobile">Spring &amp; Festive</span>
+</h1>
+<p class="font-body-sm text-body-sm text-surface-pure/90 line-clamp-2 max-w-sm">
+            Handcrafted silhouettes, contemporary Western wear &amp; regal ethnic styles delivered across Nepal.
+          </p>
+</div>
+</div>
+<!-- Action Buttons Area -->
+<div class="p-space-md bg-surface-pure flex flex-col gap-space-xs">
+<button class="w-full bg-primary text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span>Explore New Arrivals</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full bg-surface-cream text-on-surface py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.98] transition-transform hover:bg-surface-variant">
+<span>Shop Ethnic Wear</span>
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 2. Curated Categories Bar / Horizontal Scroll -->
+<section class="w-full py-space-sm">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Curated By NP</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Explore By Style</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary uppercase tracking-wider flex items-center gap-0.5" href="#">
+        View All <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Scrollable Pills Carousel -->
+<div class="flex overflow-x-auto gap-space-sm px-margin pb-2 pt-1 no-scrollbar scroll-smooth">
+<!-- Category 1 -->
+<a class="flex flex-col items-center gap-space-xs flex-shrink-0 group" href="#">
+<div class="w-20 h-20 rounded-full p-1 bg-surface-pure shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Editorial studio flatlay of an elegant ivory and blush satin slip modern western dress folded neatly on textured linen with rose petals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGg95AsvZ_3vZwI5UKxbYUxYBEKq3GR3crzYwOOykQX8GRIn-p4_tRrmatUdAe87YqPvYZX2mz9uUilgZJT0Z8VJphvfLaU0I-lkOikkBvoOtM-wPpUx3cQ0kzsGQoHm1BCstCLRoy1A2QWWEU1gLFcOmMT_Ii1XTpkE-q6I0NDeXrPcjEbIoMVCgFwk4MzjnZKBFksp0S4eRlWT4WuPxJm5hybXWQATCu2-0ecgs"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface whitespace-nowrap text-center">Western Wear</span>
+</a>
+<!-- Category 2 -->
+<a class="flex flex-col items-center gap-space-xs flex-shrink-0 group" href="#">
+<div class="w-20 h-20 rounded-full p-1 bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Intricate golden embroidery on deep maroon and rose Chanderi silk fabric close-up highlighting traditional Nepalese boutique craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcgWYtxZkNZAfPPebLhyFGd72-Znk24KoAz6Bz_j15LYYS21GfVhn1EJKzF9mPFKF0GMZ5htU3EC8uf7oFqZ_7HvVLKcTVH5h2TOpVEl2jxQc_8oevoa7DlIb8uAFMHd1TdRCeFunC_4FzwUYadpj22PSFViQHYoDgX_tlFPXYGWG3TR-yeVS0hc0CAZmkAdgCSVURhaSUIvE3RvsDxDzlWLmn-eBceipSLSXVp0U"/>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary whitespace-nowrap text-center">Ethnic &amp; Kurtis</span>
+</a>
+<!-- Category 3 -->
+<a class="flex flex-col items-center gap-space-xs flex-shrink-0 group" href="#">
+<div class="w-20 h-20 rounded-full p-1 bg-surface-pure shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Modern chic relaxed linen coordinate set in natural soft beige tones, styled with delicate minimal accessories on a warm stone pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBZ4ZDMbpUfOq_MQcomyLrwnj6uXfcA38Qc2Htan0-F1DwkAcX7htScCu_wybIrb9rStr6OGZyVvMMmscoVGV_fgMu318a0aA5WavpEjn8hL2IKgIypoY87Ru0J1vXZ8HQb-kqjCBEwyM70mvGoGBdAL_1awGfWClGMagiKADAa9ugM5MMVsESNY1HIN7ddsLt8ahhscZIe2OcaxLDc77es5cLfJJOGILbpSs-bmk"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface whitespace-nowrap text-center">Casual Luxe</span>
+</a>
+<!-- Category 4 -->
+<a class="flex flex-col items-center gap-space-xs flex-shrink-0 group" href="#">
+<div class="w-20 h-20 rounded-full p-1 bg-surface-pure shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Shimmering organza festive evening gown with subtle zari borders in dusky rose gold studio lighting, high fashion drape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx2XJq9-vcJ40gj6VhXKWBfzjNM6sIII8_iyJBofOiiWqpuR6ArKYgcCkTWJTrFjEg_ty5LFdVR2qAJBz2Ef-zharMwm4xf2QYnr2HroYEWTx0kHQ-h6LyTrBRIZstCwqC63v8uOYFMGk9CHgAlB1UWvo0sfAo5yfgcKojxpUIi9Ngg77V89IRMDtkFxxokNxfya_nnapdyIgwDzFEE37ETLWzz8yleOtEJcOshHg"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface whitespace-nowrap text-center">Party &amp; Evening</span>
+</a>
+<!-- Category 5 -->
+<a class="flex flex-col items-center gap-space-xs flex-shrink-0 group" href="#">
+<div class="w-20 h-20 rounded-full p-1 bg-surface-pure shadow-sm group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Minimalist handcrafted rose gold filigree earrings and hand-woven silk clutch displayed on natural cream raw silk background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWfDIEsOBHTvMxJyXgHSpjk2_Y5xyytsV01drgHKNd2D1pv0t3aPwLiT3EN9NkNwyUojwCIZAiYSPey9fWilgeW1n8HXcHVyKWhSC-ev7y3MM1Gju59dVRf650m02JLqfvH5wNnDAltR1HnGlnyLrFcr5OcHaiB38CxDbUlnEktWRL6xusDLXn8uWNrz_G9yfEUOMWn4Ylk1lwGQPJJUhgfLWXqjybVMX8MjUhyZQ"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface whitespace-nowrap text-center">Accessories</span>
+</a>
+</div>
+</section>
+<!-- 3. Featured New Arrivals (2-column mobile grid) -->
+<section class="w-full px-margin py-space-md">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Handcrafted &amp; Trending</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">New Arrivals</h2>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">4 Styles</span>
+</div>
+<!-- 2 Column Uniform Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Product Card 1 -->
+<div class="bg-surface-pure rounded-lg p-space-xs shadow-sm flex flex-col relative group">
+<div class="relative w-full aspect-[3/4] rounded-DEFAULT overflow-hidden bg-surface-cream">
+<img class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" data-alt="Full length editorial shot of a woman in a sweeping dusty rose silk slip maxi dress walking through sunlit Kathmandu heritage courtyard arches." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeiHO2QTUSEpDf5IWEyz1yU-VkquKiMZ0oPC1Zj7hae8Y5EfJ5rH7qbGXQNhbYqn7eh1_bAwAtmKbl2wikLNGobH-mf3Q5R-BIOC-fMsW-M6YW_1JZF7pZ2MUIL83WK0HpmnLmAIksuZhJEa6DBhxaQx9BPABtpeET6slmNNV1kIKazP2yhKiBYxiKenRLBpPpiPWKnFxRYRo3P-MTIkQKMcWHi-xN5faAyz0EsFA"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-DEFAULT uppercase tracking-wider shadow-sm">
+            New
+          </span>
+<!-- Heart Wishlist Toggle -->
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-pure/80 backdrop-blur-sm text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').innerText = this.querySelector('span').innerText === 'favorite' ? 'favorite_border' : 'favorite';" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col p-space-xs mt-1">
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">(18)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate font-normal">Rose Silk Slip Maxi</h3>
+<p class="font-body-sm text-[11px] text-text-muted truncate">Pure mulberry blend</p>
+<div class="mt-space-xs flex items-baseline gap-space-xs">
+<span class="font-currency text-currency text-primary">रु. 4,800</span>
+</div>
+<!-- Add to Bag Quick CTA -->
+<button class="mt-space-sm w-full py-2 bg-surface-cream text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT active:scale-95 transition-all hover:bg-primary hover:text-on-primary flex items-center justify-center gap-1" onclick="const countEl = document.querySelectorAll('header span.bg-primary')[1]; if(countEl){ countEl.innerText = parseInt(countEl.innerText) + 1; } this.innerText = 'Added ✓'; setTimeout(() =&gt; this.innerText = 'Add to Bag', 1200);" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Add to Bag</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-pure rounded-lg p-space-xs shadow-sm flex flex-col relative group">
+<div class="relative w-full aspect-[3/4] rounded-DEFAULT overflow-hidden bg-surface-cream">
+<img class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" data-alt="Editorial portrait of an elegant woman wearing embroidered blush Chanderi silk kurti with delicate beadwork collar and flared pants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfTU5Q2Y71BJBXg3Xh552InEuntj6mHjUI8KRWehIEGbMDTk6PUMK5gqRSlxvb8hrg0_rl5clK58SEoJ_HHxBG4fwfeJqlSEMI1linBYchE1lQ_mfIGADjALHJBMjgAWQj6c1YIHxuuNI2RLVlqmJLyT9aRd3GuuoQHRjEuwGCz70kCPxzMwRENAtvJFyEV6d2lKaEYZvmNp5oDECf7foWu5nqqLxt2ZCTB2EHrHY"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-on-surface text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-DEFAULT uppercase tracking-wider shadow-sm">
+            Bestseller
+          </span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-pure/80 backdrop-blur-sm text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').innerText = this.querySelector('span').innerText === 'favorite' ? 'favorite_border' : 'favorite';" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col p-space-xs mt-1">
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">(42)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate font-normal">Chanderi Kurti Set</h3>
+<p class="font-body-sm text-[11px] text-text-muted truncate">3-piece festive edit</p>
+<div class="mt-space-xs flex items-baseline gap-space-xs">
+<span class="font-currency text-currency text-primary">रु. 5,200</span>
+</div>
+<button class="mt-space-sm w-full py-2 bg-surface-cream text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT active:scale-95 transition-all hover:bg-primary hover:text-on-primary flex items-center justify-center gap-1" onclick="const countEl = document.querySelectorAll('header span.bg-primary')[1]; if(countEl){ countEl.innerText = parseInt(countEl.innerText) + 1; } this.innerText = 'Added ✓'; setTimeout(() =&gt; this.innerText = 'Add to Bag', 1200);" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Add to Bag</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-pure rounded-lg p-space-xs shadow-sm flex flex-col relative group">
+<div class="relative w-full aspect-[3/4] rounded-DEFAULT overflow-hidden bg-surface-cream">
+<img class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" data-alt="Editorial fashion look of a woman wearing high-waisted tailored sand linen trousers and oversized minimal blazer against warm neutral wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARB5c0ISCaxTvUoRt6EUdLd9sxVTRseg3mAUsV5g7KbfbqNiX4tRb4pPzerw15Ibn_TaP2bSJvAUgyzNp-knv4sKAnUoDBOYPy-p9T4Q-JweXNZtkwimskP0f1aRu3WlLikTUjJwv-H8bDNDkjGUMwPWBTdZQY2fnBwdOOCmWvlc62eHE3bQYXCezje8oKzzQl78K6zSRbLvalhXbBVKun9n6IAGpwORI5-oxPh-o"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-DEFAULT uppercase tracking-wider shadow-sm">
+            Essential
+          </span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-pure/80 backdrop-blur-sm text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').innerText = this.querySelector('span').innerText === 'favorite' ? 'favorite_border' : 'favorite';" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col p-space-xs mt-1">
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">(11)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate font-normal">Linen Blazer &amp; Trouser</h3>
+<p class="font-body-sm text-[11px] text-text-muted truncate">Relaxed breathable fit</p>
+<div class="mt-space-xs flex items-baseline gap-space-xs">
+<span class="font-currency text-currency text-primary">रु. 4,200</span>
+</div>
+<button class="mt-space-sm w-full py-2 bg-surface-cream text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT active:scale-95 transition-all hover:bg-primary hover:text-on-primary flex items-center justify-center gap-1" onclick="const countEl = document.querySelectorAll('header span.bg-primary')[1]; if(countEl){ countEl.innerText = parseInt(countEl.innerText) + 1; } this.innerText = 'Added ✓'; setTimeout(() =&gt; this.innerText = 'Add to Bag', 1200);" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Add to Bag</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-pure rounded-lg p-space-xs shadow-sm flex flex-col relative group">
+<div class="relative w-full aspect-[3/4] rounded-DEFAULT overflow-hidden bg-surface-cream">
+<img class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" data-alt="Editorial look of regal flared Anarkali dress in soft cream and rose tint featuring delicate golden thread work and a diaphanous organza dupatta." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0OsuqLeG1xFpsfqr1Av3QlTuaLiCkDBbNCo2EQEj0JiJWwP3yjgLnvZjbBbi2B5JGORDmuGoyjxUgtxjATYm_Ovh0K1bX1a2N3AQ09rY_ezaFLYmBnzIoYtCVdFLp9r4jdGlUpGz_mh1Vt5Z0dtMMdf3PNeEG4abOhJF7YxqxIPRU1n9FCBH6EtE12Mhuf4M-zXGVkS0jUS5wfhqnLdpu7GZKNeoqoal7W1SKVu0"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-DEFAULT uppercase tracking-wider shadow-sm">
+            Festive
+          </span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-pure/80 backdrop-blur-sm text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').innerText = this.querySelector('span').innerText === 'favorite' ? 'favorite_border' : 'favorite';" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col p-space-xs mt-1">
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-[10px] text-text-muted">(29)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate font-normal">Organza Anarkali Gown</h3>
+<p class="font-body-sm text-[11px] text-text-muted truncate">Includes zari dupatta</p>
+<div class="mt-space-xs flex items-baseline gap-space-xs">
+<span class="font-currency text-currency text-primary">रु. 5,900</span>
+</div>
+<button class="mt-space-sm w-full py-2 bg-surface-cream text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT active:scale-95 transition-all hover:bg-primary hover:text-on-primary flex items-center justify-center gap-1" onclick="const countEl = document.querySelectorAll('header span.bg-primary')[1]; if(countEl){ countEl.innerText = parseInt(countEl.innerText) + 1; } this.innerText = 'Added ✓'; setTimeout(() =&gt; this.innerText = 'Add to Bag', 1200);" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>Add to Bag</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Promotional Spotlight Banner -->
+<section class="w-full px-margin my-space-md">
+<div class="bg-primary text-on-primary rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm">
+<div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-primary-container opacity-40 blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">local_activity</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Exclusive Nepalese Festivity Offer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary leading-tight">
+        The Festive Edit: Flat 15% Off
+      </h3>
+<p class="font-body-sm text-body-sm text-on-primary/80">
+        Claim your seasonal discount with code at checkout. Seamlessly pay via eSewa, Fonepay, or Cash on Delivery.
+      </p>
+<div class="flex items-center justify-between bg-surface-pure text-on-surface rounded-DEFAULT p-space-xs pl-space-sm shadow-inner">
+<div class="flex flex-col">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-text-muted">Coupon Code</span>
+<span class="font-label-md text-label-md tracking-wider font-bold text-primary">NPWARDBO15</span>
+</div>
+<button class="bg-surface-cream text-on-surface px-space-sm py-1.5 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-variant transition-colors" onclick="navigator.clipboard?.writeText('NPWARDBO15'); this.innerText = 'Copied!'; setTimeout(() =&gt; this.innerText = 'Copy', 1500);" type="button">
+          Copy
+        </button>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-primary/90">
+<span class="font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-whatsapp-green">verified</span>
+          Verified Boutique Quality
+        </span>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed underline underline-offset-4" href="https://wa.me/9779740258617?text=Hi%20NP%20Wardrobe,%20I%20want%20to%20apply%20code%20NPWARDBO15">
+          Chat To Order
+        </a>
+</div>
+</div>
+</section>
+<!-- 5. Why NP Wardrobe (Value Props in 4 clean compact cards) -->
+<section class="w-full px-margin py-space-md">
+<div class="mb-space-md text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">The Boutique Promise</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Why Shop NP Wardrobe</h2>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1 -->
+<div class="bg-surface-pure rounded-lg p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface leading-snug">Nationwide Nepal Delivery</h4>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+          Reliable express door delivery across Kathmandu, Pokhara, Chitwan, Biratnagar &amp; beyond.
+        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-pure rounded-lg p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface leading-snug">COD &amp; eSewa Ready</h4>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+          Order comfortably with flexible Cash on Delivery, eSewa wallet, or bank transfers.
+        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-pure rounded-lg p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-whatsapp-green">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface leading-snug">Direct WhatsApp Stylist</h4>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+          Instant fit guidance &amp; custom styling support anytime via +977 9740258617.
+        </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-pure rounded-lg p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface leading-snug">Curated Fine Fabrics</h4>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+          Premium modal, mulberry silk, and chanderi inspected individually for finish.
+        </p>
+</div>
+</div>
+</section>
+<!-- 6. Customer Reviews & Testimonials Carousel -->
+<section class="w-full py-space-md">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Client Praises</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Loved Across Nepal</h2>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-[12px] text-text-muted">(320+)</span>
+</div>
+</div>
+<!-- Review Scroll -->
+<div class="flex overflow-x-auto gap-space-sm px-margin pb-2 pt-1 no-scrollbar scroll-smooth">
+<!-- Review 1 -->
+<div class="w-[280px] flex-shrink-0 bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mt-1">
+            "The Chanderi Kurti set arrived in Lalitpur within 24 hours. The fabric is so soft and the zari border has a subtle, tasteful gleam. Exceptional boutique quality!"
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-primary font-bold flex items-center justify-center font-label-sm">
+            AS
+          </div>
+<div class="flex flex-col">
+<span class="font-title-md text-[13px] font-semibold text-on-surface">Anmol Shrestha</span>
+<span class="font-label-sm text-[11px] text-text-muted">Jhamsikhel, Lalitpur • Verified Buyer</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="w-[280px] flex-shrink-0 bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mt-1">
+            "Ordered via WhatsApp after asking about size fits. Their team was super patient and helpful. Delivered to Pokhara Lakeside seamlessly with COD!"
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-primary font-bold flex items-center justify-center font-label-sm">
+            PG
+          </div>
+<div class="flex flex-col">
+<span class="font-title-md text-[13px] font-semibold text-on-surface">Pooja Gurung</span>
+<span class="font-label-sm text-[11px] text-text-muted">Lakeside, Pokhara • Verified Buyer</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="w-[280px] flex-shrink-0 bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mt-1">
+            "The linen coordinates feel straight out of a European runway lookbook. The stitching precision is unmatched in Nepal. Will definitely order for weddings!"
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-primary font-bold flex items-center justify-center font-label-sm">
+            RB
+          </div>
+<div class="flex flex-col">
+<span class="font-title-md text-[13px] font-semibold text-on-surface">Roshani Basnet</span>
+<span class="font-label-sm text-[11px] text-text-muted">Baluwatar, Kathmandu • Verified Buyer</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Instagram / #NPWardrobe Community Grid -->
+<section class="w-full px-margin py-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Social Lookbook</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">#NPWardrobe Edit</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary uppercase tracking-wider flex items-center gap-1" href="https://instagram.com" target="_blank">
+        @npwardrobe.np
+      </a>
+</div>
+<!-- 4 Photo Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative aspect-square rounded-lg overflow-hidden group shadow-sm bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Candid street style photography of a young fashionable woman wearing an NP Wardrobe rose linen blazer sipping espresso at a chic Patan cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ASow9h3B0VWCNLcDq_kqAytdaltYPU5_vorvcsbAb5nfnEeJ7IshhSS9ap2RiPlWdIoPeBZPc7oPFlBBbURHTvM3D1do9dbj4OidwV7MiR5pmSz6cdAwXF_FRFFoJnBjVJ3hPwhrXg_webPOIxzTdRDBI57zXaV9OBqft2H7Cs3kLl1y9Dbhlqd1Kr5uravUhQ6nGW_5YpGoRHHKc05RH21TqpRglmps7PpITPA"/>
+<div class="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-pure text-[24px]">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden group shadow-sm bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial detail closeup of traditional Nepalese gold ear jewelry styled with a soft blush pink silk festive kurta." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6b8QeQFOSKH3mTqcEmx7sTDW9fGDHros8-kqzc90XB46To3ksZuuZtqpSpWIiqrgmYR5Bmi6SybHyylkkeg9C-3iL0wVrzbiVyyImEtf2HN1brnYHLqlJhqB7y1p3sLOdFceQMvUBbve1Ky8_YJjuJR8w59BWpcAb-_vfJOQghkEHdemIqS6PoPmiwiwr4CQ3GtZgTCvBTXxW5wyWVdN1Znc5YRJqCx8XiAQi6Gs"/>
+<div class="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-pure text-[24px]">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden group shadow-sm bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Golden hour outdoor portrait of a Nepali woman walking through mountain viewpoint terrace dressed in an airy organza Anarkali dress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2UXI07Rpc2m-gl33q0duaedD16hUk13By_uo3nJt2hTxzEW3S1oRJfjU-v2VodhS1_FyB8RqF2SVxTHaXaIVthdUoZBk02rGrFoy0XQ1MtNELlN_jkL-PlLT27S77sZAqrcYSHgTgDASSHqHxLO6_28xg0u9-RQsXYfJEFvKNSZmrBM5tiGO-hufIrRZBsMCfCFZ6J4O3yaIuIg1F9HlZgB3XFE2Ji0-WmNwmWlY"/>
+<div class="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-pure text-[24px]">favorite</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden group shadow-sm bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Artistic unboxing shot of luxurious cream and rose gold NP Wardrobe branded apparel package with botanical sprig on wooden table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6IX-b0RtuwvX7_OdZIsjBL5jKsq8yiquJTedfCnaL6xJ5PTXrT-SkbJy_fm9NEir4_8m8ymBg8qbS92XcZmZYYmXGDp4AWKMX0p1oOx2sYrm4qZXSgHAbBC8t8E8We4wnRe0NQLwcCoXwrcN5ZqE2BLqNz8rSXqFjAp1O3l39IozHyGvOgLsbyQjgzORkqFXFFkIEdRSJcfavuaI3wzVeisLtEflUMTI_-irrzQ"/>
+<div class="absolute inset-0 bg-on-surface/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-pure text-[24px]">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. WhatsApp Order Callout Card -->
+<section class="w-full px-margin pt-space-xs pb-space-lg">
+<div class="bg-surface-pure rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-whatsapp-green/10 text-whatsapp-green flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Prefer ordering via chat?</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+          Send us your favorite design screenshot directly on WhatsApp for sizing consultations, personalized recommendations, and instant manual checkout!
+        </p>
+</div>
+<a class="w-full bg-whatsapp-green text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-space-xs active:scale-[0.98] transition-transform shadow-sm" href="https://wa.me/9779740258617?text=Hi%20NP%20Wardrobe,%20I'd%20like%20to%20order%20a%20dress%20seen%20on%20your%20website" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Chat on WhatsApp (+977 9740258617)</span>
+</a>
+</div>
+</section>
+</div><footer class="mt-space-2xl bg-surface-pure pt-space-xl pb-space-2xl px-margin flex flex-col gap-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col gap-space-xs"><h3 class="font-headline-sm text-headline-sm text-on-surface">Join the Wardrobe Circle</h3><p class="font-body-sm text-body-sm text-text-muted">Subscribe for seasonal edits, private trunk shows, and Nepalese festive previews.</p><div class="mt-space-sm flex gap-space-xs"><input class="flex-1 bg-surface-cream px-space-md py-space-sm font-body-sm text-body-sm text-on-surface rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Enter your email address" type="email"/><button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded-DEFAULT uppercase tracking-wider">Join</button></div></div><div class="grid grid-cols-2 gap-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Collections</span><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Ethnic Elegance</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Western Modern</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Festive Couture</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Size Guide</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Client Care</span><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">About Us</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Shipping Nationwide</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Return Policies</a><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">WhatsApp Concierge</a></div></div><div class="flex flex-col gap-space-sm pt-space-md items-center"><span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Accepted Payment Options</span><div class="flex items-center gap-space-md"><span class="px-space-sm py-1 bg-surface-cream rounded-DEFAULT font-label-sm text-label-sm text-on-surface font-semibold">eSewa</span><span class="px-space-sm py-1 bg-surface-cream rounded-DEFAULT font-label-sm text-label-sm text-on-surface font-semibold">Fonepay</span><span class="px-space-sm py-1 bg-surface-cream rounded-DEFAULT font-label-sm text-label-sm text-on-surface font-semibold">Cash On Delivery</span></div></div><div class="text-center"><p class="font-body-sm text-[12px] text-text-muted">© NP Wardrobe Nepal. All rights reserved. Kathmandu boutique styling.</p></div></footer></main><a aria-label="WhatsApp Order Concierge" class="fixed bottom-24 right-4 z-40 bg-whatsapp-green text-on-primary rounded-full px-space-md py-space-sm shadow-[0_4px_20px_-2px_rgba(41,35,35,0.15)] flex items-center gap-space-xs transition-transform transform active:scale-95" href="https://wa.me/9779740258617" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span></span><span class="material-symbols-outlined text-[20px]">chat</span><span class="font-label-sm text-label-sm font-bold tracking-tight whitespace-nowrap">+977 9740258617</span></a><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-cream/95 backdrop-blur-xl shadow-[0_-2px_10px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-14 transition-colors text-primary font-bold" data-path="boutique-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[10px] tracking-wider uppercase">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors" data-path="shop-catalog" href="#"><span class="material-symbols-outlined text-[22px]">styler</span><span class="font-label-sm text-[10px] tracking-wider uppercase">Shop</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors" data-path="curated-categories" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-[10px] tracking-wider uppercase">Curated</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite_border</span><span class="font-label-sm text-[10px] tracking-wider uppercase">Saved</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors" data-path="shopping-bag" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-[10px] tracking-wider uppercase">Bag</span></a></div></nav></body></html>
