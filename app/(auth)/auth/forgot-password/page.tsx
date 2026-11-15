@@ -1,5 +1,3 @@
-import { PagePlaceholder } from "@/components/shared/page-placeholder";
-
-export default function RoutePage() {
-  return <PagePlaceholder title="Recovery request" description="This page follows the approved Recovery request flow. Feature implementation is pending." />;
-}
+import { Suspense } from "react";
+import { AuthForm } from "@/components/auth/auth-form";
+export default function ForgotPasswordPage() { return <Suspense fallback={<div className="auth-card" role="status">Loading recovery…</div>}><AuthForm mode="forgot" /></Suspense>; }

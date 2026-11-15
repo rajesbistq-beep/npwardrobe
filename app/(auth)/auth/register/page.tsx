@@ -1,5 +1,3 @@
-import { PagePlaceholder } from "@/components/shared/page-placeholder";
-
-export default function RoutePage() {
-  return <PagePlaceholder title="Registration" description="This page follows the approved Registration flow. Feature implementation is pending." />;
-}
+import { Suspense } from "react";
+import { AuthForm } from "@/components/auth/auth-form";
+export default function RegisterPage() { return <Suspense fallback={<div className="auth-card" role="status">Loading registration…</div>}><AuthForm mode="register" /></Suspense>; }

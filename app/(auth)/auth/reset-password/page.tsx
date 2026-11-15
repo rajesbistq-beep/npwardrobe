@@ -1,5 +1,3 @@
-import { PagePlaceholder } from "@/components/shared/page-placeholder";
-
-export default function RoutePage() {
-  return <PagePlaceholder title="Password reset" description="This page follows the approved Password reset flow. Feature implementation is pending." />;
-}
+import { Suspense } from "react";
+import { AuthForm } from "@/components/auth/auth-form";
+export default function ResetPasswordPage() { return <Suspense fallback={<div className="auth-card" role="status">Loading recovery…</div>}><AuthForm mode="reset" /></Suspense>; }

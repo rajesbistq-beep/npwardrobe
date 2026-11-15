@@ -56,6 +56,32 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .whatsapp-link { color: #167b42; text-decoration: underline; text-underline-offset: 3px; }
 .storefront-footer__legal { max-width: 1296px; padding-top: 20px; margin: 30px auto 0; border-top: 1px solid var(--border-subtle); font-size: 11px; text-align: center; }
 .auth-layout, .admin-auth-layout { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: var(--surface-cream); }
+.auth-card { width: min(100%, 460px); padding: clamp(26px, 6vw, 46px); border: 1px solid var(--border-subtle); background: var(--surface-pure); box-shadow: 0 18px 55px #201a1a0c; }
+.auth-brand { display: inline-block; margin-bottom: 30px; color: var(--brand-primary); font-family: Georgia, 'Times New Roman', serif; font-size: 18px; letter-spacing: .12em; }
+.auth-card h1 { margin: 0 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(32px, 6vw, 42px); font-weight: 400; line-height: 1.1; }
+.auth-card .eyebrow { margin-bottom: 10px; }
+.auth-field { margin: 18px 0; }
+.auth-field > label { display: block; margin-bottom: 8px; color: #514541; font-size: 12px; }
+.auth-field input:not([type=checkbox]) { width: 100%; min-height: 48px; padding: 12px 13px; border: 1px solid var(--border-subtle); border-radius: 0; background: #fff; color: var(--foreground); font: inherit; }
+.password-control { display: flex; }
+.password-control input { min-width: 0; flex: 1; }
+.password-control button { min-width: 64px; border: 1px solid var(--border-subtle); border-left: 0; background: #fff; color: var(--brand-primary); cursor: pointer; }
+.auth-submit { width: 100%; min-height: 50px; margin-top: 10px; border: 0; background: var(--brand-primary); color: white; font: inherit; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.auth-submit:disabled { cursor: wait; opacity: .65; }
+.auth-consent { display: flex; align-items: flex-start; gap: 10px; margin: 20px 0; color: var(--text-muted); font-size: 12px; line-height: 1.5; }
+.auth-consent input { width: 18px; height: 18px; margin: 0; accent-color: var(--brand-primary); }
+.auth-inline-link, .auth-switch { color: var(--text-muted); font-size: 12px; line-height: 1.7; }
+.auth-inline-link { margin: 4px 0 18px; text-align: right; }
+.auth-switch { margin: 22px 0 0; text-align: center; }
+.auth-switch a, .auth-inline-link a { color: var(--brand-primary); text-decoration: underline; text-underline-offset: 3px; }
+.auth-notice, .auth-error { padding: 11px 13px; margin: 14px 0; font-size: 12px; line-height: 1.55; }
+.auth-notice { border: 1px solid #d7e7d9; background: #f4faf4; color: #315c38; }
+.auth-error { color: #a12c35; }
+.auth-description { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
+.auth-card--admin { border-top: 3px solid var(--brand-tertiary); }
+.mfa-enrollment { margin: 16px 0 22px; color: var(--text-muted); font-size: 13px; line-height: 1.6; }
+.mfa-enrollment img { display: block; width: min(100%, 240px); height: auto; margin: 16px auto; border: 1px solid var(--border-subtle); }
+.mfa-enrollment code { display: block; overflow-wrap: anywhere; padding: 12px; background: #f8f4f1; color: var(--foreground); font-size: 13px; }
 .account-layout { min-height: 50vh; }
 
 /* Administration console, based on the operations dashboard Stitch reference. */
@@ -77,6 +103,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .admin-topbar__context { display: flex; gap: 12px; color: #887e79; font-size: 12px; }
 .admin-user-menu { display: flex; align-items: center; gap: 10px; color: #5d514e; font-size: 12px; }
 .admin-user-menu__badge { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: #f5e8e7; color: var(--brand-primary); }
+.admin-signout, .account-signout button { min-height: 38px; padding: 8px 12px; border: 1px solid var(--border-subtle); background: #fff; color: var(--brand-primary); font: inherit; font-size: 11px; cursor: pointer; }
+.account-signout { display: flex; justify-content: flex-end; max-width: 1296px; padding: 12px 20px 0; margin: 0 auto; }
 .admin-main { padding: clamp(22px, 4vw, 48px); }
 .admin-content-container { width: 100%; max-width: 1440px; margin: 0 auto; }
 .admin-breadcrumbs { display: flex; align-items: center; gap: 10px; margin-bottom: 26px; color: #857a76; font-size: 12px; }
