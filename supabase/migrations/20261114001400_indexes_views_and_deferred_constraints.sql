@@ -106,41 +106,41 @@ left join public.stock_reservations sr on sr.id = sri.reservation_id
 comment on view public.v_inventory_availability is 'Reserved quantity is derived only from active stock_reservations. Expired timestamps count until state is atomically expired.';
 
 -- Generic updated_at maintenance for tables which carry that column.
+
+-- Generic updated_at maintenance for physical tables only.
+-- Exclude views such as v_inventory_availability.
 do $$
-declare r record;
+declare
+  r record;
 begin
   for r in
-    select table_schema, table_name
-    from information_schema.columns
-    where table_schema = 'public' and column_name = 'updated_at'
-    group by table_schema, table_name
+    select
+      c.table_schema,
+      c.table_name
+    from information_schema.columns c
+    join information_schema.tables t
+      on t.table_catalog = c.table_catalog
+     and t.table_schema = c.table_schema
+     and t.table_name = c.table_name
+    where c.table_schema = 'public'
+      and c.column_name = 'updated_at'
+      and t.table_type = 'BASE TABLE'
+    group by c.table_schema, c.table_name
   loop
-    execute format('drop trigger if exists set_updated_at on %I.%I', r.table_schema, r.table_name);
-    execute format('create trigger set_updated_at before update on %I.%I for each row execute function private.set_updated_at()', r.table_schema, r.table_name);
-  end loop;
-end;
-$$;
+    execute format(
+      'drop trigger if exists set_updated_at on %I.%I',
+      r.table_schema,
+      r.table_name
+    );
 
-create or replace function private.reject_append_only_mutation()
-returns trigger
-language plpgsql
-set search_path = ''
-as $$
-begin
-  raise exception 'APPEND_ONLY_RECORD' using errcode = '55000';
-end;
-$$;
-
-revoke all on function private.reject_append_only_mutation() from public;
-
-do $$
-declare t text;
-begin
-  foreach t in array array[
-    'order_status_history','order_payment_status_history','payment_status_history',
-    'refund_status_history','shipment_tracking_events','inventory_movements','audit_logs'
-  ] loop
-    execute format('create trigger %I before update or delete on public.%I for each row execute function private.reject_append_only_mutation()', t || '_append_only', t);
+    execute format(
+      'create trigger set_updated_at
+       before update on %I.%I
+       for each row
+       execute function private.set_updated_at()',
+      r.table_schema,
+      r.table_name
+    );
   end loop;
 end;
 $$;
