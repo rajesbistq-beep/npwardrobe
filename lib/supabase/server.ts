@@ -37,10 +37,12 @@ import { getPublicEnv } from "@/lib/env";
  * by @supabase/ssr. All other errors are re-thrown.
  */
 export async function createClient() {
-  const env = getPublicEnv();
   // cookies() is async in Next.js 16; must be awaited before passing to
-  // createServerClient so the cookie store is fully resolved.
+  // createServerClient so the cookie store is fully resolved. Reading the
+  // request first also keeps environment validation out of the static shell
+  // when this client is reached by a request-bound auth check.
   const cookieStore = await cookies();
+  const env = getPublicEnv();
 
   return createServerClient<Database>(
     env.NEXT_PUBLIC_SUPABASE_URL,

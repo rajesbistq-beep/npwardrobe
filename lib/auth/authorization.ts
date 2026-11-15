@@ -3,6 +3,12 @@ import "server-only";
 import { createClient } from "@/lib/supabase/server";
 import { AppError, throwDatabaseError } from "@/lib/errors/app-error";
 
+function isMissingAuthSession(error: { status?: number; name?: string; code?: string }): boolean {
+  return error.status === 401 ||
+    error.name === "AuthSessionMissingError" ||
+    (error.status === 403 && error.code === "session_not_found");
+}
+
 export type AuthorizationContext =
   | { kind: "customer"; userId: string }
   | { kind: "authenticated"; userId: string }
@@ -16,7 +22,7 @@ export async function getAuthorizationContext(): Promise<AuthorizationContext | 
   const supabase = await createClient();
   const { data: userData, error: userError } = await supabase.auth.getUser();
   if (userError) {
-    if (userError.status === 401) return null;
+    if (isMissingAuthSession(userError)) return null;
     throw new AppError("DATABASE_ERROR", "Sign-in status could not be verified.", 503);
   }
   if (!userData.user) return null;
@@ -24,7 +30,7 @@ export async function getAuthorizationContext(): Promise<AuthorizationContext | 
 
   const { data: claimsData, error: claimsError } = await supabase.auth.getClaims();
   if (claimsError) {
-    if (claimsError.status === 401) return null;
+    if (isMissingAuthSession(claimsError)) return null;
     throw new AppError("DATABASE_ERROR", "Sign-in status could not be verified.", 503);
   }
   if (!claimsData?.claims) return null;
