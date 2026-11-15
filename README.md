@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the NP Wardrobe storefront and admin application built with Next.js, React, TypeScript and Supabase.
 
-## Getting Started
+## Local setup
 
-First, run the development server:
+1. Copy `.env.example` to `.env.local`.
+2. Fill in your actual Supabase project values from the Supabase dashboard:
+   - `NEXT_PUBLIC_SUPABASE_URL` — the Project URL for the Supabase project.
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — the public anon / publishable key.
+   - `NEXT_PUBLIC_SITE_URL` — the local site URL such as `http://localhost:3000`.
+3. Keep `.env.local` in the project root and never commit it.
+4. Do not add real service-role credentials to the browser or source control. Server-only credentials belong in trusted server-side code only.
+
+To find the values in Supabase:
+
+- Go to your project dashboard.
+- Open Project Settings → API.
+- Copy the Project URL and the `anon` publishable key.
+- Use those values in `.env.local`.
+
+A working Supabase connection is required for real catalogue browsing, account sign-in, checkout, order creation, stock validation and admin operations.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production readiness notes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Public storefront routes can render a safe fallback shell when Supabase is not configured, but protected routes and backend workflows fail closed until the required environment variables are set.
+- The app will not claim live catalogue or account data until the backend is configured and reachable.

@@ -24,7 +24,7 @@
 
 import { createBrowserClient } from "@supabase/ssr";
 import type { Database } from "@/types/database.types";
-import { getPublicEnv } from "@/lib/env";
+import { requirePublicSupabaseConfig } from "@/lib/env";
 
 /**
  * Returns a Supabase client for use in browser (Client Component) contexts.
@@ -37,7 +37,7 @@ import { getPublicEnv } from "@/lib/env";
  * Security; it cannot bypass RLS policies.
  */
 export function createClient() {
-  const env = getPublicEnv();
+  const env = requirePublicSupabaseConfig();
 
   return createBrowserClient<Database>(
     env.NEXT_PUBLIC_SUPABASE_URL,

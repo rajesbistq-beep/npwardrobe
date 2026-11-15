@@ -23,7 +23,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import type { Database } from "@/types/database.types";
-import { getPublicEnv } from "@/lib/env";
+import { requirePublicSupabaseConfig } from "@/lib/env";
 
 /**
  * Creates a new Supabase server client bound to the current request's cookies.
@@ -42,7 +42,7 @@ export async function createClient() {
   // request first also keeps environment validation out of the static shell
   // when this client is reached by a request-bound auth check.
   const cookieStore = await cookies();
-  const env = getPublicEnv();
+  const env = requirePublicSupabaseConfig();
 
   return createServerClient<Database>(
     env.NEXT_PUBLIC_SUPABASE_URL,

@@ -1,16 +1,21 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import type { Database } from "@/types/database.types";
-import { getPublicEnv } from "@/lib/env";
+import { getPublicEnvStatus, getPublicEnv } from "@/lib/env";
 
 /** Refreshes Supabase auth cookies while leaving public routes public. */
 export async function proxy(request: NextRequest) {
+  const envStatus = getPublicEnvStatus();
+  if (!envStatus.configured) {
+    return NextResponse.next({ request });
+  }
+
   const env = getPublicEnv();
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient<Database>(
-    env.NEXT_PUBLIC_SUPABASE_URL,
-    env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    env.NEXT_PUBLIC_SUPABASE_URL!,
+    env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
         getAll: () => request.cookies.getAll(),

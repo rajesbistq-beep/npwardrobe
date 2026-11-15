@@ -15,9 +15,9 @@ export type ProductCard = {
   currencyCode: string;
   defaultPrice: number;
   salePrice: number | null;
-  saleStartsAt: string | null;
-  saleEndsAt: string | null;
   featured: boolean;
+  imageUrl: string | null;
+  imageAlt: string;
 };
 
 export type PublicMedia = {

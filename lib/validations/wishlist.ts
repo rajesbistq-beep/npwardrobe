@@ -1,0 +1,3 @@
+import { z } from "zod";
+
+export const wishlistItemSchema = z.object({ productId: z.uuid(), variantId: z.uuid().nullable() });
