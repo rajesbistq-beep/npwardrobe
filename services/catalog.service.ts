@@ -205,7 +205,7 @@ export async function getPublishedProducts(input: unknown = {}): Promise<PageRes
   if (error) throwDatabaseError(error);
   const rows = data ?? [];
   const mediaResult = rows.length
-    ? await supabase.from("product_media").select("product_id, media_asset_id, is_primary, sort_order").in("product_id", rows.map(({ id }) => id)).is("variant_id", null).neq("media_role", "size_reference").order("is_primary", { ascending: false }).order("sort_order", { ascending: true })
+    ? await supabase.from("product_media").select("product_id, media_asset_id, alt_text, is_primary, sort_order").in("product_id", rows.map(({ id }) => id)).is("variant_id", null).neq("media_role", "size_reference").order("is_primary", { ascending: false }).order("sort_order", { ascending: true })
     : { data: [], error: null };
   if (mediaResult.error) throwDatabaseError(mediaResult.error);
   const assetIds = [...new Set((mediaResult.data ?? []).map(({ media_asset_id }) => media_asset_id))];
@@ -220,7 +220,7 @@ export async function getPublishedProducts(input: unknown = {}): Promise<PageRes
   const mediaByProduct = new Map<string, { id: string; public_url: string | null; alt_text: string | null }>();
   for (const media of mediaResult.data ?? []) {
     const asset = assets.get(media.media_asset_id);
-    if (asset && !mediaByProduct.has(media.product_id)) mediaByProduct.set(media.product_id, asset);
+    if (asset && !mediaByProduct.has(media.product_id)) mediaByProduct.set(media.product_id, { ...asset, alt_text: media.alt_text ?? asset.alt_text });
   }
   return {
     items: rows.map((row) => {
@@ -270,7 +270,7 @@ export const getPublishedProductBySlug = cache(async (input: unknown) => {
       .limit(pageSizeCeiling),
     supabase
       .from("product_media")
-      .select("id, variant_id, media_asset_id, media_role, sort_order, is_primary")
+      .select("id, variant_id, media_asset_id, media_role, sort_order, is_primary, alt_text")
       .eq("product_id", product.id)
       .neq("media_role", "size_reference")
       .order("sort_order", { ascending: true })
@@ -326,7 +326,7 @@ export const getPublishedProductBySlug = cache(async (input: unknown) => {
     const asset = mediaAssets.get(item.media_asset_id);
     const publicUrl = approvedPublicMediaUrl(asset?.public_url);
     if (!asset || !publicUrl) continue;
-    const media: PublicMedia = { id: asset.id, publicUrl, altText: asset.alt_text, width: asset.width, height: asset.height };
+    const media: PublicMedia = { id: asset.id, publicUrl, altText: item.alt_text ?? asset.alt_text, width: asset.width, height: asset.height };
     if (item.variant_id) mediaByVariant.set(item.variant_id, [...(mediaByVariant.get(item.variant_id) ?? []), media]);
     else baseMedia.push(media);
   }

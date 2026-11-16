@@ -39,6 +39,28 @@ begin
   if to_regprocedure('public.submit_manual_esewa_payment(uuid,text,uuid,timestamp with time zone,uuid,boolean)') is null then
     raise exception 'MISSING_MANUAL_ESEWA_SUBMISSION_RPC';
   end if;
+  if to_regprocedure('public.save_catalog_product(jsonb,uuid[],jsonb,jsonb)') is null
+     or to_regprocedure('public.create_inventory_location(text,text,text)') is null then
+    raise exception 'MISSING_STAFF_CATALOGUE_RPCS';
+  end if;
+  if has_function_privilege('anon', 'public.save_catalog_product(jsonb,uuid[],jsonb,jsonb)', 'execute')
+     or has_function_privilege('anon', 'public.create_inventory_location(text,text,text)', 'execute')
+     or not has_function_privilege('authenticated', 'public.save_catalog_product(jsonb,uuid[],jsonb,jsonb)', 'execute')
+     or not has_function_privilege('authenticated', 'public.create_inventory_location(text,text,text)', 'execute') then
+    raise exception 'STAFF_CATALOGUE_RPCS_HAVE_INVALID_GRANTS';
+  end if;
+  begin
+    perform public.save_catalog_product('{}'::jsonb, array[]::uuid[], '[]'::jsonb, '[]'::jsonb);
+    raise exception 'UNAUTHENTICATED_CATALOGUE_WRITE_WAS_ACCEPTED';
+  exception when insufficient_privilege then
+    null;
+  end;
+  begin
+    perform public.create_inventory_location('smoke-test', 'Smoke test', 'other');
+    raise exception 'UNAUTHENTICATED_INVENTORY_LOCATION_WRITE_WAS_ACCEPTED';
+  exception when insufficient_privilege then
+    null;
+  end;
   if not exists (select 1 from public.permissions where code = 'payments.verify') then
     raise exception 'MISSING_PERMISSION_SEEDS';
   end if;

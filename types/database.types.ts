@@ -1361,14 +1361,14 @@ isOneToOne: false
                   ]
                 },"product_media": {
                   Row: {
-                    "created_at": string,"id": string,"is_primary": boolean,"media_asset_id": string,"media_role": string,"product_id": string,"sort_order": number,"variant_id": string | null
+                    "alt_text": string | null,"created_at": string,"id": string,"is_primary": boolean,"media_asset_id": string,"media_role": string,"product_id": string,"sort_order": number,"variant_id": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"id"?: string,"is_primary"?: boolean,"media_asset_id": string,"media_role": string,"product_id": string,"sort_order"?: number,"variant_id"?: string | null
+                    "alt_text"?: string | null,"created_at"?: string,"id"?: string,"is_primary"?: boolean,"media_asset_id": string,"media_role": string,"product_id": string,"sort_order"?: number,"variant_id"?: string | null
                   }
                   Update: {
-                    "created_at"?: string,"id"?: string,"is_primary"?: boolean,"media_asset_id"?: string,"media_role"?: string,"product_id"?: string,"sort_order"?: number,"variant_id"?: string | null
+                    "alt_text"?: string | null,"created_at"?: string,"id"?: string,"is_primary"?: boolean,"media_asset_id"?: string,"media_role"?: string,"product_id"?: string,"sort_order"?: number,"variant_id"?: string | null
                   }
                   Relationships: [
                     {
@@ -2479,6 +2479,9 @@ isOneToOne: false
                 }
           }
           Functions: {
+"create_inventory_location":
+{ Args: { "p_code": string,"p_location_type": string,"p_name": string }; Returns: string
+                           },
             "commit_stock_reservation":
 { Args: { "p_reservation_id": string }; Returns: undefined
                            },
@@ -2496,6 +2499,9 @@ isOneToOne: false
                            },
 "record_cod_collection":
 { Args: { "p_collected_amount": number,"p_payment_id": string,"p_reference"?: string }; Returns: undefined
+                           },
+"save_catalog_product":
+{ Args: { "p_categories": string[],"p_media": Json,"p_product": Json,"p_variants": Json }; Returns: string
                            },
 "release_stock_reservation":
 { Args: { "p_reason": string,"p_reservation_id": string }; Returns: undefined

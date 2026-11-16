@@ -5,7 +5,8 @@ This is the NP Wardrobe storefront and admin application built with Next.js, Rea
 1. Copy `.env.example` to `.env.local`.
 2. Fill in your actual Supabase project values from the Supabase dashboard:
    - `NEXT_PUBLIC_SUPABASE_URL` — the Project URL for the Supabase project.
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — the public anon / publishable key.
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` — the preferred public publishable key.
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` — optional legacy fallback for older local setups.
    - `NEXT_PUBLIC_SITE_URL` — the local site URL such as `http://localhost:3000`.
 3. Keep `.env.local` in the project root and never commit it.
 4. Do not add real service-role credentials to the browser or source control. Server-only credentials belong in trusted server-side code only.
@@ -14,10 +15,14 @@ To find the values in Supabase:
 
 - Go to your project dashboard.
 - Open Project Settings → API.
-- Copy the Project URL and the `anon` publishable key.
+- Copy the Project URL and the public `anon` / publishable key.
 - Use those values in `.env.local`.
 
 A working Supabase connection is required for real catalogue browsing, account sign-in, checkout, order creation, stock validation and admin operations.
+
+Product image uploads are optional and require server-side Cloudinary configuration in `.env.local`: `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`. Keep all three out of client code and source control. The admin uploader accepts JPEG, PNG, and WebP files up to 10 MB and fails closed until those values are configured.
+
+Apply the Supabase migrations to the target project before deploying these admin changes. Admin access remains fail-closed until an owner is provisioned through the audited, MFA-protected procedure in `docs/BACKEND_SCHEMA.md`; no default staff credentials are created.
 
 ## Run locally
 

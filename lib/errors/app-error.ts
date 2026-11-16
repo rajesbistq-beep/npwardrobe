@@ -43,6 +43,18 @@ export function fromDatabaseError(error: {
   message?: string;
 }): AppError {
   const message = error.message ?? "";
+  if (message.includes("PUBLISHED_PRODUCT_REQUIRES_VARIANT_AND_MEDIA")) {
+    return new AppError("VALIDATION_ERROR", "Add at least one active variant and one image before publishing.");
+  }
+  if (message.includes("INVALID_CATALOGUE_VARIANT_PRICE")) {
+    return new AppError("VALIDATION_ERROR", "A variant sale price cannot exceed its regular price.");
+  }
+  if (message.includes("INVALID_PRODUCT_MEDIA") || message.includes("MULTIPLE_PRIMARY_PRODUCT_MEDIA")) {
+    return new AppError("VALIDATION_ERROR", "Check the product images and choose exactly one primary image.");
+  }
+  if (message.includes("INVALID_INVENTORY_LOCATION")) {
+    return new AppError("VALIDATION_ERROR", "Enter a valid inventory location name, code, and type.");
+  }
   if (message.includes("INSUFFICIENT_STOCK")) {
     return new AppError("INSUFFICIENT_STOCK", "One or more selected variants are no longer available.");
   }

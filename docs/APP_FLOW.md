@@ -1436,7 +1436,7 @@ Must work end-to-end:
 - Order confirmation and WhatsApp handoff with fallback.
 - Customer order history/tracking; authenticated account functions subject to provider setup.
 - Wishlist essential behaviour.
-- Admin login/MFA, dashboard, product, stock, order, payment and manual delivery operations.
+- /MFA, dashboard, product, stock, order, payment and manual delivery operations.
 - Basic cancellation/return/exchange request handling.
 - Essential CMS and sales/order reports.
 - RLS, staff permissions, audit, backups, monitoring, tests and deployment gates.

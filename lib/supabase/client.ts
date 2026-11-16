@@ -38,10 +38,11 @@ import { requirePublicSupabaseConfig } from "@/lib/env";
  */
 export function createClient() {
   const env = requirePublicSupabaseConfig();
+  const key = env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   return createBrowserClient<Database>(
     env.NEXT_PUBLIC_SUPABASE_URL,
-    env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    key,
     {
       // Ensures one client instance per browser tab to prevent multiple
       // concurrent token refresh operations.
